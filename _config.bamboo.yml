@@ -29,8 +29,12 @@ sidebar:
       jinrishici: "谢谢你关注。我写代码，也写字。有缘常来。"
       background: "rgba(255,252,250,0.98)"
       social:
-        - icon: fas fa-rss
-          url: /atom.xml
+        - icon: fab fa-github
+          url: https://github.com/TobeMagic
+        - icon: fas fa-envelope
+          url: mailto:daizhaoji12345@gmail.com
+        - icon: fab fa-weixin
+          url: /about/
     side_toc:
       on: true
       background: "rgba(255,252,250,0.98)"
@@ -336,8 +340,12 @@ color_scheme:
 site_footer:
   layout: [social, copyright, custom]
   social:
-    - icon: fas fa-rss
-      url: /atom.xml
+    - icon: fab fa-github
+      url: https://github.com/TobeMagic
+    - icon: fas fa-envelope
+      url: mailto:daizhaoji12345@gmail.com
+    - icon: fab fa-weixin
+      url: /about/
   copyright: 'Copyright © 2026 AI Magician'
   custom:
     - label: "慢慢找，慢慢写。"
@@ -373,6 +381,7 @@ import:
     - '<link rel="preconnect" href="https://fonts.googleapis.com">'
     - '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     - '<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">'
+    - '<style>.social.fab.fa-qq.flat-btn{display:none!important;}</style>'
   script:
     - ""
 
