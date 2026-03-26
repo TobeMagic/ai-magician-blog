@@ -5,6 +5,9 @@ menu:
   Archives:
     url: /archives
     icon: fas fa-box-archive
+  Love:
+    url: /love/
+    icon: fas fa-heart
   About:
     url: /about/
     icon: fas fa-user
@@ -87,16 +90,16 @@ sidebar:
       on: true
       background: "rgba(255,252,250,0.98)"
       header:
-        icon: fas fa-heart
-        title: 恋爱计时
+        icon: fas fa-chart-line
+        title: 站点信息
       type:
         article:
-          on: false
+          on: true
           text: 文章
           unit: 篇
         runtime:
           on: true
-          text: 等你给我纪念日
+          text: 在一起
           data: 2026-03-26 00:00:00
           unit: 天
         wordcount:
@@ -104,20 +107,23 @@ sidebar:
           text: 字数
           unit: 字
         visitcounter:
-          service: ""
+          service: "busuanzi"
           siteuv:
-            on: false
-            text: 访客
+            on: true
+            text: 访客数
             unit: 人
           sitepv:
-            on: false
-            text: 阅读
+            on: true
+            text: 总访问量
             unit: 次
         lastupd:
-          on: false
+          on: true
           friendlyShow: true
           text: 更新
           unit: 前
+      counters:
+        siteuv_offset: 521314
+        sitepv_offset: 521314
 
 preloader:
   on: true
@@ -163,7 +169,7 @@ fancybox:
   js: https://unpkg.com/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js
 
 busuanzi:
-  on: false
+  on: true
 
 show_count: true
 
@@ -171,8 +177,8 @@ donate:
   on: false
 
 sharejs:
-  on: false
-  sites: twitter,facebook,wechat,weibo,linkedin,douban,qq,qzone
+  on: true
+  sites: wechat,weibo,qq,qzone,douban,linkedin,twitter,facebook
 
 cursor_effect:
   on: false
@@ -237,16 +243,29 @@ baiduAnalytics:
 baiduPush: true
 
 music:
-  on: false
+  on: true
+  autoHide: true
+  server: netease
+  type: playlist
+  id: 3778678
+  fixed: true
+  autoplay: false
+  theme: '#e17b9c'
+  loop: all
+  order: list
+  preload: auto
+  volume: 0.7
+  listFolded: true
+  hideLrc: false
 
 copyright:
   on: false
 
 motto:
-  on: false
-  title: 
-  content: 
-  background: 'linear-gradient(135deg, rgba(255,120,79,0.88), rgba(17,24,39,0.9))'
+  on: true
+  title: 座右铭
+  content: 慢慢找，慢慢写。
+  background: 'linear-gradient(135deg, rgba(255,237,242,0.96), rgba(255,248,244,0.98))'
 
 notice:
   on: false
@@ -260,7 +279,7 @@ notice:
       color: "#d86a8c"
 
 topArticle:
-  on: false
+  on: true
   background: "rgba(255,255,255,1)"
 
 typed:
@@ -272,8 +291,8 @@ typed:
   backSpeed: 35
 
 utterance:
-  on: false
-  repo:
+  on: true
+  repo: TobeMagic/ai-magician-blog
   theme:
     light: github-light
     dark: github-dark
@@ -371,7 +390,7 @@ color_scheme:
     fish: false
 
 site_footer:
-  layout: [social, copyright, custom]
+  layout: [social, busuanzi, copyright, custom]
   social:
     - icon: fab fa-github
       url: https://github.com/TobeMagic
@@ -414,9 +433,10 @@ import:
     - '<link rel="preconnect" href="https://fonts.googleapis.com">'
     - '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     - '<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">'
+    - '<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css">'
     - '<style>.social.fab.fa-qq.flat-btn{display:none!important;}</style>'
   script:
-    - ""
+    - '<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>'
 
 imgs:
   - https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80

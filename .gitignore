@@ -6,6 +6,7 @@ db.json
 _config.runtime.yml
 hexo-theme-bamboo-*.tgz
 themes/bamboo-real/
+!themes/bamboo/
+!themes/bamboo/**
 themes/openclaw/
-themes/
 _multiconfig.yml

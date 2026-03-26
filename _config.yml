@@ -1,11 +1,12 @@
 title: AI Magician
-subtitle: OpenClaw-driven canonical technical writing lab
-description: Canonical site for AI engineering, automation systems, and self-media publishing experiments.
+subtitle: 欢迎你到来
+description: 想在这个信息过剩的时代，只写真正值得写的东西。技术、财富、认知，以及那些在教科书和成功学之间的空白地带。
 keywords:
-  - OpenClaw
-  - AI Engineering
+  - AI Magician
+  - 技术写作
+  - 财富认知
+  - 个人博客
   - Hexo
-  - Automation
 author: aimagician
 language: zh-CN
 timezone: Asia/Shanghai

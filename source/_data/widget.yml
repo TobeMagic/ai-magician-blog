@@ -1,0 +1,17 @@
+home_widget:
+  - name: GitHub 日志
+    class_name: github-log-widget
+    id_name: github-log-widget
+    order: 1
+    icon: fab fa-github
+    icon_color: "#e17b9c"
+    background: "rgba(255,252,250,0.98)"
+    html: |
+      <div class="github-log-card">
+        <p>这里保留我最近持续在做的事。不是为了打卡，而是为了留下长期积累的痕迹。</p>
+        <div class="calendar github-calendar">GitHub contribution calendar is loading…</div>
+        <p class="github-log-links">
+          <a href="https://github.com/TobeMagic" target="_blank" rel="external nofollow noopener noreferrer">GitHub 主页</a>
+          <a href="https://github.com/TobeMagic?tab=overview&from=2026-01-01&to=2026-12-31" target="_blank" rel="external nofollow noopener noreferrer">年度日志</a>
+        </p>
+      </div>
