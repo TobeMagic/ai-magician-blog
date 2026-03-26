@@ -13,7 +13,7 @@ Github:
   on: false
   url: https://github.com/TobeMagic/ai-magician-blog
 
-logo: /medias/logo.png
+logo: medias/logo.png
 favicon: /favicon.ico
 
 sidebar:
@@ -21,7 +21,7 @@ sidebar:
   widget_library:
     side_blogger:
       on: true
-      avatar: /medias/logo.png
+      avatar: medias/logo.png
       shape: circle
       url: /about/
       title: AI Magician
@@ -34,7 +34,7 @@ sidebar:
         - icon: fas fa-envelope
           url: mailto:daizhaoji12345@gmail.com
         - icon: fab fa-weixin
-          url: /about/
+          url: https://tobemagic.github.io/ai-magician-blog/medias/wechat-qrcode-white.png
     side_toc:
       on: true
       background: "rgba(255,252,250,0.98)"
@@ -84,7 +84,40 @@ sidebar:
         icon: fas fa-archive
         title: 归档
     side_webinfo:
-      on: false
+      on: true
+      background: "rgba(255,252,250,0.98)"
+      header:
+        icon: fas fa-heart
+        title: 恋爱计时
+      type:
+        article:
+          on: false
+          text: 文章
+          unit: 篇
+        runtime:
+          on: true
+          text: 等你给我纪念日
+          data: 2026-03-26 00:00:00
+          unit: 天
+        wordcount:
+          on: false
+          text: 字数
+          unit: 字
+        visitcounter:
+          service: ""
+          siteuv:
+            on: false
+            text: 访客
+            unit: 人
+          sitepv:
+            on: false
+            text: 阅读
+            unit: 次
+        lastupd:
+          on: false
+          friendlyShow: true
+          text: 更新
+          unit: 前
 
 preloader:
   on: true
@@ -345,7 +378,7 @@ site_footer:
     - icon: fas fa-envelope
       url: mailto:daizhaoji12345@gmail.com
     - icon: fab fa-weixin
-      url: /about/
+      url: https://tobemagic.github.io/ai-magician-blog/medias/wechat-qrcode-white.png
   copyright: 'Copyright © 2026 AI Magician'
   custom:
     - label: "慢慢找，慢慢写。"

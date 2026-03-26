@@ -21,4 +21,8 @@ description: 关于 AI Magician。
 
 慢慢找，慢慢写。
 
+## 公众号
+
+![公众号二维码](https://tobemagic.github.io/ai-magician-blog/medias/wechat-qrcode-white.png)
+
 有缘常来。
