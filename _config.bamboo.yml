@@ -95,33 +95,35 @@ sidebar:
       type:
         article:
           on: true
-          text: 文章
+          text: 文章数目
           unit: 篇
         runtime:
           on: true
-          text: 在一起
-          data: 2026-03-26 00:00:00
+          text: 已运行时间
+          data: 2020-10-02 00:00:00
           unit: 天
         wordcount:
-          on: false
-          text: 字数
+          on: true
+          text: 本站总字数
           unit: 字
         visitcounter:
           service: "busuanzi"
           siteuv:
             on: true
-            text: 访客数
+            text: 本站访客数
             unit: 人
           sitepv:
             on: true
-            text: 总访问量
+            text: 本站总访问量
             unit: 次
         lastupd:
           on: true
-          friendlyShow: true
-          text: 更新
-          unit: 前
+          friendlyShow: false
+          text: 最后活动时间
+          unit: ""
       counters:
+        article_offset: 53
+        wordcount_offset: 34445
         siteuv_offset: 521314
         sitepv_offset: 521314
 
@@ -143,7 +145,7 @@ swiper:
   readMoreBtn: true
   bubble: false
   wave: true
-  defaultImg: https://images.unsplash.com/photo-1518568740560-333139a27e72?auto=format&fit=crop&w=1800&q=80
+  defaultImg: https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1800&q=80
   defaultTile: AI Magician
   defaultDesc:
     - 想在这个信息过剩的时代，只写真正值得写的东西。
@@ -264,7 +266,7 @@ copyright:
 motto:
   on: true
   title: 座右铭
-  content: 慢慢找，慢慢写。
+  content: 愿所有迟来的答案，都配得上一路走来的清醒与温柔。
   background: 'linear-gradient(135deg, rgba(255,237,242,0.96), rgba(255,248,244,0.98))'
 
 notice:

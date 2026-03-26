@@ -1,3 +1,36 @@
+widget_library:
+  - name: 恋爱时间
+    class_name: love-runtime-widget
+    id_name: love-runtime-widget
+    order: 0
+    icon: fas fa-heart
+    icon_color: "#e17b9c"
+    background: "rgba(255,252,250,0.98)"
+    html: |
+      <a class="love-runtime-card" href="/ai-magician-blog/love/">
+        <div class="love-runtime-avatars">
+          <img src="/ai-magician-blog/medias/logo.png" alt="AI Magician">
+          <span class="love-runtime-heart"><i class="fas fa-heart"></i></span>
+          <img src="/ai-magician-blog/medias/logo.png" alt="Her">
+        </div>
+        <div class="love-runtime-copy">
+          <p class="love-runtime-label">从 2020 年 10 月 2 日开始</p>
+          <p class="love-runtime-days"><span id="love-runtime-days">加载中</span> 天</p>
+          <p class="love-runtime-desc">把喜欢过成日常，也把日常认真记下来。</p>
+        </div>
+      </a>
+      <script>
+        (function renderLoveRuntime() {
+          var target = document.getElementById('love-runtime-days');
+          if (!target) return;
+          var start = new Date('2020-10-02T00:00:00+08:00');
+          var now = new Date();
+          var diff = now.getTime() - start.getTime();
+          var days = Math.max(0, Math.floor(diff / (24 * 60 * 60 * 1000)));
+          target.textContent = String(days);
+        })();
+      </script>
+
 home_widget:
   - name: GitHub 日志
     class_name: github-log-widget
@@ -8,7 +41,7 @@ home_widget:
     background: "rgba(255,252,250,0.98)"
     html: |
       <div class="github-log-card">
-        <p>这里保留我最近持续在做的事。不是为了打卡，而是为了留下长期积累的痕迹。</p>
+        <p>这里不是打卡墙，而是我长期在做的事留下来的轨迹。写代码、写文章、修修补补，最后都会变成一块清楚的地图。</p>
         <div class="calendar github-calendar">GitHub contribution calendar is loading…</div>
         <p class="github-log-links">
           <a href="https://github.com/TobeMagic" target="_blank" rel="external nofollow noopener noreferrer">GitHub 主页</a>

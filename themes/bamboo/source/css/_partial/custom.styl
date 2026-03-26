@@ -83,3 +83,228 @@
 .toc-link.is-active-link::before {
   background-color: $color-primary;
 }
+
+.love-runtime-widget
+  overflow hidden
+  .content
+    padding 0 !important
+
+.love-runtime-card
+  display block
+  padding 18px 18px 20px
+  color #5f4250
+  background linear-gradient(160deg, rgba(255,247,250,0.98), rgba(255,240,244,0.96))
+  text-decoration none
+  transition transform .25s ease, box-shadow .25s ease
+  &:hover
+    transform translateY(-2px)
+    box-shadow 0 18px 30px -20px rgba(219, 120, 155, .55)
+
+.love-runtime-avatars
+  display flex
+  align-items center
+  justify-content center
+  gap 10px
+  margin-bottom 14px
+  img
+    width 56px
+    height 56px
+    border-radius 999px
+    object-fit cover
+    border 3px solid rgba(255,255,255,.92)
+    box-shadow 0 8px 20px -12px rgba(0,0,0,.35)
+
+.love-runtime-heart
+  display inline-flex
+  align-items center
+  justify-content center
+  width 30px
+  height 30px
+  border-radius 999px
+  background linear-gradient(135deg, #f6a3bb, #df6e95)
+  color white
+  box-shadow 0 10px 18px -12px rgba(223, 110, 149, .85)
+
+.love-runtime-copy
+  text-align center
+
+.love-runtime-label
+  font-size .78rem
+  letter-spacing .08em
+  color #8b6877
+  margin 0 0 6px
+
+.love-runtime-days
+  margin 0
+  font-size 1.5rem
+  font-weight 700
+  color #6d3d4f
+
+.love-runtime-desc
+  margin 8px 0 0
+  line-height 1.7
+  color #7f6170
+  font-size .84rem
+
+.side_webinfo
+  .webinfo-item
+    display flex
+    align-items center
+    justify-content space-between
+    gap 12px
+    padding 8px 0
+    border-bottom 1px dashed rgba(225, 123, 156, .18)
+    &:last-child
+      border-bottom none
+    > div
+      &:first-child
+        color #7b5968
+      &:last-child
+        flex 0 0 auto
+        text-align right
+        white-space nowrap
+        color #4f3642
+        font-weight 600
+        max-width 58%
+        overflow hidden
+        text-overflow ellipsis
+
+#busuanzi_value_site_uv_widget,
+#busuanzi_value_site_pv_widget
+  display inline-block
+  min-width 6ch
+
+.github-log-card
+  border-radius 16px
+  background linear-gradient(180deg, rgba(255,247,250,.92), rgba(255,255,255,.98))
+  p
+    line-height 1.8
+    color #6e5360
+    margin 0 0 14px
+  .calendar
+    padding 14px
+    border-radius 14px
+    background rgba(255,255,255,.82)
+    box-shadow inset 0 0 0 1px rgba(225, 123, 156, .1)
+  .github-log-links
+    display flex
+    gap 12px
+    flex-wrap wrap
+    margin-top 14px
+    a
+      display inline-flex
+      align-items center
+      justify-content center
+      padding 8px 14px
+      border-radius 999px
+      background rgba(225, 123, 156, .1)
+      color #b35678
+      text-decoration none
+      transition all .2s ease
+      &:hover
+        background rgba(225, 123, 156, .18)
+        color #963c5e
+
+.github-calendar
+  width 100%
+  font-size .84rem
+
+.github-calendar .contrib-column
+  border-radius 4px
+
+.github-calendar .width-full > .float-left
+  display none
+
+.github-calendar .ContributionCalendar-day,
+.github-calendar .ContributionCalendar-day[data-level='0']
+  rx 4px
+  ry 4px
+
+.github-calendar text.wday,
+.github-calendar text.month
+  fill #8f7080 !important
+
+.github-calendar .ContributionCalendar-day[data-level='1']
+  fill #f6c5d4 !important
+
+.github-calendar .ContributionCalendar-day[data-level='2']
+  fill #ee9db7 !important
+
+.github-calendar .ContributionCalendar-day[data-level='3']
+  fill #df6e95 !important
+
+.github-calendar .ContributionCalendar-day[data-level='4']
+  fill #b84971 !important
+
+.motto
+  overflow hidden
+  border 1px solid rgba(225, 123, 156, .12)
+  box-shadow 0 18px 30px -26px rgba(180, 81, 113, .45)
+  &:before
+    content '“'
+    position absolute
+    top -14px
+    left 18px
+    font-size 4rem
+    color rgba(225,123,156,.16)
+    font-family Georgia, serif
+  .motto-title
+    color #8a5870
+    letter-spacing .12em
+  .motto-content
+    color #5f4653
+    font-size 1rem
+    line-height 1.9
+
+#appSwiper .swiper-bgmask
+  background linear-gradient(135deg, rgba(48, 26, 39, .28), rgba(120, 68, 94, .16)) !important
+
+#appSwiper .flag-text .title
+  letter-spacing .08em
+  text-shadow 0 10px 30px rgba(0,0,0,.16)
+
+#appSwiper .flag-text .excerpt,
+#appSwiper .flag-text .default-excerpt
+  max-width 760px
+  text-shadow 0 8px 26px rgba(0,0,0,.14)
+
+#appSwiper .read-more.swiper-btn-color
+  background linear-gradient(135deg, #df6e95, #e89eb7)
+  border none !important
+  box-shadow 0 16px 30px -18px rgba(223, 110, 149, .75)
+
+#appSwiper .read-more.swiper-btn-color2
+  background rgba(255,255,255,.12)
+  backdrop-filter blur(6px)
+  border 1px solid rgba(255,255,255,.72) !important
+
+.getJsonTalk-api
+  margin-top 6px
+
+.talk-card
+  border 1px solid rgba(225,123,156,.14)
+  box-shadow 0 16px 30px -24px rgba(180,81,113,.36)
+  background linear-gradient(180deg, rgba(255,252,253,.98), rgba(255,246,249,.98))
+  .talk-content p
+    color #5c4350
+    font-size .92rem
+    line-height 1.9
+  .hr
+    border-bottom 1px dashed rgba(225, 123, 156, .4)
+  .talk-bottom .date-info
+    gap 8px
+    flex-wrap wrap
+  .talk-bottom .date-info .time
+    background rgba(225,123,156,.1)
+    color #9d4e6f
+  .talk-bottom .date-info .link
+    background rgba(225,123,156,.12)
+    color #b35678
+
+@media (max-width: 992px)
+  .github-log-links
+    flex-direction column
+  .side_webinfo .webinfo-item
+    align-items flex-start
+    > div:last-child
+      max-width 100%
