@@ -46,11 +46,9 @@ home_widget:
     background: "rgba(255,252,250,0.98)"
     html: |
       <div class="github-log-card">
-        <p id="github-log-bio">这里保留我最近持续在做的事。不是为了打卡，而是为了留下长期积累的痕迹。</p>
-        <p>公开仓库 <strong id="github-log-repos">--</strong> · Followers <strong id="github-log-followers">--</strong> · Following <strong id="github-log-following">--</strong></p>
+        <p>这里保留我最近持续在做的事。不是为了打卡，而是为了把长期积累留下痕迹。</p>
         <div class="calendar github-calendar">GitHub contribution calendar is loading…</div>
         <p class="github-log-links">
-          <a href="https://github.com/TobeMagic" target="_blank" rel="external nofollow noopener noreferrer">GitHub 主页</a>
-          <a href="https://github.com/TobeMagic?tab=overview&from=2026-01-01&to=2026-12-31" target="_blank" rel="external nofollow noopener noreferrer">年度日志</a>
+          <a href="https://github.com/TobeMagic" target="_blank" rel="external nofollow noopener noreferrer">前往我的 GitHub 主页</a>
         </p>
       </div>
