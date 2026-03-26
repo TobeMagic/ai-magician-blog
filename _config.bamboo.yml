@@ -98,7 +98,7 @@ sidebar:
           text: 文章数目
           unit: 篇
         runtime:
-          on: true
+          on: false
           text: 已运行时间
           data: auto
           unit: 天
@@ -264,7 +264,7 @@ copyright:
 motto:
   on: true
   title: 座右铭
-  content: 慢慢找，慢慢写。
+  content: 愿你路过人间热闹时，仍能把自己的月光和心事都安放得很轻。
   background: 'linear-gradient(135deg, rgba(255,237,242,0.96), rgba(255,248,244,0.98))'
 
 notice:
@@ -390,7 +390,7 @@ color_scheme:
     fish: false
 
 site_footer:
-  layout: [social, busuanzi, copyright, custom]
+  layout: [busuanzi, social, custom, copyright]
   social:
     - icon: fab fa-github
       url: https://github.com/TobeMagic
