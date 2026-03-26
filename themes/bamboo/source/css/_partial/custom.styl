@@ -83,3 +83,183 @@
 .toc-link.is-active-link::before {
   background-color: $color-primary;
 }
+
+.love-runtime-widget
+  .content
+    padding 0 !important
+
+.love-runtime-card
+  display block
+  padding 18px
+  color #5d4751
+  text-decoration none
+  background linear-gradient(180deg, rgba(255,248,250,.98), rgba(255,252,253,.98))
+  transition transform .2s ease, box-shadow .2s ease
+  &:hover
+    transform translateY(-2px)
+    box-shadow 0 16px 32px -24px rgba(216,106,140,.5)
+
+.love-runtime-avatars
+  display flex
+  align-items center
+  justify-content center
+  gap 10px
+  margin-bottom 14px
+
+.love-runtime-avatar
+  display flex
+  flex-direction column
+  align-items center
+  gap 6px
+  img
+    width 52px
+    height 52px
+    border-radius 999px
+    object-fit cover
+    border 3px solid rgba(255,255,255,.96)
+    box-shadow 0 10px 22px -16px rgba(0,0,0,.45)
+  span
+    font-size .72rem
+    color #94697a
+
+.love-runtime-heart
+  display inline-flex
+  align-items center
+  justify-content center
+  width 28px
+  height 28px
+  border-radius 999px
+  background linear-gradient(135deg, #f1a0ba, #d56d92)
+  color #fff
+
+.love-runtime-copy
+  text-align center
+
+.love-runtime-title
+  margin 0 0 6px
+  color #7c5b69
+  font-size .82rem
+
+.love-runtime-days
+  margin 0
+  font-size 1.45rem
+  font-weight 700
+  color #61444f
+
+.love-runtime-desc
+  margin 8px 0 0
+  font-size .82rem
+  line-height 1.7
+  color #8a6876
+
+.side_webinfo
+  .webinfo-item
+    display flex
+    align-items center
+    justify-content space-between
+    gap 12px
+    padding 8px 0
+    border-bottom 1px dashed rgba(216,106,140,.16)
+    &:last-child
+      border-bottom none
+    > div:last-child
+      min-width 96px
+      text-align right
+      white-space nowrap
+
+#busuanzi_value_site_uv_widget,
+#busuanzi_value_site_pv_widget
+  display inline-block
+  min-width 7ch
+
+.github-log-card
+  .github-log-head
+    display flex
+    gap 12px
+    align-items center
+    margin-bottom 14px
+  .github-log-avatar
+    width 52px
+    height 52px
+    border-radius 999px
+    object-fit cover
+    box-shadow 0 10px 22px -16px rgba(0,0,0,.45)
+  .github-log-meta
+    display flex
+    flex-direction column
+    min-width 0
+  .github-log-name
+    color #4b3540
+    font-size 1rem
+  .github-log-handle
+    color #9b7383
+    font-size .76rem
+    margin-top 2px
+  .github-log-bio
+    margin 6px 0 0
+    color #70555f
+    line-height 1.7
+    font-size .82rem
+  .github-log-stats
+    display grid
+    grid-template-columns repeat(3, minmax(0, 1fr))
+    gap 10px
+    margin-bottom 14px
+    span
+      display flex
+      flex-direction column
+      align-items center
+      justify-content center
+      padding 10px 8px
+      border-radius 12px
+      background rgba(225,123,156,.08)
+    strong
+      color #5a3d48
+      font-size 1rem
+    em
+      font-style normal
+      font-size .72rem
+      color #8f6a78
+      margin-top 4px
+  .calendar
+    padding 10px
+    border-radius 12px
+    background rgba(255,255,255,.72)
+  .github-log-links
+    display flex
+    gap 10px
+    flex-wrap wrap
+    margin-top 12px
+    a
+      display inline-flex
+      align-items center
+      justify-content center
+      padding 7px 12px
+      border-radius 999px
+      background rgba(225,123,156,.1)
+      color #b15476
+      text-decoration none
+
+.github-calendar
+  width 100%
+  font-size .82rem
+
+.github-calendar .width-full > .float-left,
+.github-calendar .width-full > .float-right
+  display none
+
+.github-calendar .ContributionCalendar-day[data-level='1']
+  fill #f7cfdb !important
+
+.github-calendar .ContributionCalendar-day[data-level='2']
+  fill #eeaac0 !important
+
+.github-calendar .ContributionCalendar-day[data-level='3']
+  fill #de799a !important
+
+.github-calendar .ContributionCalendar-day[data-level='4']
+  fill #b75176 !important
+
+@media (max-width: 992px)
+  .github-log-card .github-log-stats
+    grid-template-columns 1fr
