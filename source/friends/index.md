@@ -3,6 +3,6 @@ title: friends
 description: 站点入口与外部阵地。
 ---
 
-- [Hashnode 镜像](https://ai-magician.hashnode.dev/)
-- [GitHub Workspace](https://github.com/TobeMagic/openclaw-tech-selfmedia-workspace)
+- [GitHub Pages 主站](https://tobemagic.github.io/ai-magician-blog/)
+- [GitHub 仓库](https://github.com/TobeMagic/ai-magician-blog)
 - [OpenClaw](https://github.com/openclaw/openclaw)

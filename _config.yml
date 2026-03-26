@@ -10,7 +10,7 @@ author: aimagician
 language: zh-CN
 timezone: Asia/Shanghai
 
-url: https://blog.example.com
+url: https://tobemagic.github.io/ai-magician-blog
 root: /
 permalink: posts/:year/:month/:day/:title/
 pretty_urls:

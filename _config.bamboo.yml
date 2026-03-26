@@ -20,7 +20,7 @@ menu:
 
 Github:
   on: true
-  url: https://github.com/TobeMagic/openclaw-tech-selfmedia-workspace
+  url: https://github.com/TobeMagic/ai-magician-blog
 
 logo: /medias/logo.png
 favicon: /favicon.ico
@@ -41,11 +41,11 @@ sidebar:
         - icon: fas fa-rss
           url: /atom.xml
         - icon: fas fa-globe
-          url: https://tobemagic.github.io/openclaw-tech-selfmedia-workspace/
+          url: https://tobemagic.github.io/ai-magician-blog/
         - icon: fab fa-github
-          url: https://github.com/TobeMagic/openclaw-tech-selfmedia-workspace
+          url: https://github.com/TobeMagic/ai-magician-blog
         - icon: fas fa-pen-nib
-          url: https://tobemagic.github.io/openclaw-tech-selfmedia-workspace/archives
+          url: https://tobemagic.github.io/ai-magician-blog/archives
     side_toc:
       on: true
       background: "#ffffff"
@@ -155,7 +155,7 @@ swiper:
   defaultLeftBtnText: 阅读归档
   defaultLeftBtnLink: /archives/
   defaultRightBtnText: 浏览源码
-  defaultRightBtnLink: https://github.com/TobeMagic/openclaw-tech-selfmedia-workspace
+  defaultRightBtnLink: https://github.com/TobeMagic/ai-magician-blog
   defaultDescTyped: true
   defaultDescTypedSpeed: 80
   defaultDescTypedBackSpeed: 30
@@ -389,9 +389,9 @@ site_footer:
     - icon: fas fa-rss
       url: /atom.xml
     - icon: fab fa-github
-      url: https://github.com/TobeMagic/openclaw-tech-selfmedia-workspace
+      url: https://github.com/TobeMagic/ai-magician-blog
     - icon: fas fa-pen-nib
-      url: https://tobemagic.github.io/openclaw-tech-selfmedia-workspace/
+      url: https://tobemagic.github.io/ai-magician-blog/
   copyright: 'Copyright © 2026 AI Magician | Powered by Hexo | Theme Bamboo'
   custom:
     - label: "Canonical source first, community mirrors second."

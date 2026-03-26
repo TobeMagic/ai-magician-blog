@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - ".github/workflows/hexo-pages.yml"
-      - "hexo-blog/**"
+      - "**"
   workflow_dispatch:
 
 permissions:
@@ -21,12 +21,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: hexo-blog
     env:
-      OPENCLAW_HEXO_CANONICAL_URL: https://tobemagic.github.io/openclaw-tech-selfmedia-workspace
-      HEXO_SITE_ROOT: /openclaw-tech-selfmedia-workspace/
+      OPENCLAW_HEXO_CANONICAL_URL: https://tobemagic.github.io/ai-magician-blog
+      HEXO_SITE_ROOT: /ai-magician-blog/
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,7 +33,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: hexo-blog/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -50,7 +47,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: hexo-blog/public
+          path: public
 
   deploy:
     environment:
