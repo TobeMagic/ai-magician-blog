@@ -67,33 +67,6 @@
   function initGitHubLogCalendar() {
     var calendar = document.querySelector('.github-calendar');
     if (!calendar) return;
-    var bio = document.getElementById('github-log-bio');
-    var repos = document.getElementById('github-log-repos');
-    var followers = document.getElementById('github-log-followers');
-    var following = document.getElementById('github-log-following');
-
-    function hydrateProfile() {
-      if (!bio || bio.getAttribute('data-loaded') === 'true') return;
-      fetch('https://api.github.com/users/TobeMagic')
-        .then(function(response) {
-          if (!response.ok) throw new Error('github profile unavailable');
-          return response.json();
-        })
-        .then(function(profile) {
-          bio.textContent = profile.bio || '持续写代码，也持续把值得留下的东西写清楚。';
-          repos.textContent = String(profile.public_repos || 0);
-          followers.textContent = String(profile.followers || 0);
-          following.textContent = String(profile.following || 0);
-          bio.setAttribute('data-loaded', 'true');
-        })
-        .catch(function() {
-          bio.textContent = '持续写代码，也持续把值得留下的东西写清楚。';
-          repos.textContent = '--';
-          followers.textContent = '--';
-          following.textContent = '--';
-        });
-    }
-
     function run() {
       if (typeof GitHubCalendar !== 'function') {
         setTimeout(run, 400);
@@ -106,7 +79,6 @@
         tooltips: true
       });
     }
-    hydrateProfile();
     run();
   }
   $(document).ready(initGitHubLogCalendar);

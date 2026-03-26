@@ -1,18 +1,3 @@
-<%
-  var postsData = site.posts && site.posts.data ? site.posts.data.slice() : [];
-  postsData.sort(function(a, b) {
-    return new Date(a.date) - new Date(b.date);
-  });
-  var firstPost = postsData[0];
-  var latestPost = postsData.length ? postsData.slice().sort(function(a, b) {
-    return new Date(b.updated || b.date) - new Date(a.updated || a.date);
-  })[0] : null;
-  var runtimeSeed = item.type.runtime.data === 'auto' && firstPost
-    ? (firstPost.date || new Date())
-    : (item.type.runtime.data || new Date());
-  var runtimeDate = new Date(runtimeSeed);
-  var latestUpdateValue = latestPost ? (latestPost.updated || latestPost.date) : new Date();
-%>
 <section class="widget side_webinfo">
   <%- partial('sideHeader', {item: item}) %>
   <div class='content'>
@@ -27,10 +12,10 @@
       <% if (item.type.runtime.on) { %>
         <div class="webinfo-item">
           <div><%= item.type.runtime.text %></div>
-          <div id="webinfo-runtime-count"></div>
+          <div id="webinfo-runtime-count" publish_date="03/24/2020 21:34:09"></div>
         </div>
         <script>
-          var BirthDay = new Date(new Date('<%= runtimeDate.toISOString() %>'));
+          var BirthDay = new Date(new Date('<%= item.type.runtime.data %>'));
           var today = new Date();
           var timeold = (today.getTime() - BirthDay.getTime());
           var daysold = Math.floor(timeold / (24 * 60 * 60 * 1000));
@@ -76,7 +61,7 @@
             <div id="last-update" style="display: none;"><%= new Date() %></div>
             <div id="last-update-show"><%- date(Date.now()) %> <%= item.type.lastupd.unit %></div>
           <% } else { %>
-            <div><%- date(latestUpdateValue, 'YYYY-MM-DD') %><% if (item.type.lastupd.unit) { %> <%= item.type.lastupd.unit %><% } %></div>
+            <div><%- date(Date.now()) %> <%= item.type.lastupd.unit %></div>
           <% } %>
         </div>
         <% if (item.type.lastupd.friendlyShow) { %>

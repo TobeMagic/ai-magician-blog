@@ -1,41 +1,3 @@
-widget_library:
-  - name: 恋爱时间
-    class_name: love-runtime-widget
-    id_name: love-runtime-widget
-    order: 0
-    icon: fas fa-heart
-    icon_color: "#e17b9c"
-    background: "rgba(255,252,250,0.98)"
-    html: |
-      <a class="love-runtime-card" href="/ai-magician-blog/love/">
-        <div class="love-runtime-avatars">
-          <div class="love-runtime-avatar">
-            <img src="/ai-magician-blog/medias/logo.png" alt="我">
-            <span>我</span>
-          </div>
-          <span class="love-runtime-heart"><i class="fas fa-heart"></i></span>
-          <div class="love-runtime-avatar">
-            <img src="/ai-magician-blog/medias/logo.png" alt="她">
-            <span>她</span>
-          </div>
-        </div>
-        <div class="love-runtime-copy">
-          <p class="love-runtime-title">从 2020 年 10 月 2 日开始</p>
-          <p class="love-runtime-days"><span id="love-runtime-days">0</span> 天</p>
-          <p class="love-runtime-desc">把喜欢过成日常，也把日常认真记下来。</p>
-        </div>
-      </a>
-      <script>
-        (function renderLoveRuntime() {
-          var target = document.getElementById('love-runtime-days');
-          if (!target) return;
-          var start = new Date('2020-10-02T00:00:00+08:00');
-          var now = new Date();
-          var days = Math.max(0, Math.floor((now.getTime() - start.getTime()) / 86400000));
-          target.textContent = String(days);
-        })();
-      </script>
-
 home_widget:
   - name: GitHub 日志
     class_name: github-log-widget
@@ -46,19 +8,7 @@ home_widget:
     background: "rgba(255,252,250,0.98)"
     html: |
       <div class="github-log-card">
-        <div class="github-log-head">
-          <img class="github-log-avatar" src="https://github.com/TobeMagic.png?size=120" alt="TobeMagic">
-          <div class="github-log-meta">
-            <strong class="github-log-name">TobeMagic</strong>
-            <span class="github-log-handle">@TobeMagic</span>
-            <p class="github-log-bio" id="github-log-bio">正在加载 GitHub 简介…</p>
-          </div>
-        </div>
-        <div class="github-log-stats">
-          <span><strong id="github-log-repos">--</strong><em>Repositories</em></span>
-          <span><strong id="github-log-followers">--</strong><em>Followers</em></span>
-          <span><strong id="github-log-following">--</strong><em>Following</em></span>
-        </div>
+        <p>这里保留我最近持续在做的事。不是为了打卡，而是为了留下长期积累的痕迹。</p>
         <div class="calendar github-calendar">GitHub contribution calendar is loading…</div>
         <p class="github-log-links">
           <a href="https://github.com/TobeMagic" target="_blank" rel="external nofollow noopener noreferrer">GitHub 主页</a>

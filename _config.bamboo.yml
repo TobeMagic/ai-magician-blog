@@ -95,32 +95,32 @@ sidebar:
       type:
         article:
           on: true
-          text: 文章数目
+          text: 文章
           unit: 篇
         runtime:
           on: true
-          text: 已运行时间
-          data: auto
+          text: 在一起
+          data: 2026-03-26 00:00:00
           unit: 天
         wordcount:
-          on: true
-          text: 本站总字数
+          on: false
+          text: 字数
           unit: 字
         visitcounter:
           service: "busuanzi"
           siteuv:
             on: true
-            text: 本站访客数
+            text: 访客数
             unit: 人
           sitepv:
             on: true
-            text: 本站总访问量
+            text: 总访问量
             unit: 次
         lastupd:
           on: true
-          friendlyShow: false
-          text: 最后活动时间
-          unit: ""
+          friendlyShow: true
+          text: 更新
+          unit: 前
       counters:
         siteuv_offset: 521314
         sitepv_offset: 521314
@@ -426,7 +426,7 @@ prismjs:
   theme: tomorrow
 
 wordcount:
-  on: true
+  on: false
 
 import:
   link:
