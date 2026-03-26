@@ -5,21 +5,12 @@ menu:
   Archives:
     url: /archives
     icon: fas fa-box-archive
-  Tags:
-    url: /tags
-    icon: fas fa-tags
-  Categories:
-    url: /categories
-    icon: fas fa-folder-tree
-  Friends:
-    url: /friends
-    icon: fas fa-link
   About:
-    url: /about
-    icon: fas fa-user-astronaut
+    url: /about/
+    icon: fas fa-user
 
 Github:
-  on: true
+  on: false
   url: https://github.com/TobeMagic/ai-magician-blog
 
 logo: /medias/logo.png
@@ -31,24 +22,18 @@ sidebar:
     side_blogger:
       on: true
       avatar: /medias/logo.png
-      shape: rectangle
+      shape: circle
       url: /about/
       title: AI Magician
-      subtitle: OpenClaw 驱动的技术自媒体实验室
-      jinrishici: "让自动化替你搬砖，让内容真正留下来。"
-      background: "#ffffff"
+      subtitle: 欢迎你到来。
+      jinrishici: "谢谢你关注。我写代码，也写字。有缘常来。"
+      background: "rgba(255,252,250,0.98)"
       social:
         - icon: fas fa-rss
           url: /atom.xml
-        - icon: fas fa-globe
-          url: https://tobemagic.github.io/ai-magician-blog/
-        - icon: fab fa-github
-          url: https://github.com/TobeMagic/ai-magician-blog
-        - icon: fas fa-pen-nib
-          url: https://tobemagic.github.io/ai-magician-blog/archives
     side_toc:
       on: true
-      background: "#ffffff"
+      background: "rgba(255,252,250,0.98)"
       order: -1
       header:
         icon: fas fa-list
@@ -58,14 +43,14 @@ sidebar:
       collapseDepth: 20
     side_category:
       on: true
-      background: "#ffffff"
+      background: "rgba(255,252,250,0.98)"
       header:
         icon: fas fa-folder-open
         title: 文章分类
         url: /categories/
     side_tagcloud:
       on: true
-      background: "#ffffff"
+      background: "rgba(255,252,250,0.98)"
       header:
         icon: fas fa-tags
         title: 热门标签
@@ -73,11 +58,11 @@ sidebar:
       min_font: 14
       max_font: 24
       color: true
-      start_color: "#ff784f"
-      end_color: "#0f172a"
+      start_color: "#e6849d"
+      end_color: "#7b4158"
     side_recent_post:
       on: true
-      background: "#ffffff"
+      background: "rgba(255,252,250,0.98)"
       limit: 6
       sort: update
       header:
@@ -90,75 +75,44 @@ sidebar:
       format: YYYY-MM
       timeOrder: -1
       limit: 12
-      background: "#ffffff"
+      background: "rgba(255,252,250,0.98)"
       header:
         icon: fas fa-archive
         title: 归档
     side_webinfo:
-      background: "#ffffff"
-      header:
-        icon: fas fa-chart-line
-        title: 站点信息
-      type:
-        article:
-          on: true
-          text: "文章数目："
-          unit: "篇"
-        runtime:
-          on: true
-          data: "2026/03/26"
-          text: "已运行时间："
-          unit: "天"
-        wordcount:
-          on: true
-          text: "本站总字数："
-          unit: "字"
-        visitcounter:
-          service: busuanzi
-          siteuv:
-            on: true
-            text: "本站访客数："
-            unit: "人"
-          sitepv:
-            on: true
-            text: "本站总访问量："
-            unit: "次"
-        lastupd:
-          on: true
-          friendlyShow: true
-          text: "最后活动时间："
-          unit: "日"
+      on: false
 
 preloader:
   on: true
-  type: 6
+  type: 3
 
 swiper:
   on: true
   showPrevNext: true
-  showIndicators: true
+  showIndicators: false
   autoplay: true
   loop: true
-  delay: 4500
-  effect: slide
+  delay: 5200
+  effect: fade
   textAnimated: fadeInDown
-  textDuration: 0.3s
-  textDelay: 0.1s
+  textDuration: 0.45s
+  textDelay: 0.15s
   readMoreBtn: true
-  bubble: true
+  bubble: false
   wave: true
-  defaultImg: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80
+  defaultImg: https://images.unsplash.com/photo-1518568740560-333139a27e72?auto=format&fit=crop&w=1800&q=80
   defaultTile: AI Magician
   defaultDesc:
-    - 用 OpenClaw 打通技术自媒体自动化链路
-    - 用 Hexo 作为 canonical 主站，公众号和社区作为分发末端
-  defaultLeftBtnText: 阅读归档
+    - 想在这个信息过剩的时代，只写真正值得写的东西。
+    - 技术、钱，以及那些在教科书和成功学之间的空白地带。
+    - 慢慢找，慢慢写。
+  defaultLeftBtnText: 开始阅读
   defaultLeftBtnLink: /archives/
-  defaultRightBtnText: 浏览源码
-  defaultRightBtnLink: https://github.com/TobeMagic/ai-magician-blog
+  defaultRightBtnText: 认识我
+  defaultRightBtnLink: /about/
   defaultDescTyped: true
-  defaultDescTypedSpeed: 80
-  defaultDescTypedBackSpeed: 30
+  defaultDescTypedSpeed: 58
+  defaultDescTypedBackSpeed: 24
   defaultDescTypedLoop: true
   defaultAddToSwiper: true
   full: true
@@ -172,7 +126,7 @@ fancybox:
   js: https://unpkg.com/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js
 
 busuanzi:
-  on: true
+  on: false
 
 show_count: true
 
@@ -180,15 +134,15 @@ donate:
   on: false
 
 sharejs:
-  on: true
+  on: false
   sites: twitter,facebook,wechat,weibo,linkedin,douban,qq,qzone
 
 cursor_effect:
-  on: true
+  on: false
   type: explosion
 
 weather:
-  on: true
+  on: false
 
 search:
   on: true
@@ -205,7 +159,7 @@ inputEffects:
   on: true
 
 ribbon:
-  on: true
+  on: false
 
 live2d:
   on: false
@@ -215,7 +169,7 @@ snow:
   onlyPc: false
 
 sakura:
-  on: true
+  on: false
   onlyPc: false
 
 homePostImgsPosition:
@@ -223,7 +177,7 @@ homePostImgsPosition:
   left: true
 
 lantern:
-  on: true
+  on: false
   left: AI
   right: Lab
 
@@ -249,31 +203,27 @@ music:
   on: false
 
 copyright:
-  on: true
+  on: false
 
 motto:
-  on: true
-  title: 主站定位
-  content: 主站负责沉淀，分发负责扩散，自动化负责把两者连起来。
+  on: false
+  title: 
+  content: 
   background: 'linear-gradient(135deg, rgba(255,120,79,0.88), rgba(17,24,39,0.9))'
 
 notice:
-  on: true
+  on: false
   seamless: false
-  title: 公告
+  title: 最近
   background: 'linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,239,232,0.92))'
   list:
-    - title: "# Hexo 已升级为 canonical 主站"
-      date: "2026-03-26"
-      url: /archives/
-      color: "#ff784f"
-    - title: "# OpenClaw 将从这里向公众号和社区分发"
+    - title: "# 欢迎你到来"
       date: "2026-03-26"
       url: /about/
-      color: "#0f172a"
+      color: "#d86a8c"
 
 topArticle:
-  on: true
+  on: false
   background: "rgba(255,255,255,1)"
 
 typed:
@@ -366,38 +316,34 @@ dark:
 
 color_scheme:
   common:
-    theme: "rgba(255,120,79,0.88)"
-    inner: "#ffffff"
-    link: "#ff784f"
-    postListBackground: "rgba(255,255,255,1)"
-    bgFloor: 'linear-gradient(180deg, rgba(255,248,242,1), rgba(255,233,219,0.92))'
-    headerMenuBackgroundColor: "rgba(255,255,255,0.85)"
+    theme: "rgba(225,123,156,0.9)"
+    inner: "#fffaf7"
+    link: "#d86a8c"
+    postListBackground: "rgba(255,250,247,0.98)"
+    bgFloor: 'linear-gradient(180deg, rgba(255,249,245,1), rgba(255,239,235,0.95))'
+    headerMenuBackgroundColor: "rgba(255,250,247,0.82)"
   post:
-    fontFamily: "-apple-system,BlinkMacSystemFont,PingFang SC,Segoe UI,Microsoft YaHei,Hiragino Sans GB,Helvetica Neue,Helvetica,Arial,sans-serif"
+    fontFamily: "\"LXGW WenKai\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", sans-serif"
     contentOpacity: "1"
     bgImg: ""
     bgImgDelay: 180000
     bgImgTransition: fade
   footer:
-    background: "rgba(17,24,39,0.92)"
-    aHover: "#ff784f"
-    fish: true
+    background: "rgba(53,37,46,0.92)"
+    aHover: "#f7a7bf"
+    fish: false
 
 site_footer:
   layout: [social, copyright, custom]
   social:
     - icon: fas fa-rss
       url: /atom.xml
-    - icon: fab fa-github
-      url: https://github.com/TobeMagic/ai-magician-blog
-    - icon: fas fa-pen-nib
-      url: https://tobemagic.github.io/ai-magician-blog/
-  copyright: 'Copyright © 2026 AI Magician | Powered by Hexo | Theme Bamboo'
+  copyright: 'Copyright © 2026 AI Magician'
   custom:
-    - label: "Canonical source first, community mirrors second."
+    - label: "慢慢找，慢慢写。"
 
 mermaid:
-  on: true
+  on: false
   theme: default
   cdn: https://unpkg.com/mermaid/dist/mermaid.min.js
 
@@ -420,10 +366,13 @@ prismjs:
   theme: tomorrow
 
 wordcount:
-  on: true
+  on: false
 
 import:
   link:
+    - '<link rel="preconnect" href="https://fonts.googleapis.com">'
+    - '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+    - '<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">'
   script:
     - ""
 
