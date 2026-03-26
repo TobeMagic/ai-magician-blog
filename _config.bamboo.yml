@@ -104,16 +104,16 @@ swiper:
   defaultTile: AI Magician
   defaultDesc:
     - 想在这个信息过剩的时代，只写真正值得写的东西。
-    - 技术、钱，以及那些在教科书和成功学之间的空白地带。
-    - 慢慢找，慢慢写。
+    - 技术、财富、认知，以及那些在教科书和成功学之间的空白地带。
+    - 那里住着大多数真实的问题，也住着少数真正有用的答案。慢慢找，慢慢写。
   defaultLeftBtnText: 开始阅读
-  defaultLeftBtnLink: /archives/
+  defaultLeftBtnLink: /ai-magician-blog/archives/
   defaultRightBtnText: 认识我
-  defaultRightBtnLink: /about/
+  defaultRightBtnLink: /ai-magician-blog/about/
   defaultDescTyped: true
-  defaultDescTypedSpeed: 58
+  defaultDescTypedSpeed: 52
   defaultDescTypedBackSpeed: 24
-  defaultDescTypedLoop: true
+  defaultDescTypedLoop: false
   defaultAddToSwiper: true
   full: true
 
