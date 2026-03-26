@@ -3,7 +3,7 @@ title: 欢迎你到来
 date: 2026-03-26 20:00:00
 layout: post
 top: true
-swiper: true
+swiper: false
 tags:
   - 写作
   - 技术

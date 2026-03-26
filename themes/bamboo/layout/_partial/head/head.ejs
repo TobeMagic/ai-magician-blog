@@ -53,6 +53,17 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <%- partial('_partial/analytics/google-analytics') %>
   <title><%= pageTitle %></title>
+  <% var metaImage = url_for('/medias/logo.png'); %>
+  <meta property="og:title" content="<%= pageTitle %>">
+  <meta property="og:site_name" content="<%= config.title %>">
+  <meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>">
+  <meta property="og:url" content="<%= config.url ? config.url + url_for(page.path || '/') : url_for(page.path || '/') %>">
+  <meta property="og:image" content="<%= config.url ? config.url + metaImage : metaImage %>">
+  <meta property="og:description" content="<%= page.description || config.description || config.subtitle || config.title %>">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="<%= pageTitle %>">
+  <meta name="twitter:description" content="<%= page.description || config.description || config.subtitle || config.title %>">
+  <meta name="twitter:image" content="<%= config.url ? config.url + metaImage : metaImage %>">
 
   <link rel="icon" type="<%= iconType %>" href="<%- url_for(theme.favicon) %>">
   <link rel="stylesheet" href="<%= theme.CDN.iconfont %>">
