@@ -1,0 +1,433 @@
+menu:
+  Home:
+    url: /
+    icon: fas fa-house
+  Archives:
+    url: /archives
+    icon: fas fa-box-archive
+  Tags:
+    url: /tags
+    icon: fas fa-tags
+  Categories:
+    url: /categories
+    icon: fas fa-folder-tree
+  Friends:
+    url: /friends
+    icon: fas fa-link
+  About:
+    url: /about
+    icon: fas fa-user-astronaut
+
+Github:
+  on: true
+  url: https://github.com/TobeMagic/openclaw-tech-selfmedia-workspace
+
+logo: /medias/logo.png
+favicon: /favicon.ico
+
+sidebar:
+  position: left
+  widget_library:
+    side_blogger:
+      on: true
+      avatar: /medias/logo.png
+      shape: rectangle
+      url: /about/
+      title: AI Magician
+      subtitle: OpenClaw 驱动的技术自媒体实验室
+      jinrishici: "让自动化替你搬砖，让内容真正留下来。"
+      background: "#ffffff"
+      social:
+        - icon: fas fa-rss
+          url: /atom.xml
+        - icon: fas fa-globe
+          url: https://tobemagic.github.io/openclaw-tech-selfmedia-workspace/
+        - icon: fab fa-github
+          url: https://github.com/TobeMagic/openclaw-tech-selfmedia-workspace
+        - icon: fas fa-pen-nib
+          url: https://tobemagic.github.io/openclaw-tech-selfmedia-workspace/archives
+    side_toc:
+      on: true
+      background: "#ffffff"
+      order: -1
+      header:
+        icon: fas fa-list
+        title: 本文目录
+      before: number
+      heading: h2, h3, h4
+      collapseDepth: 20
+    side_category:
+      on: true
+      background: "#ffffff"
+      header:
+        icon: fas fa-folder-open
+        title: 文章分类
+        url: /categories/
+    side_tagcloud:
+      on: true
+      background: "#ffffff"
+      header:
+        icon: fas fa-tags
+        title: 热门标签
+        url: /tags/
+      min_font: 14
+      max_font: 24
+      color: true
+      start_color: "#ff784f"
+      end_color: "#0f172a"
+    side_recent_post:
+      on: true
+      background: "#ffffff"
+      limit: 6
+      sort: update
+      header:
+        icon: fas fa-book
+        title: 最新文章
+        url: /archives/
+    side_archives:
+      on: true
+      type: monthly
+      format: YYYY-MM
+      timeOrder: -1
+      limit: 12
+      background: "#ffffff"
+      header:
+        icon: fas fa-archive
+        title: 归档
+    side_webinfo:
+      background: "#ffffff"
+      header:
+        icon: fas fa-chart-line
+        title: 站点信息
+      type:
+        article:
+          on: true
+          text: "文章数目："
+          unit: "篇"
+        runtime:
+          on: true
+          data: "2026/03/26"
+          text: "已运行时间："
+          unit: "天"
+        wordcount:
+          on: true
+          text: "本站总字数："
+          unit: "字"
+        visitcounter:
+          service: busuanzi
+          siteuv:
+            on: true
+            text: "本站访客数："
+            unit: "人"
+          sitepv:
+            on: true
+            text: "本站总访问量："
+            unit: "次"
+        lastupd:
+          on: true
+          friendlyShow: true
+          text: "最后活动时间："
+          unit: "日"
+
+preloader:
+  on: true
+  type: 6
+
+swiper:
+  on: true
+  showPrevNext: true
+  showIndicators: true
+  autoplay: true
+  loop: true
+  delay: 4500
+  effect: slide
+  textAnimated: fadeInDown
+  textDuration: 0.3s
+  textDelay: 0.1s
+  readMoreBtn: true
+  bubble: true
+  wave: true
+  defaultImg: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80
+  defaultTile: AI Magician
+  defaultDesc:
+    - 用 OpenClaw 打通技术自媒体自动化链路
+    - 用 Hexo 作为 canonical 主站，公众号和社区作为分发末端
+  defaultLeftBtnText: 阅读归档
+  defaultLeftBtnLink: /archives/
+  defaultRightBtnText: 浏览源码
+  defaultRightBtnLink: https://github.com/TobeMagic/openclaw-tech-selfmedia-workspace
+  defaultDescTyped: true
+  defaultDescTypedSpeed: 80
+  defaultDescTypedBackSpeed: 30
+  defaultDescTypedLoop: true
+  defaultAddToSwiper: true
+  full: true
+
+goTop:
+  on: true
+
+fancybox:
+  on: true
+  css: https://unpkg.com/@fancyapps/ui@5.0/dist/fancybox/fancybox.css
+  js: https://unpkg.com/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js
+
+busuanzi:
+  on: true
+
+show_count: true
+
+donate:
+  on: false
+
+sharejs:
+  on: true
+  sites: twitter,facebook,wechat,weibo,linkedin,douban,qq,qzone
+
+cursor_effect:
+  on: true
+  type: explosion
+
+weather:
+  on: true
+
+search:
+  on: true
+
+postNav:
+  on: true
+
+copy:
+  on: true
+  title: 成功
+  content: 代码已复制，请保留原始来源。
+
+inputEffects:
+  on: true
+
+ribbon:
+  on: true
+
+live2d:
+  on: false
+
+snow:
+  on: false
+  onlyPc: false
+
+sakura:
+  on: true
+  onlyPc: false
+
+homePostImgsPosition:
+  on: true
+  left: true
+
+lantern:
+  on: true
+  left: AI
+  right: Lab
+
+scrollreveal:
+  on: true
+  js: https://unpkg.com/scrollreveal@4.0.6/dist/scrollreveal.min.js
+  distance: 100px
+  duration: 500
+  interval: 50
+  scale: 1
+  origin: bottom
+  easing: ease
+
+googleAnalytics:
+  on: false
+
+baiduAnalytics:
+  on: false
+
+baiduPush: true
+
+music:
+  on: false
+
+copyright:
+  on: true
+
+motto:
+  on: true
+  title: 主站定位
+  content: 主站负责沉淀，分发负责扩散，自动化负责把两者连起来。
+  background: 'linear-gradient(135deg, rgba(255,120,79,0.88), rgba(17,24,39,0.9))'
+
+notice:
+  on: true
+  seamless: false
+  title: 公告
+  background: 'linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,239,232,0.92))'
+  list:
+    - title: "# Hexo 已升级为 canonical 主站"
+      date: "2026-03-26"
+      url: /archives/
+      color: "#ff784f"
+    - title: "# OpenClaw 将从这里向公众号和社区分发"
+      date: "2026-03-26"
+      url: /about/
+      color: "#0f172a"
+
+topArticle:
+  on: true
+  background: "rgba(255,255,255,1)"
+
+typed:
+  on: true
+  loop: false
+  showCursor: false
+  startDelay: 100
+  typeSpeed: 80
+  backSpeed: 35
+
+utterance:
+  on: false
+  repo:
+  theme:
+    light: github-light
+    dark: github-dark
+  issue_term: pathname
+  cdn: https://utteranc.es/client.js
+
+beaudar:
+  on: false
+
+twikoo:
+  on: false
+
+valine:
+  on: false
+
+gitalk:
+  on: false
+
+giscus:
+  on: false
+
+waline:
+  on: false
+
+livere:
+  on: false
+
+gitment:
+  on: false
+
+changyan:
+  on: false
+
+archive:
+  title: Archive
+  img: https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80
+  desc: 把可复用的技术现场写成长期资产。
+  full: true
+  video: ""
+  background: ""
+
+tag:
+  title: Tags
+  img: https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80
+  desc: 关键词会比时间线更快暴露你的方法论。
+  full: false
+  video: ""
+  background: ""
+
+tagDetail:
+  title: Tag
+  img: https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1600&q=80
+  desc: 单个标签页用于回看一个主题的完整积累。
+  full: false
+  video: ""
+  background: ""
+
+categories:
+  title: Categories
+  img: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80
+  desc: 按主题整理，而不是把内容留在时间流里。
+  full: false
+  video: ""
+  background: ""
+
+categoryDetail:
+  title: Category
+  img: https://images.unsplash.com/photo-1516321310764-8d3a7ffef2dd?auto=format&fit=crop&w=1600&q=80
+  desc: 每个分类都应该能独立支撑一个系列。
+  full: false
+  video: ""
+  background: ""
+
+dark:
+  on: true
+  default: false
+
+color_scheme:
+  common:
+    theme: "rgba(255,120,79,0.88)"
+    inner: "#ffffff"
+    link: "#ff784f"
+    postListBackground: "rgba(255,255,255,1)"
+    bgFloor: 'linear-gradient(180deg, rgba(255,248,242,1), rgba(255,233,219,0.92))'
+    headerMenuBackgroundColor: "rgba(255,255,255,0.85)"
+  post:
+    fontFamily: "-apple-system,BlinkMacSystemFont,PingFang SC,Segoe UI,Microsoft YaHei,Hiragino Sans GB,Helvetica Neue,Helvetica,Arial,sans-serif"
+    contentOpacity: "1"
+    bgImg: ""
+    bgImgDelay: 180000
+    bgImgTransition: fade
+  footer:
+    background: "rgba(17,24,39,0.92)"
+    aHover: "#ff784f"
+    fish: true
+
+site_footer:
+  layout: [social, copyright, custom]
+  social:
+    - icon: fas fa-rss
+      url: /atom.xml
+    - icon: fab fa-github
+      url: https://github.com/TobeMagic/openclaw-tech-selfmedia-workspace
+    - icon: fas fa-pen-nib
+      url: https://tobemagic.github.io/openclaw-tech-selfmedia-workspace/
+  copyright: 'Copyright © 2026 AI Magician | Powered by Hexo | Theme Bamboo'
+  custom:
+    - label: "Canonical source first, community mirrors second."
+
+mermaid:
+  on: true
+  theme: default
+  cdn: https://unpkg.com/mermaid/dist/mermaid.min.js
+
+pjax:
+  on: true
+  animation: circle
+  animationColor: "#ff784f"
+  cacheBust: false
+  timeout: 5000
+  banUrl: []
+
+lazyload:
+  enable: true
+  js: https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js
+  onlypost: false
+  loadingImg: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=320&q=60
+  blurIn: true
+
+prismjs:
+  theme: tomorrow
+
+wordcount:
+  on: true
+
+import:
+  link:
+  script:
+    - ""
+
+imgs:
+  - https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80
+  - https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80
+  - https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80
