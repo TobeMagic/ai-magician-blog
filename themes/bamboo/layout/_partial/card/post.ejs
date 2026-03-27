@@ -19,6 +19,11 @@ var hashCode = function (str) {
       var img = 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/ada660a8c596431983dddd411a12f2b3.jpg!sswm';
       var imgs = theme.imgs;
       var isTextLeftCard = !(i % 2 == 0 && theme.homePostImgsPosition.on) && !(theme.homePostImgsPosition.on === false && theme.homePostImgsPosition.left);
+      var titleSource = (post.title || '').trim();
+      var titleLimit = isTextLeftCard ? 30 : 48;
+      var titlePreview = titleSource.length > titleLimit
+        ? titleSource.slice(0, titleLimit).trim() + '...'
+        : titleSource;
       var summarySource = strip_html(post.excerpt || post.content || '').replace(/\s+/g, ' ').trim();
       var summaryLimit = isTextLeftCard ? 68 : 88;
       var summaryPreview = summarySource.length > summaryLimit
@@ -37,7 +42,7 @@ var hashCode = function (str) {
             <span class="post-time"><%- date(post.date, "YYYY-MM-DD") %></span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+            <a class="post-title-link" href="<%- url_for(post.path) %>"><%= titlePreview %></a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
