@@ -10,7 +10,7 @@ widget_library:
       <a class="love-runtime-card" href="/ai-magician-blog/love/">
         <div class="love-runtime-avatars">
           <div class="love-runtime-avatar">
-            <img src="/ai-magician-blog/medias/logo.png" alt="我">
+            <img src="/ai-magician-blog/medias/portrait.png" alt="我">
             <span>我</span>
           </div>
           <span class="love-runtime-heart"><i class="fas fa-heart"></i></span>
