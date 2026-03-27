@@ -291,7 +291,7 @@ typed:
   backSpeed: 35
 
 utterance:
-  on: true
+  on: false
   repo: TobeMagic/ai-magician-blog
   theme:
     light: github-light
@@ -300,7 +300,17 @@ utterance:
   cdn: https://utteranc.es/client.js
 
 beaudar:
-  on: false
+  on: true
+  repo: TobeMagic/ai-magician-blog
+  issue-term: pathname
+  issue-number:
+  branch: main
+  position: top
+  order: desc
+  theme:
+    light: github-light
+    dark: github-dark
+  label: 评论区
 
 twikoo:
   on: false
@@ -390,7 +400,7 @@ color_scheme:
     fish: false
 
 site_footer:
-  layout: [busuanzi, social, custom, copyright]
+  layout: [custom, busuanzi, social, copyright]
   social:
     - icon: fab fa-github
       url: https://github.com/TobeMagic
@@ -400,7 +410,7 @@ site_footer:
       url: https://tobemagic.github.io/ai-magician-blog/medias/wechat-qrcode-white.png
   copyright: 'Copyright © 2026 AI Magician'
   custom:
-    - label: "慢慢找，慢慢写。"
+    - label: "月色温柔，风也温柔。"
 
 mermaid:
   on: false
@@ -433,10 +443,8 @@ import:
     - '<link rel="preconnect" href="https://fonts.googleapis.com">'
     - '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
     - '<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">'
-    - '<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css">'
     - '<style>.social.fab.fa-qq.flat-btn{display:none!important;}</style>'
-  script:
-    - '<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>'
+  script: []
 
 imgs:
   - https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80

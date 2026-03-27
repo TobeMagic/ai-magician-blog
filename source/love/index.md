@@ -2,9 +2,9 @@
 title: 恋爱墙
 layout: post
 comments: false
-description: 用 talk-card 的形式记录和她在一起之后的琐碎时刻。
+description: 用官方内置的 talk-card，把我们一路走来的纪念节点慢慢留住。
 ---
 
-支持通过本地 `json` 生成 `talk-card`，这里用来记录我们一路走来的那些小事。
+这里不写大道理，只留下那些值得被重新想起的日子。
 
 {% getTalkOnline /ai-magician-blog/love/love-wall.json %}

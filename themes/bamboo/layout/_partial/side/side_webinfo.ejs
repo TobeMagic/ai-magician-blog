@@ -140,17 +140,36 @@
       var source = document.getElementById(sourceId);
       var target = document.getElementById(targetId);
       if (!source || !target) return false;
+      if (target.dataset.offsetApplied === 'true') return true;
       var raw = String(source.textContent || "").replace(/[^\d]/g, "");
       if (!raw) return false;
       var base = Number(target.getAttribute("data-base") || "0");
-      var finalValue = Number(raw) + base;
+      var numeric = Number(raw);
+      var finalValue = numeric >= base ? numeric : numeric + base;
       target.textContent = Number.isFinite(finalValue) ? String(finalValue) : raw;
+      target.dataset.offsetApplied = 'true';
       return true;
     }
+    function applyFallback(targetId) {
+      var target = document.getElementById(targetId);
+      if (!target || target.dataset.offsetApplied === 'true') return;
+      var base = Number(target.getAttribute("data-base") || "0");
+      if (Number.isFinite(base) && base > 0) {
+        target.textContent = String(base);
+        target.dataset.offsetApplied = 'fallback';
+      }
+    }
+    var attempts = 0;
     function run() {
       var uvReady = copyWithOffset("busuanzi_value_site_uv", "busuanzi_value_site_uv_widget");
       var pvReady = copyWithOffset("busuanzi_value_site_pv", "busuanzi_value_site_pv_widget");
       if (!(uvReady && pvReady)) {
+        attempts += 1;
+        if (attempts >= 20) {
+          applyFallback("busuanzi_value_site_uv_widget");
+          applyFallback("busuanzi_value_site_pv_widget");
+          return;
+        }
         setTimeout(run, 600);
       }
     }

@@ -40,6 +40,7 @@ home_widget:
   - name: GitHub 日志
     class_name: github-log-widget
     id_name: github-log-widget
+    url: https://github.com/TobeMagic
     order: 1
     icon: fab fa-github
     icon_color: "#e17b9c"
@@ -47,8 +48,7 @@ home_widget:
     html: |
       <div class="github-log-card">
         <p>这里保留我最近持续在做的事。不是为了打卡，而是为了把长期积累留下痕迹。</p>
-        <div class="calendar github-calendar">GitHub contribution calendar is loading…</div>
-        <p class="github-log-links">
-          <a href="https://github.com/TobeMagic" target="_blank" rel="external nofollow noopener noreferrer">前往我的 GitHub 主页</a>
-        </p>
+        <a class="github-heatmap-link" href="https://github.com/TobeMagic" target="_blank" rel="external nofollow noopener noreferrer">
+          <img class="github-heatmap" src="https://ghchart.rshah.org/e17b9c/TobeMagic" alt="TobeMagic GitHub 热力图">
+        </a>
       </div>
