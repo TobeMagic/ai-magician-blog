@@ -136,6 +136,25 @@
 </section>
 <script>
   (function syncWidgetBusuanzi() {
+    var cacheKeyMap = {
+      busuanzi_value_site_uv_widget: "ai-magician-site-uv",
+      busuanzi_value_site_pv_widget: "ai-magician-site-pv"
+    };
+    function applyCached(targetId) {
+      var target = document.getElementById(targetId);
+      if (!target) return;
+      var key = cacheKeyMap[targetId];
+      var cached = key ? window.localStorage.getItem(key) : "";
+      if (cached && /^\d+$/.test(cached)) {
+        target.textContent = cached;
+        target.dataset.offsetApplied = 'cached';
+        return;
+      }
+      var base = Number(target.getAttribute("data-base") || "0");
+      if (Number.isFinite(base) && base > 0) {
+        target.textContent = String(base);
+      }
+    }
     function copyWithOffset(sourceId, targetId) {
       var source = document.getElementById(sourceId);
       var target = document.getElementById(targetId);
@@ -148,6 +167,10 @@
       var finalValue = numeric >= base ? numeric : numeric + base;
       target.textContent = Number.isFinite(finalValue) ? String(finalValue) : raw;
       target.dataset.offsetApplied = 'true';
+      var key = cacheKeyMap[targetId];
+      if (key && Number.isFinite(finalValue)) {
+        window.localStorage.setItem(key, String(finalValue));
+      }
       return true;
     }
     function applyFallback(targetId) {
@@ -160,6 +183,8 @@
       }
     }
     var attempts = 0;
+    applyCached("busuanzi_value_site_uv_widget");
+    applyCached("busuanzi_value_site_pv_widget");
     function run() {
       var uvReady = copyWithOffset("busuanzi_value_site_uv", "busuanzi_value_site_uv_widget");
       var pvReady = copyWithOffset("busuanzi_value_site_pv", "busuanzi_value_site_pv_widget");

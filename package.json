@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Canonical Hexo Bamboo blog for AI Magician.",
   "scripts": {
-    "prepare-config": "node ./tools/write-runtime-config.mjs",
+    "prepare-config": "node ./tools/fetch-github-contributions.mjs && node ./tools/write-runtime-config.mjs",
     "clean": "node ./tools/run-hexo.mjs clean",
     "build": "npm run prepare-config && node ./tools/run-hexo.mjs clean && node ./tools/run-hexo.mjs generate",
     "server": "npm run prepare-config && node ./tools/run-hexo.mjs server",

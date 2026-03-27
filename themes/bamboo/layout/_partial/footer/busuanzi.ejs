@@ -10,6 +10,25 @@
 </div>
 <script>
   (function offsetBusuanziCounters() {
+    var cacheKeyMap = {
+      busuanzi_value_site_pv: "ai-magician-site-pv",
+      busuanzi_value_site_uv: "ai-magician-site-uv"
+    };
+    function applyCached(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var key = cacheKeyMap[id];
+      var cached = key ? window.localStorage.getItem(key) : "";
+      if (cached && /^\d+$/.test(cached)) {
+        el.textContent = cached;
+        el.dataset.offsetApplied = 'cached';
+        return;
+      }
+      var base = Number(el.getAttribute("data-base") || "0");
+      if (Number.isFinite(base) && base > 0) {
+        el.textContent = String(base);
+      }
+    }
     function applyOffset(id) {
       var el = document.getElementById(id);
       if (!el) return false;
@@ -21,6 +40,10 @@
       var finalValue = numeric >= base ? numeric : numeric + base;
       el.textContent = Number.isFinite(finalValue) ? String(finalValue) : raw;
       el.dataset.offsetApplied = 'true';
+      var key = cacheKeyMap[id];
+      if (key && Number.isFinite(finalValue)) {
+        window.localStorage.setItem(key, String(finalValue));
+      }
       return true;
     }
     function applyFallback(id) {
@@ -33,6 +56,8 @@
       }
     }
     var attempts = 0;
+    applyCached("busuanzi_value_site_pv");
+    applyCached("busuanzi_value_site_uv");
     function run() {
       var pvReady = applyOffset("busuanzi_value_site_pv");
       var uvReady = applyOffset("busuanzi_value_site_uv");

@@ -49,6 +49,6 @@ home_widget:
       <div class="github-log-card">
         <p>这里保留我最近持续在做的事。不是为了打卡，而是为了把长期积累留下痕迹。</p>
         <a class="github-heatmap-link" href="https://github.com/TobeMagic" target="_blank" rel="external nofollow noopener noreferrer">
-          <img class="github-heatmap" src="https://ghchart.rshah.org/e17b9c/TobeMagic" alt="TobeMagic GitHub 热力图">
+          <img class="github-heatmap" src="/ai-magician-blog/medias/github-contributions.svg" alt="TobeMagic GitHub 热力图">
         </a>
       </div>
