@@ -173,6 +173,23 @@
       }
       return true;
     }
+    function syncFromCounterEvent(event) {
+      if (!event || !event.detail) return;
+      var sourceId = event.detail.id;
+      if (sourceId === "busuanzi_value_site_uv") {
+        copyWithOffset("busuanzi_value_site_uv", "busuanzi_value_site_uv_widget");
+      } else if (sourceId === "busuanzi_value_site_pv") {
+        copyWithOffset("busuanzi_value_site_pv", "busuanzi_value_site_pv_widget");
+      }
+    }
+    function watchSource(sourceId, targetId) {
+      var source = document.getElementById(sourceId);
+      if (!source || typeof MutationObserver === 'undefined') return;
+      var observer = new MutationObserver(function () {
+        copyWithOffset(sourceId, targetId);
+      });
+      observer.observe(source, { childList: true, characterData: true, subtree: true });
+    }
     function applyFallback(targetId) {
       var target = document.getElementById(targetId);
       if (!target || target.dataset.offsetApplied === 'true') return;
@@ -185,6 +202,9 @@
     var attempts = 0;
     applyCached("busuanzi_value_site_uv_widget");
     applyCached("busuanzi_value_site_pv_widget");
+    window.addEventListener('ai-magician-counter-update', syncFromCounterEvent);
+    watchSource("busuanzi_value_site_uv", "busuanzi_value_site_uv_widget");
+    watchSource("busuanzi_value_site_pv", "busuanzi_value_site_pv_widget");
     function run() {
       var uvReady = copyWithOffset("busuanzi_value_site_uv", "busuanzi_value_site_uv_widget");
       var pvReady = copyWithOffset("busuanzi_value_site_pv", "busuanzi_value_site_pv_widget");

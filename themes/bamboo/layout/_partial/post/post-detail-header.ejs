@@ -44,7 +44,7 @@
 
       <% if (post.categories && post.categories.length > 0) { %>
         <span class="post-detail-header_categories">
-          <i class="iconfont iconbookmark1"></i> <%= __('category') %>：
+          <i class="fas fa-bookmark" aria-hidden="true"></i> <%= __('category') %>：
           <% post.categories.map(function(category) { %>
             <a href="<%- url_for(category.path) %>" class="post-detail-header_category">
               <%- category.name %>
