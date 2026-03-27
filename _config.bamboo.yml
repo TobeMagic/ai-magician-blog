@@ -16,15 +16,15 @@ Github:
   on: false
   url: https://github.com/TobeMagic/ai-magician-blog
 
-logo: medias/logo.png
-favicon: /medias/logo.png
+logo: medias/portrait.png
+favicon: /medias/portrait.png
 
 sidebar:
   position: left
   widget_library:
     side_blogger:
       on: true
-      avatar: medias/logo.png
+      avatar: medias/portrait.png
       shape: circle
       url: /about/
       title: AI Magician
