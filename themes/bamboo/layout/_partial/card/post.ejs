@@ -18,8 +18,9 @@ var hashCode = function (str) {
     <%
       var img = 'https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/ada660a8c596431983dddd411a12f2b3.jpg!sswm';
       var imgs = theme.imgs;
+      var isTextLeftCard = !(i % 2 == 0 && theme.homePostImgsPosition.on) && !(theme.homePostImgsPosition.on === false && theme.homePostImgsPosition.left);
       var summarySource = strip_html(post.excerpt || post.content || '').replace(/\s+/g, ' ').trim();
-      var summaryLimit = 88;
+      var summaryLimit = isTextLeftCard ? 68 : 88;
       var summaryPreview = summarySource.length > summaryLimit
         ? summarySource.slice(0, summaryLimit).trim() + '...'
         : summarySource;
