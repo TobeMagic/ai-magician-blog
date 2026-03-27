@@ -159,14 +159,17 @@
       var source = document.getElementById(sourceId);
       var target = document.getElementById(targetId);
       if (!source || !target) return false;
-      if (target.dataset.offsetApplied === 'true') return true;
       var raw = String(source.textContent || "").replace(/[^\d]/g, "");
       if (!raw) return false;
       var base = Number(target.getAttribute("data-base") || "0");
       var numeric = Number(raw);
       var finalValue = numeric >= base ? numeric : numeric + base;
-      target.textContent = Number.isFinite(finalValue) ? String(finalValue) : raw;
+      var rendered = Number.isFinite(finalValue) ? String(finalValue) : raw;
+      if (target.textContent !== rendered) {
+        target.textContent = rendered;
+      }
       target.dataset.offsetApplied = 'true';
+      target.dataset.lastRaw = raw;
       var key = cacheKeyMap[targetId];
       if (key && Number.isFinite(finalValue)) {
         window.localStorage.setItem(key, String(finalValue));
