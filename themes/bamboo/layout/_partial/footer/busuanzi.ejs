@@ -40,22 +40,21 @@
     function applyOffset(id) {
       var el = document.getElementById(id);
       if (!el) return false;
+      if (el.dataset.offsetApplied === 'true') return true;
       var raw = String(el.textContent || "").replace(/[^\d]/g, "");
       if (!raw) return false;
+      if (el.dataset.lastRaw === raw && el.dataset.offsetApplied === 'true') return true;
       var base = Number(el.getAttribute("data-base") || "0");
       var numeric = Number(raw);
       var finalValue = numeric >= base ? numeric : numeric + base;
-      var rendered = Number.isFinite(finalValue) ? String(finalValue) : raw;
-      if (el.textContent !== rendered) {
-        el.textContent = rendered;
-      }
+      el.textContent = Number.isFinite(finalValue) ? String(finalValue) : raw;
       el.dataset.offsetApplied = 'true';
       el.dataset.lastRaw = raw;
       var key = cacheKeyMap[id];
       if (key && Number.isFinite(finalValue)) {
         window.localStorage.setItem(key, String(finalValue));
       }
-      dispatchUpdate(id, rendered);
+      dispatchUpdate(id, el.textContent);
       return true;
     }
     function applyFallback(id) {
