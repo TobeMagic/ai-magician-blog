@@ -62,25 +62,3 @@
 
 <!-- 轮播图标签 -->
 <%- partial('_partial/scripts/swiperTag') %>
-
-<script>
-  function initGitHubLogCalendar() {
-    var calendar = document.querySelector('.github-calendar');
-    if (!calendar) return;
-    function run() {
-      if (typeof GitHubCalendar !== 'function') {
-        setTimeout(run, 400);
-        return;
-      }
-      if (calendar.getAttribute('data-rendered') === 'true') return;
-      calendar.setAttribute('data-rendered', 'true');
-      GitHubCalendar('.github-calendar', 'TobeMagic', {
-        responsive: true,
-        tooltips: true
-      });
-    }
-    run();
-  }
-  $(document).ready(initGitHubLogCalendar);
-  document.addEventListener('pjax:complete', initGitHubLogCalendar);
-</script>

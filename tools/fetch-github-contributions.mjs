@@ -17,14 +17,39 @@ function fallbackSvg(reason = "GitHub heatmap unavailable") {
 </svg>`;
 }
 
-function buildSvg(entries) {
-  const cell = 10;
-  const gap = 3;
-  const left = 26;
-  const top = 16;
-  const width = left + 54 * (cell + gap) + 8;
-  const height = top + 7 * (cell + gap) + 8;
+function buildSvg({ entries, months, totalContributions }) {
+  const cell = 11;
+  const gap = 4;
+  const left = 34;
+  const top = 30;
+  const legendBottom = 28;
+  const cardPadding = 16;
+  const gridWidth = 53 * (cell + gap);
+  const gridHeight = 7 * (cell + gap) - gap;
+  const width = left + gridWidth + cardPadding;
+  const height = top + gridHeight + legendBottom + 34;
   const colors = ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"];
+  const weekdayLabels = [
+    { text: "Mon", row: 1 },
+    { text: "Wed", row: 3 },
+    { text: "Fri", row: 5 },
+  ];
+  const monthOffsets = new Set();
+  const monthLabels = (months || [])
+    .map((month) => {
+      const monthKey = `${month.year}-${String(new Date(`${month.firstDay}T00:00:00Z`).getUTCMonth() + 1).padStart(2, "0")}`;
+      const monthEntry = entries.find((entry) => entry.date.startsWith(monthKey));
+      if (!monthEntry || monthOffsets.has(monthEntry.week)) return "";
+      monthOffsets.add(monthEntry.week);
+      return `<text x="${left + monthEntry.week * (cell + gap)}" y="${top - 10}" fill="#57606a" font-size="10" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">${month.name}</text>`;
+    })
+    .join("\n");
+  const weekdayText = weekdayLabels
+    .map(
+      ({ text, row }) =>
+        `<text x="0" y="${top + row * (cell + gap) + cell - 1}" fill="#57606a" font-size="10" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">${text}</text>`,
+    )
+    .join("\n");
   const rects = entries
     .map(({ week, row, level, date, count }) => {
       const x = left + week * (cell + gap);
@@ -35,10 +60,24 @@ function buildSvg(entries) {
 </rect>`;
     })
     .join("\n");
+  const legendX = width - 144;
+  const legendY = top + gridHeight + 22;
+  const legend = colors
+    .map(
+      (color, index) =>
+        `<rect x="${legendX + 38 + index * 15}" y="${legendY - 9}" width="11" height="11" rx="2" fill="${color}" />`,
+    )
+    .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${user} GitHub contributions heatmap">
-  <rect width="${width}" height="${height}" rx="18" fill="#fff8fb"/>
+  <rect width="${width}" height="${height}" rx="16" fill="#ffffff"/>
+  <text x="0" y="12" fill="#24292f" font-size="13" font-weight="600" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">${totalContributions} contributions in the last year</text>
+  ${monthLabels}
+  ${weekdayText}
   ${rects}
+  <text x="${legendX}" y="${legendY}" fill="#57606a" font-size="10" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">Less</text>
+  ${legend}
+  <text x="${legendX + 118}" y="${legendY}" fill="#57606a" font-size="10" font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif">More</text>
 </svg>`;
 }
 
@@ -49,6 +88,12 @@ async function fetchGraphqlEntries() {
       user(login: $login) {
         contributionsCollection {
           contributionCalendar {
+            totalContributions
+            months {
+              name
+              year
+              firstDay
+            }
             weeks {
               contributionDays {
                 contributionCount
@@ -76,17 +121,22 @@ async function fetchGraphqlEntries() {
   });
   if (!response.ok) return [];
   const payload = await response.json();
-  const weeks = payload?.data?.user?.contributionsCollection?.contributionCalendar?.weeks;
-  if (!Array.isArray(weeks)) return [];
-  return weeks.flatMap((week, weekIndex) =>
-    (week.contributionDays || []).map((day) => ({
-      date: day.date,
-      level: ["NONE", "FIRST_QUARTILE", "SECOND_QUARTILE", "THIRD_QUARTILE", "FOURTH_QUARTILE"].indexOf(day.contributionLevel),
-      count: `${day.contributionCount} contribution${day.contributionCount === 1 ? "" : "s"}`,
-      week: weekIndex,
-      row: Number(day.weekday) || 0,
-    })),
-  );
+  const calendar = payload?.data?.user?.contributionsCollection?.contributionCalendar;
+  const weeks = calendar?.weeks;
+  if (!Array.isArray(weeks)) return null;
+  return {
+    totalContributions: Number(calendar?.totalContributions) || 0,
+    months: Array.isArray(calendar?.months) ? calendar.months : [],
+    entries: weeks.flatMap((week, weekIndex) =>
+      (week.contributionDays || []).map((day) => ({
+        date: day.date,
+        level: ["NONE", "FIRST_QUARTILE", "SECOND_QUARTILE", "THIRD_QUARTILE", "FOURTH_QUARTILE"].indexOf(day.contributionLevel),
+        count: `${day.contributionCount} contribution${day.contributionCount === 1 ? "" : "s"}`,
+        week: weekIndex,
+        row: Number(day.weekday) || 0,
+      })),
+    ),
+  };
 }
 
 async function fetchHtmlEntries() {
@@ -116,16 +166,35 @@ async function fetchHtmlEntries() {
     });
     index += 1;
   }
-  return entries;
+  const totals = html.match(/<h2[^>]*>\s*<span[^>]*>\s*([\d,]+)\s*<\/span>\s+contributions/i);
+  const months = [];
+  const monthSeen = new Set();
+  for (const entry of entries) {
+    const [year, month] = entry.date.split("-");
+    const key = `${year}-${month}`;
+    if (monthSeen.has(key)) continue;
+    monthSeen.add(key);
+    const date = new Date(`${entry.date}T00:00:00Z`);
+    months.push({
+      name: date.toLocaleString("en-US", { month: "short", timeZone: "UTC" }),
+      year: Number(year),
+      firstDay: entry.date,
+    });
+  }
+  return {
+    totalContributions: totals ? Number(totals[1].replace(/,/g, "")) : entries.filter((item) => !String(item.count).startsWith("0 ")).length,
+    months,
+    entries,
+  };
 }
 
 async function main() {
   try {
-    let entries = await fetchGraphqlEntries();
-    if (!entries.length) {
-      entries = await fetchHtmlEntries();
+    let data = await fetchGraphqlEntries();
+    if (!data?.entries?.length) {
+      data = await fetchHtmlEntries();
     }
-    const svg = entries.length ? buildSvg(entries) : fallbackSvg("GitHub heatmap parse failed");
+    const svg = data?.entries?.length ? buildSvg(data) : fallbackSvg("GitHub heatmap parse failed");
     mkdirSync(dirname(target), { recursive: true });
     writeFileSync(target, svg, "utf8");
   } catch (error) {

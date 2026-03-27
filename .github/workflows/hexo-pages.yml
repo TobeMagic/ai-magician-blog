@@ -24,7 +24,7 @@ jobs:
     env:
       OPENCLAW_HEXO_CANONICAL_URL: https://tobemagic.github.io/ai-magician-blog
       HEXO_SITE_ROOT: /ai-magician-blog/
-      GITHUB_HEATMAP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_HEATMAP_TOKEN: ${{ secrets.HEATMAP_PAT || github.token }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

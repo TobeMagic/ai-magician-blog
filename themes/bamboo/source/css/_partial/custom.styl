@@ -158,23 +158,31 @@
 .github-log-card
   display flex
   flex-direction column
-  gap 14px
+  gap 12px
   p
     margin 0
-    line-height 1.9
+    line-height 1.85
     color #6d5660
+    font-size .92rem
 
 .github-heatmap-link
   display block
-  border-radius 16px
+  border-radius 14px
   overflow hidden
-  background linear-gradient(180deg, rgba(248, 235, 240, .9), rgba(255, 251, 252, .96))
-  border 1px solid rgba(225, 123, 156, .18)
+  background #ffffff
+  border 1px solid rgba(208, 215, 222, .9)
+  box-shadow inset 0 1px 0 rgba(255,255,255,.75)
+  padding 12px
+  transition border-color .25s ease, box-shadow .25s ease
+  &:hover
+    border-color rgba(225, 123, 156, .4)
+    box-shadow 0 10px 24px rgba(185, 129, 149, .08)
 
 .github-heatmap
   display block
   width 100%
   height auto
+  background #ffffff
 
 .side_webinfo
   .content

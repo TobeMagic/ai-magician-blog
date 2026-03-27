@@ -47,8 +47,8 @@ home_widget:
     background: "rgba(255,252,250,0.98)"
     html: |
       <div class="github-log-card">
-        <p>这里保留我最近持续在做的事。不是为了打卡，而是为了把长期积累留下痕迹。</p>
-        <a class="github-heatmap-link" href="https://github.com/TobeMagic" target="_blank" rel="external nofollow noopener noreferrer">
+        <p>这里放我最近一年留下的提交热力图。比起热闹，我更在意那些慢慢积起来的痕迹。</p>
+        <a class="github-heatmap-link" href="https://github.com/TobeMagic" target="_blank" rel="external nofollow noopener noreferrer" aria-label="GitHub 日志">
           <img class="github-heatmap" src="/ai-magician-blog/medias/github-contributions.svg" alt="TobeMagic GitHub 热力图">
         </a>
       </div>
