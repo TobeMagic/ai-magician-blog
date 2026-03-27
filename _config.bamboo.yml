@@ -302,7 +302,7 @@ utterance:
 beaudar:
   on: true
   repo: TobeMagic/ai-magician-blog
-  issue-term: pathname
+  issue-term: title
   issue-number:
   branch: main
   position: top
