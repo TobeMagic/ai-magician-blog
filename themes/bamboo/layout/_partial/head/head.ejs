@@ -66,9 +66,7 @@
   <meta name="twitter:image" content="<%= config.url ? config.url + metaImage : metaImage %>">
 
   <link rel="icon" type="<%= iconType %>" href="<%- url_for(theme.favicon) %>">
-  <% if (theme.CDN && theme.CDN.iconfont) { %>
-    <link rel="stylesheet" href="<%= theme.CDN.iconfont %>">
-  <% } %>
+  <link rel="stylesheet" href="<%= theme.CDN.iconfont %>">
   <link href="<%= theme.CDN.fontAwesome %>" rel="stylesheet">
   <link href="<%- url_for('/js/swiper/swiper@5.4.1.min.css') %>" rel="stylesheet">
   
@@ -105,10 +103,8 @@
             }
         }
     </style>
-    <% if (theme.preloader && theme.preloader.on && theme.CDN && theme.CDN.paceJs && theme.CDN.paceCss) { %>
-      <script defer src="<%- url_for(theme.CDN.paceJs) %>"></script>
-      <link href="<%- url_for(theme.CDN.paceCss) %>" rel="stylesheet">
-    <% } %>
+    <script defer src="<%- url_for(theme.CDN.paceJs) %>"></script>
+    <link href="<%- url_for(theme.CDN.paceCss) %>" rel="stylesheet">
 
     <% if (theme.valine.on && page.comments !== false) { %>
         <script src="<%- url_for(theme.CDN.valine) %>"></script>

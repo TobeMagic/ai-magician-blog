@@ -14,13 +14,6 @@
       busuanzi_value_site_pv: "ai-magician-site-pv",
       busuanzi_value_site_uv: "ai-magician-site-uv"
     };
-    function dispatchUpdate(id, value) {
-      try {
-        window.dispatchEvent(new CustomEvent('ai-magician-counter-update', {
-          detail: { id: id, value: value }
-        }));
-      } catch (error) {}
-    }
     function applyCached(id) {
       var el = document.getElementById(id);
       if (!el) return;
@@ -29,7 +22,6 @@
       if (cached && /^\d+$/.test(cached)) {
         el.textContent = cached;
         el.dataset.offsetApplied = 'cached';
-        dispatchUpdate(id, cached);
         return;
       }
       var base = Number(el.getAttribute("data-base") || "0");
@@ -43,18 +35,15 @@
       if (el.dataset.offsetApplied === 'true') return true;
       var raw = String(el.textContent || "").replace(/[^\d]/g, "");
       if (!raw) return false;
-      if (el.dataset.lastRaw === raw && el.dataset.offsetApplied === 'true') return true;
       var base = Number(el.getAttribute("data-base") || "0");
       var numeric = Number(raw);
       var finalValue = numeric >= base ? numeric : numeric + base;
       el.textContent = Number.isFinite(finalValue) ? String(finalValue) : raw;
       el.dataset.offsetApplied = 'true';
-      el.dataset.lastRaw = raw;
       var key = cacheKeyMap[id];
       if (key && Number.isFinite(finalValue)) {
         window.localStorage.setItem(key, String(finalValue));
       }
-      dispatchUpdate(id, el.textContent);
       return true;
     }
     function applyFallback(id) {
@@ -64,22 +53,11 @@
       if (Number.isFinite(base) && base > 0) {
         el.textContent = String(base);
         el.dataset.offsetApplied = 'fallback';
-        dispatchUpdate(id, el.textContent);
       }
-    }
-    function watch(id) {
-      var el = document.getElementById(id);
-      if (!el || typeof MutationObserver === 'undefined') return;
-      var observer = new MutationObserver(function () {
-        applyOffset(id);
-      });
-      observer.observe(el, { childList: true, characterData: true, subtree: true });
     }
     var attempts = 0;
     applyCached("busuanzi_value_site_pv");
     applyCached("busuanzi_value_site_uv");
-    watch("busuanzi_value_site_pv");
-    watch("busuanzi_value_site_uv");
     function run() {
       var pvReady = applyOffset("busuanzi_value_site_pv");
       var uvReady = applyOffset("busuanzi_value_site_uv");

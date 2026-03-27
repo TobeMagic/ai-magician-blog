@@ -127,7 +127,7 @@ sidebar:
         sitepv_offset: 521314
 
 preloader:
-  on: false
+  on: true
   type: 3
 
 swiper:
@@ -144,7 +144,7 @@ swiper:
   readMoreBtn: true
   bubble: false
   wave: true
-  defaultImg: /medias/hero-home.webp
+  defaultImg: https://images.unsplash.com/photo-1518568740560-333139a27e72?auto=format&fit=crop&w=1800&q=80
   defaultTile: AI Magician
   defaultDesc:
     - 想在这个信息过剩的时代，只写真正值得写的东西。
@@ -166,8 +166,8 @@ goTop:
 
 fancybox:
   on: true
-  css: /vendor/fancybox/fancybox.css
-  js: /vendor/fancybox/fancybox.umd.js
+  css: https://unpkg.com/@fancyapps/ui@5.0/dist/fancybox/fancybox.css
+  js: https://unpkg.com/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js
 
 busuanzi:
   on: true
@@ -227,7 +227,7 @@ lantern:
 
 scrollreveal:
   on: true
-  js: /vendor/scrollreveal/scrollreveal.min.js
+  js: https://unpkg.com/scrollreveal@4.0.6/dist/scrollreveal.min.js
   distance: 100px
   duration: 500
   interval: 50
@@ -241,7 +241,7 @@ googleAnalytics:
 baiduAnalytics:
   on: false
 
-baiduPush: false
+baiduPush: true
 
 music:
   on: true
@@ -254,7 +254,7 @@ music:
   theme: '#e17b9c'
   loop: all
   order: list
-  preload: metadata
+  preload: auto
   volume: 0.7
   listFolded: true
   hideLrc: false
@@ -339,7 +339,7 @@ changyan:
 
 archive:
   title: Archive
-  img: /medias/archive-hero.webp
+  img: https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80
   desc: 把可复用的技术现场写成长期资产。
   full: true
   video: ""
@@ -347,7 +347,7 @@ archive:
 
 tag:
   title: Tags
-  img: /medias/tag-hero.webp
+  img: https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80
   desc: 关键词会比时间线更快暴露你的方法论。
   full: false
   video: ""
@@ -355,7 +355,7 @@ tag:
 
 tagDetail:
   title: Tag
-  img: /medias/tag-detail-hero.webp
+  img: https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1600&q=80
   desc: 单个标签页用于回看一个主题的完整积累。
   full: false
   video: ""
@@ -363,7 +363,7 @@ tagDetail:
 
 categories:
   title: Categories
-  img: /medias/category-hero.webp
+  img: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80
   desc: 按主题整理，而不是把内容留在时间流里。
   full: false
   video: ""
@@ -371,7 +371,7 @@ categories:
 
 categoryDetail:
   title: Category
-  img: /medias/category-detail-hero.webp
+  img: https://images.unsplash.com/photo-1516321310764-8d3a7ffef2dd?auto=format&fit=crop&w=1600&q=80
   desc: 每个分类都应该能独立支撑一个系列。
   full: false
   video: ""
@@ -429,9 +429,9 @@ pjax:
 
 lazyload:
   enable: true
-  js: /vendor/lazyload/lazyload.min.js
+  js: https://unpkg.com/vanilla-lazyload@17.1.0/dist/lazyload.min.js
   onlypost: false
-  loadingImg: /medias/loading-placeholder.webp
+  loadingImg: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=320&q=60
   blurIn: true
 
 prismjs:
@@ -442,35 +442,13 @@ wordcount:
 
 import:
   link:
+    - '<link rel="preconnect" href="https://fonts.googleapis.com">'
+    - '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+    - '<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">'
     - '<style>.social.fab.fa-qq.flat-btn{display:none!important;}</style>'
   script: []
 
 imgs:
-  - /medias/archive-hero.webp
-  - /medias/tag-hero.webp
-  - /medias/category-hero.webp
-
-cursor:
-  pointer: /medias/cursor/Horizontal.cur
-  default: /medias/cursor/Horizontal.cur
-
-CDN:
-  iconfont: ""
-  fontAwesome: /vendor/fontawesome/css/all.min.css
-  aplayer: /vendor/aplayer/aplayer.min.js
-  Meting: /vendor/meting/meting.min.js
-  ayuCss: /vendor/ayu/ayu.css
-  ayuJs: /vendor/ayu/ayu.umd.min.js
-  busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
-  paceJs: ""
-  paceCss: ""
-  typedJs: /vendor/typed/typed.min.js
-  tocbotJs: /js/tocbot/tocbot.min.js
-  tocbotCss: /js/tocbot/tocbot.css
-  jquery: /js/jquery3.5.1.js
-  vue: /js/vue2.6.11.js
-
-tag_plugins:
-  swiper:
-    css: /vendor/swiper6/swiper-bundle.min.css
-    js: /vendor/swiper6/swiper-bundle.min.js
+  - https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80
+  - https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80
+  - https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80

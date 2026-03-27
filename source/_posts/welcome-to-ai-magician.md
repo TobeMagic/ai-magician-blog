@@ -11,7 +11,6 @@ tags:
 categories:
   - 开场白
 description: 这是 AI Magician 的第一篇真正对外的文章。
-img: /medias/hero-home.webp
 ---
 
 欢迎你到来。
