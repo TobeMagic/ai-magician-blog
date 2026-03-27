@@ -172,3 +172,54 @@ $line-numbers
       .javascript .function
         color: highlight-purple
 
+  figure.highlight
+  pre:has(> code[class*="language-"])
+    margin: 1.35rem 0
+    border: 1px solid rgba(207, 195, 204, 0.85)
+    border-radius: 18px
+    background: linear-gradient(180deg, rgba(251, 245, 248, 0.98) 0, rgba(255, 255, 255, 0.98) 38px)
+    box-shadow: 0 14px 34px rgba(126, 98, 112, 0.12)
+    overflow: hidden
+    &:before
+      content: ''
+      display: block
+      width: 52px
+      height: 12px
+      margin: 12px 0 0 14px
+      border-radius: 999px
+      background: radial-gradient(circle at 6px 6px, #ff6b6b 0, #ff6b6b 4px, transparent 4.5px), radial-gradient(circle at 26px 6px, #ffd166 0, #ffd166 4px, transparent 4.5px), radial-gradient(circle at 46px 6px, #6bcf8d 0, #6bcf8d 4px, transparent 4.5px)
+
+  figure.highlight
+    pre
+      padding: 16px 18px 18px
+      overflow-x: auto
+      -webkit-overflow-scrolling: touch
+    .gutter
+      display: none
+    .gutter + .code pre
+      padding: 16px 18px 18px
+
+  pre:has(> code[class*="language-"])
+    > code[class*="language-"]
+      display: block
+      padding: 16px 18px 18px
+      background: transparent
+      overflow-x: auto
+      -webkit-overflow-scrolling: touch
+
+@media (max-width: 768px)
+  .post
+    figure.highlight
+    pre:has(> code[class*="language-"])
+      border-radius: 16px
+      margin: 1rem 0
+      &:before
+        margin: 10px 0 0 12px
+    figure.highlight
+      pre
+      .gutter + .code pre
+        padding: 14px 16px 16px
+    pre:has(> code[class*="language-"])
+      > code[class*="language-"]
+        padding: 14px 16px 16px
+
