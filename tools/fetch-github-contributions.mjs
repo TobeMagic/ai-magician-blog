@@ -2,6 +2,10 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 
 const user = process.env.GITHUB_HEATMAP_USER?.trim() || "TobeMagic";
+const token =
+  process.env.GITHUB_HEATMAP_TOKEN?.trim() ||
+  process.env.GITHUB_TOKEN?.trim() ||
+  "";
 const target = resolve("source/medias/github-contributions.svg");
 
 function fallbackSvg(reason = "GitHub heatmap unavailable") {
@@ -38,32 +42,88 @@ function buildSvg(entries) {
 </svg>`;
 }
 
+async function fetchGraphqlEntries() {
+  if (!token) return [];
+  const query = `
+    query($login: String!) {
+      user(login: $login) {
+        contributionsCollection {
+          contributionCalendar {
+            weeks {
+              contributionDays {
+                contributionCount
+                contributionLevel
+                date
+                weekday
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+  const response = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `bearer ${token}`,
+      "Content-Type": "application/json",
+      "User-Agent": "ai-magician-blog-heatmap",
+    },
+    body: JSON.stringify({
+      query,
+      variables: { login: user },
+    }),
+  });
+  if (!response.ok) return [];
+  const payload = await response.json();
+  const weeks = payload?.data?.user?.contributionsCollection?.contributionCalendar?.weeks;
+  if (!Array.isArray(weeks)) return [];
+  return weeks.flatMap((week, weekIndex) =>
+    (week.contributionDays || []).map((day) => ({
+      date: day.date,
+      level: ["NONE", "FIRST_QUARTILE", "SECOND_QUARTILE", "THIRD_QUARTILE", "FOURTH_QUARTILE"].indexOf(day.contributionLevel),
+      count: `${day.contributionCount} contribution${day.contributionCount === 1 ? "" : "s"}`,
+      week: weekIndex,
+      row: Number(day.weekday) || 0,
+    })),
+  );
+}
+
+async function fetchHtmlEntries() {
+  const response = await fetch(`https://github.com/users/${encodeURIComponent(user)}/contributions`, {
+    headers: {
+      "User-Agent": "ai-magician-blog-heatmap",
+      Accept: "text/html",
+    },
+  });
+  const html = await response.text();
+  const pattern =
+    /<td[^>]*data-date="([^"]+)"[^>]*data-level="([^"]+)"[^>]*>([\s\S]*?)<\/td>\s*<tool-tip[\s\S]*?>([^<]+)<\/tool-tip>/g;
+  const entries = [];
+  let index = 0;
+  for (const match of html.matchAll(pattern)) {
+    const date = match[1];
+    const level = match[2];
+    const tooltip = match[4].replace(/\s+/g, " ").trim();
+    const countMatch = tooltip.match(/^(.+?) on /);
+    const count = countMatch ? countMatch[1] : tooltip;
+    entries.push({
+      date,
+      level,
+      count,
+      week: Math.floor(index / 7),
+      row: index % 7,
+    });
+    index += 1;
+  }
+  return entries;
+}
+
 async function main() {
   try {
-    const response = await fetch(`https://github.com/users/${encodeURIComponent(user)}/contributions`, {
-      headers: {
-        "User-Agent": "ai-magician-blog-heatmap",
-        Accept: "text/html",
-      },
-    });
-    const html = await response.text();
-    const pattern = /<td[^>]*data-date="([^"]+)"[^>]*data-level="([^"]+)"[^>]*>([\s\S]*?)<\/td>\s*<tool-tip[\s\S]*?>([^<]+)<\/tool-tip>/g;
-    const entries = [];
-    let index = 0;
-    for (const match of html.matchAll(pattern)) {
-      const date = match[1];
-      const level = match[2];
-      const tooltip = match[4].replace(/\s+/g, " ").trim();
-      const countMatch = tooltip.match(/^(.+?) on /);
-      const count = countMatch ? countMatch[1] : tooltip;
-      entries.push({
-        date,
-        level,
-        count,
-        week: Math.floor(index / 7),
-        row: index % 7,
-      });
-      index += 1;
+    let entries = await fetchGraphqlEntries();
+    if (!entries.length) {
+      entries = await fetchHtmlEntries();
     }
     const svg = entries.length ? buildSvg(entries) : fallbackSvg("GitHub heatmap parse failed");
     mkdirSync(dirname(target), { recursive: true });
