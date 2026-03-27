@@ -184,6 +184,69 @@
   height auto
   background #ffffff
 
+.social-qrcode-trigger
+  position relative
+  display inline-flex
+  align-items center
+  justify-content center
+  cursor pointer
+
+.social-qrcode-popover
+  position absolute
+  left 50%
+  bottom calc(100% + 14px)
+  transform translateX(-50%)
+  display flex
+  flex-direction column
+  align-items center
+  gap 8px
+  min-width 164px
+  padding 12px
+  border-radius 16px
+  background rgba(255, 252, 250, .98)
+  border 1px solid rgba(225, 123, 156, .18)
+  box-shadow 0 14px 34px rgba(96, 72, 84, .12)
+  opacity 0
+  visibility hidden
+  pointer-events none
+  transition opacity .22s ease, transform .22s ease, visibility .22s ease
+  z-index 40
+  &:after
+    content ''
+    position absolute
+    left 50%
+    bottom -8px
+    width 14px
+    height 14px
+    background rgba(255, 252, 250, .98)
+    border-right 1px solid rgba(225, 123, 156, .18)
+    border-bottom 1px solid rgba(225, 123, 156, .18)
+    transform translateX(-50%) rotate(45deg)
+  img
+    display block
+    width 140px
+    height 140px
+    object-fit contain
+    border-radius 12px
+    background #fff
+  .social-qrcode-title
+    font-size .86rem
+    font-weight 600
+    color #7b5060
+
+.social-qrcode-trigger:hover .social-qrcode-popover,
+.social-qrcode-trigger:focus .social-qrcode-popover,
+.social-qrcode-trigger:focus-within .social-qrcode-popover
+  opacity 1
+  visibility visible
+  transform translateX(-50%) translateY(-4px)
+
+.footer .social-qrcode-popover
+  bottom calc(100% + 18px)
+
+.footer .social-qrcode-trigger
+  color inherit
+
 .side_webinfo
   .content
     overflow visible

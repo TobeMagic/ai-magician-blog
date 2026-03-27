@@ -28,7 +28,19 @@
     <% if (item.social && item.social.length > 0) { %>
       <div class="social-wrapper">
         <% (item.social||[]).forEach(function(value){ %>
-          <% if (value.url && (value.icon || value.img || value.avatar)) { %>
+          <% if (value.qrcode && (value.icon || value.img || value.avatar)) { %>
+            <span class="social social-qrcode-trigger <%- value.icon %> flat-btn" tabindex="0" role="button" aria-label="<%- value.label || '微信公众号' %>">
+              <% if (value.img) { %>
+                <img src="<%- value.img %>"/>
+              <% } else if (value.avatar) { %>
+                <img src="<%- url_for(value.avatar) %>" style="border-radius:120px"/>
+              <% } %>
+              <span class="social-qrcode-popover">
+                <span class="social-qrcode-title"><%- value.label || '微信公众号' %></span>
+                <img no-lazy src="<%- url_for(value.qrcode) %>" alt="<%- value.label || '微信公众号二维码' %>"/>
+              </span>
+            </span>
+          <% } else if (value.url && (value.icon || value.img || value.avatar)) { %>
             <a href="<%= url_for(value.url) %>"
               class="social <%- value.icon %> flat-btn"
               target="_blank"
