@@ -123,8 +123,8 @@ sidebar:
           text: 最后活动时间
           unit: ""
       counters:
-        siteuv_offset: 521314
-        sitepv_offset: 521314
+        siteuv_offset: 0
+        sitepv_offset: 0
 
 preloader:
   on: true
