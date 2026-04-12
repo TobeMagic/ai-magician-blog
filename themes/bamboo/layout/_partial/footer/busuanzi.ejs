@@ -1,76 +1,10 @@
 <!-- 不蒜子统计 -->
 <div class="footer-busuanzi">
   <span id="busuanzi_container_site_pv">
-        <i class="fas fa-eye" aria-hidden="true"></i><%= __('totalVisits') %>：<span id="busuanzi_value_site_pv" data-base="<%= theme.sidebar.widget_library.side_webinfo.counters.sitepv_offset || 0 %>"></span> <%= __('times') %>
+        <i class="fas fa-eye" aria-hidden="true"></i><%= __('totalVisits') %>：<span id="busuanzi_value_site_pv"></span> <%= __('times') %>
   </span>
   <span class="post-meta-divider">|</span>
   <span id="busuanzi_container_site_uv">
-        <i class="fas fa-users" aria-hidden="true"></i><%= __('numberVisitors') %>：<span id="busuanzi_value_site_uv" data-base="<%= theme.sidebar.widget_library.side_webinfo.counters.siteuv_offset || 0 %>"></span> <%= __('people') %>
+        <i class="fas fa-users" aria-hidden="true"></i><%= __('numberVisitors') %>：<span id="busuanzi_value_site_uv"></span> <%= __('people') %>
   </span>
 </div>
-<script>
-  (function offsetBusuanziCounters() {
-    var cacheKeyMap = {
-      busuanzi_value_site_pv: "ai-magician-site-pv",
-      busuanzi_value_site_uv: "ai-magician-site-uv"
-    };
-    function applyCached(id) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      var key = cacheKeyMap[id];
-      var cached = key ? window.localStorage.getItem(key) : "";
-      if (cached && /^\d+$/.test(cached)) {
-        el.textContent = cached;
-        el.dataset.offsetApplied = 'cached';
-        return;
-      }
-      var base = Number(el.getAttribute("data-base") || "0");
-      if (Number.isFinite(base) && base > 0) {
-        el.textContent = String(base);
-      }
-    }
-    function applyOffset(id) {
-      var el = document.getElementById(id);
-      if (!el) return false;
-      if (el.dataset.offsetApplied === 'true') return true;
-      var raw = String(el.textContent || "").replace(/[^\d]/g, "");
-      if (!raw) return false;
-      var base = Number(el.getAttribute("data-base") || "0");
-      var numeric = Number(raw);
-      var finalValue = numeric >= base ? numeric : numeric + base;
-      el.textContent = Number.isFinite(finalValue) ? String(finalValue) : raw;
-      el.dataset.offsetApplied = 'true';
-      var key = cacheKeyMap[id];
-      if (key && Number.isFinite(finalValue)) {
-        window.localStorage.setItem(key, String(finalValue));
-      }
-      return true;
-    }
-    function applyFallback(id) {
-      var el = document.getElementById(id);
-      if (!el || el.dataset.offsetApplied === 'true') return;
-      var base = Number(el.getAttribute("data-base") || "0");
-      if (Number.isFinite(base) && base > 0) {
-        el.textContent = String(base);
-        el.dataset.offsetApplied = 'fallback';
-      }
-    }
-    var attempts = 0;
-    applyCached("busuanzi_value_site_pv");
-    applyCached("busuanzi_value_site_uv");
-    function run() {
-      var pvReady = applyOffset("busuanzi_value_site_pv");
-      var uvReady = applyOffset("busuanzi_value_site_uv");
-      if (!(pvReady && uvReady)) {
-        attempts += 1;
-        if (attempts >= 20) {
-          applyFallback("busuanzi_value_site_pv");
-          applyFallback("busuanzi_value_site_uv");
-          return;
-        }
-        setTimeout(run, 600);
-      }
-    }
-    run();
-  })();
-</script>
