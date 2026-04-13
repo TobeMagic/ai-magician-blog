@@ -74,7 +74,7 @@ function wrapImageWithFancyBox() {
 	    .not('.getJsonTalk-api img')
 	    .each(function () {
 	      var $image = $(this);
-	      var imageCaption = normalizeImageCaption($image.attr("alt"));
+	      var imageCaption = "";
 	      var $imageWrapLink = $image.parent("a");
 	      var $linkWrapDiv = $imageWrapLink.parent("div");
       if ($imageWrapLink.length < 1) {
@@ -91,18 +91,18 @@ function wrapImageWithFancyBox() {
           .parent("div");
       }
 
+      imageCaption = resolveAdjacentBlockquoteCaption($linkWrapDiv);
       if (!imageCaption) {
-        imageCaption = resolveAdjacentBlockquoteCaption($linkWrapDiv);
+        imageCaption = normalizeImageCaption($image.attr("alt"));
       }
 
       $imageWrapLink.attr("data-fancybox", "images");
       if (imageCaption) {
         $imageWrapLink.attr("data-caption", imageCaption);
-        if (!$linkWrapDiv.hasClass('image-caption')) {
-          $linkWrapDiv.append(
-            '<span class="image-caption">' + imageCaption + "</span>"
-          );
-        }
+        $linkWrapDiv.find("> .image-caption").remove();
+        $linkWrapDiv.append(
+          '<span class="image-caption">' + imageCaption + "</span>"
+        );
       }
     });
   
