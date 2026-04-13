@@ -1,27 +1,27 @@
 ---
-layout: post
-title: 【小卷1.1 | LangGraph】LangGraph核心原理
-description: 2026 年春招，LangGraph 在大厂 Agent 岗位 JD 中的出现频率已超过 LangChain。本卷拆解 Graph 结构三要素、State
-  Schema 设计与动态路由逻辑，补齐面试必问的工程细节与易错点。
-tags:
-- LangGraph
-- Agent 面试
-- StateGraph
-- State 设计
-- 动态路由
-- 八股文
-- Agent
-- JD
-canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/12/小卷11-langgraphlanggraph核心原理/
-img: https://iili.io/BXJEUCl.png
-swiperImg: https://iili.io/BXJEUCl.png
-permalink: posts/2026/04/12/小卷11-langgraphlanggraph核心原理/
-date: '2026-04-12 10:47:00'
-updated: '2026-04-12 13:42:00'
-cover: https://iili.io/BXJEUCl.png
+layout: "post"
+article_page_id: "3400f85d-e690-8180-8c55-fec0a2ecb62e"
+title: "【小卷1.1 | LangGraph】LangGraph核心原理"
+description: "2026 年春招，LangGraph 在大厂 Agent 岗位 JD 中的出现频率已超过 LangChain。本卷拆解 Graph 结构三要素、State Schema 设计与动态路由逻辑，补齐面试必问的工程细节与易错点。"
 categories:
-- 小卷1.1
-- LangGraph
+  - "小卷1.1"
+  - "LangGraph"
+tags:
+  - "LangGraph"
+  - "Agent 面试"
+  - "StateGraph"
+  - "State 设计"
+  - "动态路由"
+  - "八股文"
+  - "Agent"
+  - "JD"
+canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/12/小卷11-langgraphlanggraph核心原理/"
+img: "https://iili.io/BXJEUCl.png"
+swiperImg: "https://iili.io/BXJEUCl.png"
+permalink: "posts/2026/04/12/小卷11-langgraphlanggraph核心原理/"
+date: "2026-04-12 10:47:00"
+updated: "2026-04-12 14:13:00"
+cover: "https://iili.io/BXJEUCl.png"
 ---
 
 2026 年春招，打开淘天、字节甚至 OpenAI 的 Agent 岗位 JD，LangGraph 的出现频率已经悄悄压过了 LangChain。面试官不再满足于问"会不会调 API"，而是直接在白板上画个圈："如果这个节点失败了，State 怎么回滚？循环怎么跳出？"只会背 Node 和 Edge 的定义，这一轮大概率挂在白板画图上。Agent 面试的基准线，已经从"会用 Chain"变成了"懂 Graph"。[1](https://www.nowcoder.com/discuss/871718560224112640)
@@ -54,7 +54,7 @@ LangGraph 的 Graph 结构包含三个核心要素，每个要素都有明确的
 
 相比 LangChain 的线性 Chain，LangGraph 的优势在于循环能力。Chain 是单次执行路径，遇到需要反复尝试或分支决策的场景，往往需要硬编码或复杂的嵌套。LangGraph 允许 Graph 在特定条件下回到之前的 Node，形成"思考-行动-观察"的闭环。
 
-![SVGDIAGRAM::正文图解 1](https://iili.io/BXcq0CP.png)
+![](https://iili.io/BX0rYMP.png)
 
 ### 面试里怎么压缩回答
 
@@ -144,4 +144,4 @@ LangGraph 更新较快，API 可能变动。建议在简历中注明你使用的
 
 ---
 
-![文末收口图](https://iili.io/qLIhGYg.png)
+![](https://iili.io/qLIhGYg.png)
