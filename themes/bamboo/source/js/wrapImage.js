@@ -18,6 +18,37 @@ function normalizeImageCaption(rawCaption) {
   return caption;
 }
 
+function findCaptionSourceBlock($imageWrapDiv) {
+  var $container = $imageWrapDiv.closest("p, figure, li");
+  if (!$container.length) {
+    $container = $imageWrapDiv.parent();
+  }
+  if (!$container.length) {
+    return $();
+  }
+  var containerText = String($container.clone().children().remove().end().text() || "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (containerText) {
+    return $();
+  }
+  var $next = $container.next();
+  if ($next.length && $next.is("blockquote")) {
+    return $next;
+  }
+  return $();
+}
+
+function resolveAdjacentBlockquoteCaption($imageWrapDiv) {
+  var $captionBlock = findCaptionSourceBlock($imageWrapDiv);
+  if (!$captionBlock.length) {
+    return "";
+  }
+  var caption = normalizeImageCaption($captionBlock.text());
+  $captionBlock.remove();
+  return caption;
+}
+
 /**
  * Wrap images with fancybox support.
  */
@@ -58,6 +89,10 @@ function wrapImageWithFancyBox() {
         $linkWrapDiv = $imageWrapLink
           .wrap('<div class="fancybox"></div>')
           .parent("div");
+      }
+
+      if (!imageCaption) {
+        imageCaption = resolveAdjacentBlockquoteCaption($linkWrapDiv);
       }
 
       $imageWrapLink.attr("data-fancybox", "images");
