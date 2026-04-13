@@ -1,23 +1,27 @@
 ---
-layout: "post"
-title: "【小卷1.1 | LangGraph】LangGraph核心原理"
-description: "2026 年春招，LangGraph 在大厂 Agent 岗位 JD 中的出现频率已超过 LangChain。本卷拆解 Graph 结构三要素、State Schema 设计与动态路由逻辑，补齐面试必问的工程细节与易错点。"
+layout: post
+title: 【小卷1.1 | LangGraph】LangGraph核心原理
+description: 2026 年春招，LangGraph 在大厂 Agent 岗位 JD 中的出现频率已超过 LangChain。本卷拆解 Graph 结构三要素、State
+  Schema 设计与动态路由逻辑，补齐面试必问的工程细节与易错点。
 tags:
-  - "LangGraph"
-  - "Agent 面试"
-  - "StateGraph"
-  - "State 设计"
-  - "动态路由"
-  - "八股文"
-  - "Agent"
-  - "JD"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/12/小卷11-langgraphlanggraph核心原理/"
-img: "https://iili.io/BXJEUCl.png"
-swiperImg: "https://iili.io/BXJEUCl.png"
-permalink: "posts/2026/04/12/小卷11-langgraphlanggraph核心原理/"
-date: "2026-04-12 10:47:00"
-updated: "2026-04-12 13:42:00"
-cover: "https://iili.io/BXJEUCl.png"
+- LangGraph
+- Agent 面试
+- StateGraph
+- State 设计
+- 动态路由
+- 八股文
+- Agent
+- JD
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/12/小卷11-langgraphlanggraph核心原理/
+img: https://iili.io/BXJEUCl.png
+swiperImg: https://iili.io/BXJEUCl.png
+permalink: posts/2026/04/12/小卷11-langgraphlanggraph核心原理/
+date: '2026-04-12 10:47:00'
+updated: '2026-04-12 13:42:00'
+cover: https://iili.io/BXJEUCl.png
+categories:
+- 小卷1.1
+- LangGraph
 ---
 
 2026 年春招，打开淘天、字节甚至 OpenAI 的 Agent 岗位 JD，LangGraph 的出现频率已经悄悄压过了 LangChain。面试官不再满足于问"会不会调 API"，而是直接在白板上画个圈："如果这个节点失败了，State 怎么回滚？循环怎么跳出？"只会背 Node 和 Edge 的定义，这一轮大概率挂在白板画图上。Agent 面试的基准线，已经从"会用 Chain"变成了"懂 Graph"。[1](https://www.nowcoder.com/discuss/871718560224112640)

@@ -146,15 +146,25 @@
       return true;
     }
     var attempts = 0;
+    function watchSource(sourceId, targetId) {
+      var source = document.getElementById(sourceId);
+      if (!source || typeof MutationObserver === "undefined") return;
+      var observer = new MutationObserver(function () {
+        copyValue(sourceId, targetId);
+      });
+      observer.observe(source, { childList: true, characterData: true, subtree: true });
+    }
+    watchSource("busuanzi_value_site_uv", "busuanzi_value_site_uv_widget");
+    watchSource("busuanzi_value_site_pv", "busuanzi_value_site_pv_widget");
     function run() {
       var uvReady = copyValue("busuanzi_value_site_uv", "busuanzi_value_site_uv_widget");
       var pvReady = copyValue("busuanzi_value_site_pv", "busuanzi_value_site_pv_widget");
       if (!(uvReady && pvReady)) {
         attempts += 1;
-        if (attempts >= 20) {
+        if (attempts >= 40) {
           return;
         }
-        setTimeout(run, 600);
+        setTimeout(run, 500);
       }
     }
     run();

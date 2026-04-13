@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "Apple 的防守反击：从 App Store 佣金下调到 AI PC 的供应链赌注"
-description: "Apple 在 2026 年初接连释放出两个关键信号：中国 App Store 佣金下调与 MacBook Neo 的押注。这并非单纯的让利或新品发布，而是服务收入增速放缓背景下的防守反击。"
+layout: post
+title: Apple 的防守反击：从 App Store 佣金下调到 AI PC 的供应链赌注
+description: Apple 在 2026 年初接连释放出两个关键信号：中国 App Store 佣金下调与 MacBook Neo 的押注。这并非单纯的让利或新品发布，而是服务收入增速放缓背景下的防守反击。
 tags:
-  - "Apple"
-  - "App Store 佣金"
-  - "AI PC"
-  - "MacBook Neo"
-  - "供应链"
-  - "技术投入"
-  - "App"
-  - "Store"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/apple-的防守反击从-app-store-佣金下调到-ai-pc-的供应链赌注/"
-permalink: "posts/2026/04/10/apple-的防守反击从-app-store-佣金下调到-ai-pc-的供应链赌注/"
-date: "2026-04-10 09:49:00"
-updated: "2026-04-10 09:50:00"
+- Apple
+- App Store 佣金
+- AI PC
+- MacBook Neo
+- 供应链
+- 技术投入
+- App
+- Store
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/apple-的防守反击从-app-store-佣金下调到-ai-pc-的供应链赌注/
+permalink: posts/2026/04/10/apple-的防守反击从-app-store-佣金下调到-ai-pc-的供应链赌注/
+date: '2026-04-10 09:49:00'
+updated: '2026-04-10 09:50:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 2026 年 3 月 15 日，Apple 正式对中国区 App Store 的佣金结构动刀。

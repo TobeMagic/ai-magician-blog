@@ -1,21 +1,24 @@
 ---
-layout: "post"
-title: "微信热议：AI工程师面试到底在问什么"
-description: "2026年AI工程师面试风向突变，从模型调参转向工程落地。"
+layout: post
+title: 微信热议：AI工程师面试到底在问什么
+description: 2026年AI工程师面试风向突变，从模型调参转向工程落地。
 tags:
-  - "AI工程师"
-  - "面试趋势"
-  - "系统设计"
-  - "职场情报"
-  - "求职准备"
-  - "人工智能"
-  - "程序员成长"
-  - "职场观察"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/11/微信热议ai工程师面试到底在问什么/"
-permalink: "posts/2026/04/11/微信热议ai工程师面试到底在问什么/"
-date: "2026-04-11 08:25:00"
-updated: "2026-04-11 08:35:00"
-cover: "https://iili.io/BM1A0Mu.png"
+- AI工程师
+- 面试趋势
+- 系统设计
+- 职场情报
+- 求职准备
+- 人工智能
+- 程序员成长
+- 职场观察
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/11/微信热议ai工程师面试到底在问什么/
+permalink: posts/2026/04/11/微信热议ai工程师面试到底在问什么/
+date: '2026-04-11 08:25:00'
+updated: '2026-04-11 08:35:00'
+cover: https://iili.io/BM1A0Mu.png
+categories:
+- 求职成长
+- 求职面试
 ---
 
 2026 年 4 月的一个周三下午，技术群里跳出一张截图，瞬间把昏昏欲睡的群聊炸醒了。

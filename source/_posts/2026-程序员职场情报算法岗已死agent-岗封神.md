@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "2026 程序员职场情报：算法岗已死，Agent 岗封神？"
-description: "本文深度拆解 2026 年春招职场情报，分析 AI 应用岗取代传统算法岗的趋势。通过字节面试复盘、AIGC 创业公司 Offer 权衡及后端+Agent 技术栈实操，为程序员提供 18 个月保质期内的职业转型建议。"
+layout: post
+title: 2026 程序员职场情报：算法岗已死，Agent 岗封神？
+description: 本文深度拆解 2026 年春招职场情报，分析 AI 应用岗取代传统算法岗的趋势。通过字节面试复盘、AIGC 创业公司 Offer 权衡及后端+Agent
+  技术栈实操，为程序员提供 18 个月保质期内的职业转型建议。
 tags:
-  - "AI Agent"
-  - "Tool Calling"
-  - "职场转型"
-  - "2026春招"
-  - "RAG"
-  - "字节跳动面试"
-  - "Agent"
-  - "AI"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/30/2026-程序员职场情报算法岗已死agent-岗封神/"
-permalink: "posts/2026/03/30/2026-程序员职场情报算法岗已死agent-岗封神/"
-date: "2026-03-30 00:40:00"
-updated: "2026-03-30 00:40:00"
+- AI Agent
+- Tool Calling
+- 职场转型
+- 2026春招
+- RAG
+- 字节跳动面试
+- Agent
+- AI
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/30/2026-程序员职场情报算法岗已死agent-岗封神/
+permalink: posts/2026/03/30/2026-程序员职场情报算法岗已死agent-岗封神/
+date: '2026-03-30 00:40:00'
+updated: '2026-03-30 00:40:00'
+categories:
+- AI工程
+- 面试八股
 ---
 
 Hello 大家好呀，我是计算机魔术师。

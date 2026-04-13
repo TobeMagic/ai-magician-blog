@@ -1,21 +1,24 @@
 ---
-layout: "post"
-title: "AI 面试八股文 Vol.3：Tool Calling 为什么总在一面被问到？"
-description: "本文从一面挂科真实案例切入，拆解 Tool Calling 的核心机制与工程边界。解析为何它成为区分调包侠与工程师的分水岭，并提供标准答案、追问应对及典型避坑指南。"
+layout: post
+title: AI 面试八股文 Vol.3：Tool Calling 为什么总在一面被问到？
+description: 本文从一面挂科真实案例切入，拆解 Tool Calling 的核心机制与工程边界。解析为何它成为区分调包侠与工程师的分水岭，并提供标准答案、追问应对及典型避坑指南。
 tags:
-  - "AI 面试"
-  - "Tool Calling"
-  - "大模型工程"
-  - "面试八股文"
-  - "后端开发"
-  - "AI"
-  - "Vol.3"
-  - "Tool"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/28/ai-面试八股文-vol3tool-calling-为什么总在一面被问到/"
-permalink: "posts/2026/03/28/ai-面试八股文-vol3tool-calling-为什么总在一面被问到/"
-date: "2026-03-28 04:42:00"
-updated: "2026-03-28 05:08:00"
-cover: "https://iili.io/qbuwij1.png"
+- AI 面试
+- Tool Calling
+- 大模型工程
+- 面试八股文
+- 后端开发
+- AI
+- Vol.3
+- Tool
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/28/ai-面试八股文-vol3tool-calling-为什么总在一面被问到/
+permalink: posts/2026/03/28/ai-面试八股文-vol3tool-calling-为什么总在一面被问到/
+date: '2026-03-28 04:42:00'
+updated: '2026-03-28 05:08:00'
+cover: https://iili.io/qbuwij1.png
+categories:
+- AI工程
+- 面试八股
 ---
 
 ## 为什么现在值得写

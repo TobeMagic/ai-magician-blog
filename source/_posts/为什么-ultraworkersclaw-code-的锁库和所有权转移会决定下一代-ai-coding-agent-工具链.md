@@ -1,21 +1,24 @@
 ---
-layout: "post"
-title: "为什么 ultraworkers/claw-code 的锁库和所有权转移，会决定下一代 AI Coding Agent 工具链？"
-description: "claw-code 项目 48 小时冲上 GitHub 136k Stars 后突然锁库，公告称“所有权转移”。"
+layout: post
+title: 为什么 ultraworkers/claw-code 的锁库和所有权转移，会决定下一代 AI Coding Agent 工具链？
+description: claw-code 项目 48 小时冲上 GitHub 136k Stars 后突然锁库，公告称“所有权转移”。
 tags:
-  - "claw-code"
-  - "AI Coding Agent"
-  - "干净室重实现"
-  - "开源工具链"
-  - "所有权转移"
-  - "Ultraworkers"
-  - "AI"
-  - "Coding"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/05/为什么-ultraworkersclaw-code-的锁库和所有权转移会决定下一代-ai-coding-agent-工具链/"
-permalink: "posts/2026/04/05/为什么-ultraworkersclaw-code-的锁库和所有权转移会决定下一代-ai-coding-agent-工具链/"
-date: "2026-04-05 09:56:00"
-updated: "2026-04-05 09:57:00"
-cover: "https://iili.io/BTnNYHg.png"
+- claw-code
+- AI Coding Agent
+- 干净室重实现
+- 开源工具链
+- 所有权转移
+- Ultraworkers
+- AI
+- Coding
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/05/为什么-ultraworkersclaw-code-的锁库和所有权转移会决定下一代-ai-coding-agent-工具链/
+permalink: posts/2026/04/05/为什么-ultraworkersclaw-code-的锁库和所有权转移会决定下一代-ai-coding-agent-工具链/
+date: '2026-04-05 09:56:00'
+updated: '2026-04-05 09:57:00'
+cover: https://iili.io/BTnNYHg.png
+categories:
+- 开源热点
+- 技术趋势
 ---
 
 先和你打个招呼，今天这篇想认真聊一个问题：为什么 ultraworkers/claw-code 的锁库和所有权转移。

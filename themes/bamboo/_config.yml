@@ -770,7 +770,7 @@ CDN:
   gitmentJs: https://unpkg.com/gitment@0.0.3/dist/gitment.browser.js
   gitalkCss: https://unpkg.com/gitalk@1.7.2/dist/gitalk.css
   gitalkJs: https://unpkg.com/gitalk@1.7.2/dist/gitalk.min.js
-  busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 不蒜子
+  busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # 不蒜子
   ayuCss: https://unpkg.com/v-plugs-ayu/lib/ayu.css
   ayuJs: https://unpkg.com/v-plugs-ayu/lib/ayu.umd.min.js
   copyRight: https://creativecommons.org/licenses/by-nc-nd/4.0/

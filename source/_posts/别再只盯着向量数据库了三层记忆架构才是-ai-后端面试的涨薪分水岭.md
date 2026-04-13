@@ -1,21 +1,24 @@
 ---
-layout: "post"
-title: "别再只盯着向量数据库了：三层记忆架构才是 AI 后端面试的“涨薪分水岭”"
-description: "本文深度解析了当前 AI 后端领域最前沿的“三层记忆架构”（Redis+Postgres+Vector），揭示了单一 RAG 模式在生产环境中的局限性。结合 Anthropic 的 MCP 协议，探讨了后端工程师如何从简单的接口调用转向复杂的状态工程，并提供了面试高频场景的应对思路与架构实战建议。"
+layout: post
+title: 别再只盯着向量数据库了：三层记忆架构才是 AI 后端面试的“涨薪分水岭”
+description: 本文深度解析了当前 AI 后端领域最前沿的“三层记忆架构”（Redis+Postgres+Vector），揭示了单一 RAG 模式在生产环境中的局限性。结合
+  Anthropic 的 MCP 协议，探讨了后端工程师如何从简单的接口调用转向复杂的状态工程，并提供了面试高频场景的应对思路与架构实战建议。
 tags:
-  - "AI Agent"
-  - "MCP 协议"
-  - "向量数据库"
-  - "后端架构"
-  - "RAG"
-  - "面试八股"
-  - "AI"
-  - "Redis+Postgres+Vector"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/30/别再只盯着向量数据库了三层记忆架构才是-ai-后端面试的涨薪分水岭/"
-permalink: "posts/2026/03/30/别再只盯着向量数据库了三层记忆架构才是-ai-后端面试的涨薪分水岭/"
-date: "2026-03-30 10:45:00"
-updated: "2026-03-30 10:49:00"
-cover: "https://iili.io/BJFuhIS.png"
+- AI Agent
+- MCP 协议
+- 向量数据库
+- 后端架构
+- RAG
+- 面试八股
+- AI
+- Redis+Postgres+Vector
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/30/别再只盯着向量数据库了三层记忆架构才是-ai-后端面试的涨薪分水岭/
+permalink: posts/2026/03/30/别再只盯着向量数据库了三层记忆架构才是-ai-后端面试的涨薪分水岭/
+date: '2026-03-30 10:45:00'
+updated: '2026-03-30 10:49:00'
+cover: https://iili.io/BJFuhIS.png
+categories:
+- 技术观察
 ---
 
 ## 架构评审现场：那个被“记忆”卡住的 Agent

@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "Agent 的「骚扰」工程：从失控到自愈的 Reflection Pattern 实战"
-description: "本文深度拆解 Agent 在生产环境中的“逻辑死循环”痛点，通过引入 Reflection Pattern（反思模式），详细讲解 Actor-Critic 架构设计、状态机流转及生产级熔断策略，帮助开发者构建具备自愈能力的智能体，告别无效的 Token 损耗。"
+layout: post
+title: Agent 的「骚扰」工程：从失控到自愈的 Reflection Pattern 实战
+description: 本文深度拆解 Agent 在生产环境中的“逻辑死循环”痛点，通过引入 Reflection Pattern（反思模式），详细讲解 Actor-Critic
+  架构设计、状态机流转及生产级熔断策略，帮助开发者构建具备自愈能力的智能体，告别无效的 Token 损耗。
 tags:
-  - "AI Agent"
-  - "Reflection Pattern"
-  - "LLM 逻辑死循环"
-  - "LangChain"
-  - "工程化实战"
-  - "Agent"
-  - "Reflection"
-  - "Pattern"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/30/agent-的骚扰工程从失控到自愈的-reflection-pattern-实战/"
-permalink: "posts/2026/03/30/agent-的骚扰工程从失控到自愈的-reflection-pattern-实战/"
-date: "2026-03-30 01:02:00"
-updated: "2026-03-30 01:02:00"
+- AI Agent
+- Reflection Pattern
+- LLM 逻辑死循环
+- LangChain
+- 工程化实战
+- Agent
+- Reflection
+- Pattern
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/30/agent-的骚扰工程从失控到自愈的-reflection-pattern-实战/
+permalink: posts/2026/03/30/agent-的骚扰工程从失控到自愈的-reflection-pattern-实战/
+date: '2026-03-30 01:02:00'
+updated: '2026-03-30 01:02:00'
+categories:
+- 技术观察
 ---
 
 Hello 大家好呀，我是计算机魔术师。凌晨两点的服务器告警，通常比前任的深夜短信更让人心惊肉跳。

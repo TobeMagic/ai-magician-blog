@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "macOS 的窗口管理，到底在教用户怎么用电脑？"
-description: "macOS 的窗口管理一直是个谜：最大化窗口四角透光，绿色按钮行为精神分裂，高效操作全靠隐藏技巧。本文从 HN 热门讨论出发，深挖 Apple 的「空间管理哲学」与现代生产力的冲突，并给出开发者生存指南。"
+layout: post
+title: macOS 的窗口管理，到底在教用户怎么用电脑？
+description: macOS 的窗口管理一直是个谜：最大化窗口四角透光，绿色按钮行为精神分裂，高效操作全靠隐藏技巧。本文从 HN 热门讨论出发，深挖 Apple
+  的「空间管理哲学」与现代生产力的冲突，并给出开发者生存指南。
 tags:
-  - "macOS"
-  - "窗口管理"
-  - "Rectangle"
-  - "UI 设计"
-  - "生产力工具"
-  - "HN"
-  - "Apple"
-  - "工程实践"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/28/macos-的窗口管理到底在教用户怎么用电脑/"
-permalink: "posts/2026/03/28/macos-的窗口管理到底在教用户怎么用电脑/"
-date: "2026-03-28 00:06:00"
-updated: "2026-03-28 00:07:00"
+- macOS
+- 窗口管理
+- Rectangle
+- UI 设计
+- 生产力工具
+- HN
+- Apple
+- 工程实践
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/28/macos-的窗口管理到底在教用户怎么用电脑/
+permalink: posts/2026/03/28/macos-的窗口管理到底在教用户怎么用电脑/
+date: '2026-03-28 00:06:00'
+updated: '2026-03-28 00:07:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 ## 为什么现在值得写

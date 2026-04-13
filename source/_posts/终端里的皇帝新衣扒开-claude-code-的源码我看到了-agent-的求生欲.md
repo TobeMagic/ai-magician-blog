@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "终端里的“皇帝新衣”：扒开 Claude Code 的源码，我看到了 Agent 的求生欲"
-description: "通过对 Anthropic 新发布的 Claude Code 命令行工具进行源码级拆解，揭示了顶级 AI Agent 并非仅靠模型智力，而是依赖极其严密的 System Prompt 约束与工程化防御机制。"
+layout: post
+title: 终端里的“皇帝新衣”：扒开 Claude Code 的源码，我看到了 Agent 的求生欲
+description: 通过对 Anthropic 新发布的 Claude Code 命令行工具进行源码级拆解，揭示了顶级 AI Agent 并非仅靠模型智力，而是依赖极其严密的
+  System Prompt 约束与工程化防御机制。
 tags:
-  - "Claude Code"
-  - "AI Agent"
-  - "源码拆解"
-  - "Prompt Engineering"
-  - "软件工程"
-  - "Claude"
-  - "Code"
-  - "Agent"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/31/终端里的皇帝新衣扒开-claude-code-的源码我看到了-agent-的求生欲/"
-permalink: "posts/2026/03/31/终端里的皇帝新衣扒开-claude-code-的源码我看到了-agent-的求生欲/"
-date: "2026-03-31 13:21:00"
-updated: "2026-03-31 13:21:00"
+- Claude Code
+- AI Agent
+- 源码拆解
+- Prompt Engineering
+- 软件工程
+- Claude
+- Code
+- Agent
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/31/终端里的皇帝新衣扒开-claude-code-的源码我看到了-agent-的求生欲/
+permalink: posts/2026/03/31/终端里的皇帝新衣扒开-claude-code-的源码我看到了-agent-的求生欲/
+date: '2026-03-31 13:21:00'
+updated: '2026-03-31 13:21:00'
+categories:
+- AI工程
+- 面试八股
 ---
 
 下午三点，阳光斜着打在机械键盘的侧边，你刚解决完一个诡异的内存溢出，正打算接杯咖啡。

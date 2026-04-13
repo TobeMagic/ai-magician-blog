@@ -57,7 +57,39 @@
 <%- partial('_partial/scripts/cursor_effect') %>
 
 <% if (theme.busuanzi.on) { %>
-  <script async src="<%- url_for(theme.CDN.busuanzi) %>" data-pjax></script>
+  <script>
+    (function ensureBusuanzi() {
+      var src = "<%- theme.CDN.busuanzi %>";
+      function hasValues() {
+        return [
+          "busuanzi_value_site_pv",
+          "busuanzi_value_site_uv",
+          "busuanzi_value_page_pv",
+        ].some(function (id) {
+          var node = document.getElementById(id);
+          return node && String(node.textContent || "").replace(/[^\d]/g, "");
+        });
+      }
+      function injectBusuanzi(force) {
+        if (!force && document.querySelector('script[data-busuanzi-loader]')) return;
+        var script = document.createElement("script");
+        script.async = true;
+        script.src = src + (src.indexOf("?") === -1 ? "?" : "&") + "ts=" + Date.now();
+        script.setAttribute("data-pjax", "");
+        script.setAttribute("data-busuanzi-loader", "true");
+        document.body.appendChild(script);
+      }
+      injectBusuanzi();
+      var retries = 0;
+      function retry() {
+        if (hasValues() || retries >= 8) return;
+        retries += 1;
+        injectBusuanzi(true);
+        setTimeout(retry, 3000);
+      }
+      setTimeout(retry, 2000);
+    })();
+  </script>
 <% } %>
 
 <!-- 轮播图标签 -->

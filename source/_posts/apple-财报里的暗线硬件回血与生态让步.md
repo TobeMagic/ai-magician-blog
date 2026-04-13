@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "Apple 财报里的暗线：硬件回血与生态让步"
-description: "2026 年 4 月 Apple 财报显示营收增长 16%，iPhone 17 需求激增，MacBook 出货量反弹。同时 App Store 中国佣金下调至 25%。"
+layout: post
+title: Apple 财报里的暗线：硬件回血与生态让步
+description: 2026 年 4 月 Apple 财报显示营收增长 16%，iPhone 17 需求激增，MacBook 出货量反弹。同时 App Store
+  中国佣金下调至 25%。
 tags:
-  - "Apple 财报"
-  - "iPhone 17"
-  - "App Store 降佣"
-  - "供应链"
-  - "M 系列芯片"
-  - "端侧 AI"
-  - "Apple"
-  - "iPhone"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/apple-财报里的暗线硬件回血与生态让步/"
-permalink: "posts/2026/04/10/apple-财报里的暗线硬件回血与生态让步/"
-date: "2026-04-10 10:23:00"
-updated: "2026-04-10 10:24:00"
+- Apple 财报
+- iPhone 17
+- App Store 降佣
+- 供应链
+- M 系列芯片
+- 端侧 AI
+- Apple
+- iPhone
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/apple-财报里的暗线硬件回血与生态让步/
+permalink: posts/2026/04/10/apple-财报里的暗线硬件回血与生态让步/
+date: '2026-04-10 10:23:00'
+updated: '2026-04-10 10:24:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 2026 年 4 月 10 日，Apple 投资者关系页面静悄悄地更新了最新一季的财报数据。

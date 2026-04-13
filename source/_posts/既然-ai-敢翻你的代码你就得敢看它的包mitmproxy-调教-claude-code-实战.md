@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "既然 AI 敢翻你的代码，你就得敢看它的包：mitmproxy 调教 Claude Code 实战"
-description: "面对 Claude Code 等 AI Agent 的黑盒操作，本文通过 mitmproxy 揭秘其底层通信逻辑。从证书替换原理到 Python 自动化脚本提取 Prompt，带你实战逆向 AI 的“心路历程”，重夺开发者对数字资产的控制权。"
+layout: post
+title: 既然 AI 敢翻你的代码，你就得敢看它的包：mitmproxy 调教 Claude Code 实战
+description: 面对 Claude Code 等 AI Agent 的黑盒操作，本文通过 mitmproxy 揭秘其底层通信逻辑。从证书替换原理到 Python
+  自动化脚本提取 Prompt，带你实战逆向 AI 的“心路历程”，重夺开发者对数字资产的控制权。
 tags:
-  - "mitmproxy"
-  - "Claude Code"
-  - "API 逆向"
-  - "AI Agent"
-  - "抓包实战"
-  - "网络安全"
-  - "AI"
-  - "Claude"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/29/既然-ai-敢翻你的代码你就得敢看它的包mitmproxy-调教-claude-code-实战/"
-permalink: "posts/2026/03/29/既然-ai-敢翻你的代码你就得敢看它的包mitmproxy-调教-claude-code-实战/"
-date: "2026-03-29 10:23:00"
-updated: "2026-03-29 12:37:00"
+- mitmproxy
+- Claude Code
+- API 逆向
+- AI Agent
+- 抓包实战
+- 网络安全
+- AI
+- Claude
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/29/既然-ai-敢翻你的代码你就得敢看它的包mitmproxy-调教-claude-code-实战/
+permalink: posts/2026/03/29/既然-ai-敢翻你的代码你就得敢看它的包mitmproxy-调教-claude-code-实战/
+date: '2026-03-29 10:23:00'
+updated: '2026-03-29 12:37:00'
+categories:
+- AI工程
+- 面试八股
 ---
 
 Hello 大家好呀，我是计算机魔术师。今天想和你聊聊那个最近在终端里风卷残云的“新同事”——Claude Code。

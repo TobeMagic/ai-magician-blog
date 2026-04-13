@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "从 Blackwell 到 Rubin：NVIDIA 正在怎么重写工程师的基础设施判断"
-description: "NVIDIA FY2026 营收突破 2159 亿美元，股价却从高点回落 20%。Rubin 架构全面转向“推理为王”，配合 200 亿美元收购 Groq，预示着 AI 算力成本结构正在重构。本文拆解这一变化对工程师基础设施决策的具体影响。"
+layout: post
+title: 从 Blackwell 到 Rubin：NVIDIA 正在怎么重写工程师的基础设施判断
+description: NVIDIA FY2026 营收突破 2159 亿美元，股价却从高点回落 20%。Rubin 架构全面转向“推理为王”，配合 200 亿美元收购
+  Groq，预示着 AI 算力成本结构正在重构。本文拆解这一变化对工程师基础设施决策的具体影响。
 tags:
-  - "NVIDIA"
-  - "Rubin架构"
-  - "Groq收购"
-  - "AI基础设施"
-  - "推理成本"
-  - "Blackwell"
-  - "Rubin"
-  - "FY2026"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/从-blackwell-到-rubinnvidia-正在怎么重写工程师的基础设施判断/"
-permalink: "posts/2026/04/10/从-blackwell-到-rubinnvidia-正在怎么重写工程师的基础设施判断/"
-date: "2026-04-10 17:52:00"
-updated: "2026-04-11 04:22:00"
+- NVIDIA
+- Rubin架构
+- Groq收购
+- AI基础设施
+- 推理成本
+- Blackwell
+- Rubin
+- FY2026
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/从-blackwell-到-rubinnvidia-正在怎么重写工程师的基础设施判断/
+permalink: posts/2026/04/10/从-blackwell-到-rubinnvidia-正在怎么重写工程师的基础设施判断/
+date: '2026-04-10 17:52:00'
+updated: '2026-04-11 04:22:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 2026 年 4 月的 GTC 之后，如果你还在只盯着 H100 的租用价格做预算，那这份预算表大概率下个季度就得作废。

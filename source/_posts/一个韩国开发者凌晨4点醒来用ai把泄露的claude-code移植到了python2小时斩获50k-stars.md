@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "一个韩国开发者凌晨4点醒来，用AI把泄露的Claude Code移植到了Python，2小时斩获50K Stars"
-description: "本文深度拆解了 GitHub 爆火工具 Claw-code。"
+layout: post
+title: 一个韩国开发者凌晨4点醒来，用AI把泄露的Claude Code移植到了Python，2小时斩获50K Stars
+description: 本文深度拆解了 GitHub 爆火工具 Claw-code。
 tags:
-  - "Claw-code"
-  - "Harness Engineering"
-  - "AI Agent"
-  - "代码重构"
-  - "AST"
-  - "开发者体验"
-  - "Stars"
-  - "GitHub"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/01/一个韩国开发者凌晨4点醒来用ai把泄露的claude-code移植到了python2小时斩获50k-stars/"
-permalink: "posts/2026/04/01/一个韩国开发者凌晨4点醒来用ai把泄露的claude-code移植到了python2小时斩获50k-stars/"
-date: "2026-04-01 00:17:00"
-updated: "2026-04-01 00:21:00"
+- Claw-code
+- Harness Engineering
+- AI Agent
+- 代码重构
+- AST
+- 开发者体验
+- Stars
+- GitHub
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/01/一个韩国开发者凌晨4点醒来用ai把泄露的claude-code移植到了python2小时斩获50k-stars/
+permalink: posts/2026/04/01/一个韩国开发者凌晨4点醒来用ai把泄露的claude-code移植到了python2小时斩获50k-stars/
+date: '2026-04-01 00:17:00'
+updated: '2026-04-01 00:21:00'
+categories:
+- AI工程
+- 面试八股
 ---
 
 周五下午四点半，正是摸鱼等下班的黄金时段，公司那个常年只有“订餐”和“周报提醒”的架构组群聊突然炸了。

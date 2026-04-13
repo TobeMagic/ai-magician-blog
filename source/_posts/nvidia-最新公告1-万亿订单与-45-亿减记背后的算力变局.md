@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "NVIDIA 最新公告：1 万亿订单与 45 亿减记背后的算力变局"
-description: "NVIDIA 最新公告显示，1 万亿美元订单与 45 亿美元 H20 减记并存，标志着 AI 基建从“淘金热”转向“ROI 时代”。"
+layout: post
+title: NVIDIA 最新公告：1 万亿订单与 45 亿减记背后的算力变局
+description: NVIDIA 最新公告显示，1 万亿美元订单与 45 亿美元 H20 减记并存，标志着 AI 基建从“淘金热”转向“ROI 时代”。
 tags:
-  - "NVIDIA"
-  - "AI 基础设施"
-  - "ROI"
-  - "Rubin 架构"
-  - "地缘政治"
-  - "H20"
-  - "AI"
-  - "人工智能"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/06/nvidia-最新公告1-万亿订单与-45-亿减记背后的算力变局/"
-permalink: "posts/2026/04/06/nvidia-最新公告1-万亿订单与-45-亿减记背后的算力变局/"
-date: "2026-04-06 14:25:00"
-updated: "2026-04-06 15:35:00"
+- NVIDIA
+- AI 基础设施
+- ROI
+- Rubin 架构
+- 地缘政治
+- H20
+- AI
+- 人工智能
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/06/nvidia-最新公告1-万亿订单与-45-亿减记背后的算力变局/
+permalink: posts/2026/04/06/nvidia-最新公告1-万亿订单与-45-亿减记背后的算力变局/
+date: '2026-04-06 14:25:00'
+updated: '2026-04-06 15:35:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 2026 年 4 月，GTC 大会刚结束不到一个月，Jensen Huang 在财报电话会上抛出的两个数字，让很多还在算计显卡预算的工程师心里一沉。

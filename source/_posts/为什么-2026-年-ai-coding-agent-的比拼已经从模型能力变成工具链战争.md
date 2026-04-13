@@ -1,20 +1,22 @@
 ---
-layout: "post"
-title: "为什么 2026 年 AI Coding Agent 的比拼，已经从模型能力变成工具链战争？"
-description: "2026 年，AI Coding Agent 的竞争焦点已从模型智力转向工具链控制权。"
+layout: post
+title: 为什么 2026 年 AI Coding Agent 的比拼，已经从模型能力变成工具链战争？
+description: 2026 年，AI Coding Agent 的竞争焦点已从模型智力转向工具链控制权。
 tags:
-  - "AI Coding Agent"
-  - "工具链"
-  - "SWE-bench"
-  - "Cursor"
-  - "AASB"
-  - "MCP"
-  - "AI"
-  - "Coding"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/05/为什么-2026-年-ai-coding-agent-的比拼已经从模型能力变成工具链战争/"
-permalink: "posts/2026/04/05/为什么-2026-年-ai-coding-agent-的比拼已经从模型能力变成工具链战争/"
-date: "2026-04-05 09:23:00"
-updated: "2026-04-05 09:24:00"
+- AI Coding Agent
+- 工具链
+- SWE-bench
+- Cursor
+- AASB
+- MCP
+- AI
+- Coding
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/05/为什么-2026-年-ai-coding-agent-的比拼已经从模型能力变成工具链战争/
+permalink: posts/2026/04/05/为什么-2026-年-ai-coding-agent-的比拼已经从模型能力变成工具链战争/
+date: '2026-04-05 09:23:00'
+updated: '2026-04-05 09:24:00'
+categories:
+- 技术观察
 ---
 
 先问候一声，这篇我们认真聊聊为什么 2026 年 AI Codi。

@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "Apple IR 页面更新：藏在产品列表里的 HC 风向标"
-description: "距离 Apple Q2 财报发布还有 20 天，IR 页面已悄然更新。MacBook Neo 与 Apple Intelligence 的标签揭示了端侧算力的战略重心，iPhone 17 在中国的热销数据反驳了外企撤退论。"
+layout: post
+title: Apple IR 页面更新：藏在产品列表里的 HC 风向标
+description: 距离 Apple Q2 财报发布还有 20 天，IR 页面已悄然更新。MacBook Neo 与 Apple Intelligence 的标签揭示了端侧算力的战略重心，iPhone
+  17 在中国的热销数据反驳了外企撤退论。
 tags:
-  - "Apple财报"
-  - "端侧AI"
-  - "HC风向"
-  - "资本开支"
-  - "技术投入"
-  - "Apple"
-  - "IR"
-  - "HC"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/apple-ir-页面更新藏在产品列表里的-hc-风向标/"
-permalink: "posts/2026/04/10/apple-ir-页面更新藏在产品列表里的-hc-风向标/"
-date: "2026-04-10 12:25:00"
-updated: "2026-04-10 12:30:00"
+- Apple财报
+- 端侧AI
+- HC风向
+- 资本开支
+- 技术投入
+- Apple
+- IR
+- HC
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/apple-ir-页面更新藏在产品列表里的-hc-风向标/
+permalink: posts/2026/04/10/apple-ir-页面更新藏在产品列表里的-hc-风向标/
+date: '2026-04-10 12:25:00'
+updated: '2026-04-10 12:30:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 2026 年 4 月 10 日，Apple Investor Relations 页面静悄悄地更新了一行小字：Q2 财报电话会定于 4 月 30 日举行。

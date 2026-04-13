@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "OpenAI 注册链路又崩了？这个 GitHub 热榜第 6 的项目专治各种“玄学”翻车"
-description: "OpenAI 注册链路近期频繁变动，昨天能跑的脚本今天可能就挂了。GitHub 热榜项目 codex-console 应运而生，它基于 cnlimiter/codex-manager 进行了增强，通过集成化控制台、任务管理和自动重试机制，解决了手动运维的痛点。本文深入拆解其核心功能与技术实现，并手把手教你从零搭建。"
+layout: post
+title: OpenAI 注册链路又崩了？这个 GitHub 热榜第 6 的项目专治各种“玄学”翻车
+description: OpenAI 注册链路近期频繁变动，昨天能跑的脚本今天可能就挂了。GitHub 热榜项目 codex-console 应运而生，它基于 cnlimiter/codex-manager
+  进行了增强，通过集成化控制台、任务管理和自动重试机制，解决了手动运维的痛点。本文深入拆解其核心功能与技术实现，并手把手教你从零搭建。
 tags:
-  - "codex-console"
-  - "OpenAI"
-  - "Python"
-  - "自动化运维"
-  - "GitHub 热榜"
-  - "GitHub"
-  - "Cnlimiter"
-  - "Codex-manager"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/27/openai-注册链路又崩了这个-github-热榜第-6-的项目专治各种玄学翻车/"
-permalink: "posts/2026/03/27/openai-注册链路又崩了这个-github-热榜第-6-的项目专治各种玄学翻车/"
-date: "2026-03-27 13:23:00"
-updated: "2026-03-27 13:23:00"
+- codex-console
+- OpenAI
+- Python
+- 自动化运维
+- GitHub 热榜
+- GitHub
+- Cnlimiter
+- Codex-manager
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/27/openai-注册链路又崩了这个-github-热榜第-6-的项目专治各种玄学翻车/
+permalink: posts/2026/03/27/openai-注册链路又崩了这个-github-热榜第-6-的项目专治各种玄学翻车/
+date: '2026-03-27 13:23:00'
+updated: '2026-03-27 13:23:00'
+categories:
+- 开源热点
+- 技术趋势
 ---
 
 ## 为什么现在值得写

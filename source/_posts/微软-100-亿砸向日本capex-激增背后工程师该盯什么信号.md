@@ -1,18 +1,22 @@
 ---
-layout: "post"
-title: "微软 100 亿砸向日本，CapEx 激增背后，工程师该盯什么信号？"
-description: "微软 2026 年 4 月宣布向日本投资 100 亿美元，较 2024 年承诺翻三倍。与此同时，季度 CapEx 达到 375 亿美元，同比激增 66%。"
+layout: post
+title: 微软 100 亿砸向日本，CapEx 激增背后，工程师该盯什么信号？
+description: 微软 2026 年 4 月宣布向日本投资 100 亿美元，较 2024 年承诺翻三倍。与此同时，季度 CapEx 达到 375 亿美元，同比激增
+  66%。
 tags:
-  - "微软投资"
-  - "CapEx"
-  - "主权云"
-  - "AI基建"
-  - "工程师职业"
-  - "人工智能"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/微软-100-亿砸向日本capex-激增背后工程师该盯什么信号/"
-permalink: "posts/2026/04/10/微软-100-亿砸向日本capex-激增背后工程师该盯什么信号/"
-date: "2026-04-10 13:18:00"
-updated: "2026-04-10 13:28:00"
+- 微软投资
+- CapEx
+- 主权云
+- AI基建
+- 工程师职业
+- 人工智能
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/微软-100-亿砸向日本capex-激增背后工程师该盯什么信号/
+permalink: posts/2026/04/10/微软-100-亿砸向日本capex-激增背后工程师该盯什么信号/
+date: '2026-04-10 13:18:00'
+updated: '2026-04-10 13:28:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 2026 年 4 月 3 日，微软副总裁兼总裁 Brad Smith 站在东京的发布会上，宣布了一组数字：从 2026 年到 2029 年，微软将在日本投资 100 亿美元。

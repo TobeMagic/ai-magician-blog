@@ -1,21 +1,24 @@
 ---
-layout: "post"
-title: "本科和研究生想去外企，该怎么准备？把 OpenAI、Anthropic 和真实岗位要求拆开看"
-description: "本文拆解 OpenAI 与 Anthropic 真实岗位要求，对比本科生与研究生的准备分水岭。从英文简历避坑到 AI 面试四轮框架，提供一份基于真实数据的行动清单。"
+layout: post
+title: 本科和研究生想去外企，该怎么准备？把 OpenAI、Anthropic 和真实岗位要求拆开看
+description: 本文拆解 OpenAI 与 Anthropic 真实岗位要求，对比本科生与研究生的准备分水岭。从英文简历避坑到 AI 面试四轮框架，提供一份基于真实数据的行动清单。
 tags:
-  - "外企求职"
-  - "OpenAI"
-  - "英文简历"
-  - "AI 面试"
-  - "校招准备"
-  - "Anthropic"
-  - "AI"
-  - "人工智能"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/05/本科和研究生想去外企该怎么准备把-openaianthropic-和真实岗位要求拆开看/"
-permalink: "posts/2026/04/05/本科和研究生想去外企该怎么准备把-openaianthropic-和真实岗位要求拆开看/"
-date: "2026-04-05 05:53:00"
-updated: "2026-04-05 03:43:00"
-cover: "https://iili.io/BI4m7yu.png"
+- 外企求职
+- OpenAI
+- 英文简历
+- AI 面试
+- 校招准备
+- Anthropic
+- AI
+- 人工智能
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/05/本科和研究生想去外企该怎么准备把-openaianthropic-和真实岗位要求拆开看/
+permalink: posts/2026/04/05/本科和研究生想去外企该怎么准备把-openaianthropic-和真实岗位要求拆开看/
+date: '2026-04-05 05:53:00'
+updated: '2026-04-05 03:43:00'
+cover: https://iili.io/BI4m7yu.png
+categories:
+- AI工程
+- 面试八股
 ---
 
 先和你打声招呼，今天想顺着本科和研究生想去外企，该怎么准备？把往下聊。

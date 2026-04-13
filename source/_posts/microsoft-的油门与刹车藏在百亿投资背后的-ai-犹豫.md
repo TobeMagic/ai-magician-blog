@@ -1,19 +1,23 @@
 ---
-layout: "post"
-title: "Microsoft 的油门与刹车：藏在百亿投资背后的 AI 犹豫"
-description: "Microsoft 一边宣布对日本投资 100 亿美元，一边悄然暂停全球多地数据中心项目。这种矛盾的“双轨”行动，折射出科技巨头对 AI 成本结构与兑现周期的深度再校准，也为工程师的技术决策提供了关键信号。"
+layout: post
+title: Microsoft 的油门与刹车：藏在百亿投资背后的 AI 犹豫
+description: Microsoft 一边宣布对日本投资 100 亿美元，一边悄然暂停全球多地数据中心项目。这种矛盾的“双轨”行动，折射出科技巨头对 AI
+  成本结构与兑现周期的深度再校准，也为工程师的技术决策提供了关键信号。
 tags:
-  - "Microsoft"
-  - "AI 基础设施"
-  - "数据中心"
-  - "股价分析"
-  - "技术战略"
-  - "AI"
-  - "人工智能"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/06/microsoft-的油门与刹车藏在百亿投资背后的-ai-犹豫/"
-permalink: "posts/2026/04/06/microsoft-的油门与刹车藏在百亿投资背后的-ai-犹豫/"
-date: "2026-04-06 08:19:00"
-updated: "2026-04-06 08:20:00"
+- Microsoft
+- AI 基础设施
+- 数据中心
+- 股价分析
+- 技术战略
+- AI
+- 人工智能
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/06/microsoft-的油门与刹车藏在百亿投资背后的-ai-犹豫/
+permalink: posts/2026/04/06/microsoft-的油门与刹车藏在百亿投资背后的-ai-犹豫/
+date: '2026-04-06 08:19:00'
+updated: '2026-04-06 08:20:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 先和你打个招呼，今天这篇想顺着几条公开信号，聊聊这件事为什么值得工程师盯住。

@@ -1,23 +1,27 @@
 ---
-layout: "post"
-title: "【小卷 1.1 | LangGraph】LangGraph 核心原理｜这一小卷会讲什么"
-description: "2026 年春招，LangGraph 在大厂 Agent 岗位 JD 中的出现频率已超过 LangChain。本卷拆解 Graph 结构三要素、State Schema 设计与动态路由逻辑，补齐面试必问的工程细节与易错点。"
+layout: post
+title: 【小卷 1.1 | LangGraph】LangGraph 核心原理｜这一小卷会讲什么
+description: 2026 年春招，LangGraph 在大厂 Agent 岗位 JD 中的出现频率已超过 LangChain。本卷拆解 Graph 结构三要素、State
+  Schema 设计与动态路由逻辑，补齐面试必问的工程细节与易错点。
 tags:
-  - "LangGraph"
-  - "Agent 面试"
-  - "StateGraph"
-  - "State 设计"
-  - "动态路由"
-  - "八股文"
-  - "Agent"
-  - "JD"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/12/小卷-11-langgraphlanggraph-核心原理这一小卷会讲什么/"
-img: "https://iili.io/BXJEUCl.png"
-swiperImg: "https://iili.io/BXJEUCl.png"
-permalink: "posts/2026/04/12/小卷-11-langgraphlanggraph-核心原理这一小卷会讲什么/"
-date: "2026-04-12 10:47:00"
-updated: "2026-04-12 10:53:00"
-cover: "https://iili.io/BXJEUCl.png"
+- LangGraph
+- Agent 面试
+- StateGraph
+- State 设计
+- 动态路由
+- 八股文
+- Agent
+- JD
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/12/小卷-11-langgraphlanggraph-核心原理这一小卷会讲什么/
+img: https://iili.io/BXJEUCl.png
+swiperImg: https://iili.io/BXJEUCl.png
+permalink: posts/2026/04/12/小卷-11-langgraphlanggraph-核心原理这一小卷会讲什么/
+date: '2026-04-12 10:47:00'
+updated: '2026-04-12 10:53:00'
+cover: https://iili.io/BXJEUCl.png
+categories:
+- 小卷1.1
+- LangGraph
 ---
 
 2026 年 4 月，春招正酣。打开淘天、字节甚至 OpenAI 的 Agent 岗位 JD，你会发现 LangGraph 的出现频率已经悄悄压过了 LangChain。

@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "为什么微软和 NVIDIA 的公开信号开始背离：AI 基建从抢卡转向算账"
-description: "2026 年 4 月，微软强调资本效率，NVIDIA 却宣布 1 万亿订单积压。这种信号背离揭示了 AI 基建从‘抢卡’转向‘算账’的周期切换。"
+layout: post
+title: 为什么微软和 NVIDIA 的公开信号开始背离：AI 基建从抢卡转向算账
+description: 2026 年 4 月，微软强调资本效率，NVIDIA 却宣布 1 万亿订单积压。这种信号背离揭示了 AI 基建从‘抢卡’转向‘算账’的周期切换。
 tags:
-  - "AI 基建"
-  - "资本开支"
-  - "NVIDIA"
-  - "微软"
-  - "ROI"
-  - "工程师职业"
-  - "AI"
-  - "人工智能"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/11/为什么微软和-nvidia-的公开信号开始背离ai-基建从抢卡转向算账/"
-permalink: "posts/2026/04/11/为什么微软和-nvidia-的公开信号开始背离ai-基建从抢卡转向算账/"
-date: "2026-04-11 04:43:00"
-updated: "2026-04-11 04:45:00"
+- AI 基建
+- 资本开支
+- NVIDIA
+- 微软
+- ROI
+- 工程师职业
+- AI
+- 人工智能
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/11/为什么微软和-nvidia-的公开信号开始背离ai-基建从抢卡转向算账/
+permalink: posts/2026/04/11/为什么微软和-nvidia-的公开信号开始背离ai-基建从抢卡转向算账/
+date: '2026-04-11 04:43:00'
+updated: '2026-04-11 04:45:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 2026 年 4 月，微软财报电话会上，“资本效率”和“利用率”这两个词被管理层反复提及，语气谨慎得像是在过冬。

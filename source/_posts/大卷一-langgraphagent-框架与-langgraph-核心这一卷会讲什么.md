@@ -1,22 +1,25 @@
 ---
-layout: "post"
-title: "【大卷一 | LangGraph】Agent 框架与 LangGraph 核心｜这一卷会讲什么"
-description: "2026 年 Agent 框架已成面试必考，LangGraph、ReAct、Tool Calling 构成核心三件套。本文按八股文结构拆解：模板答案、筛选逻辑、常见追问、易错点与项目实战说法。"
+layout: post
+title: 【大卷一 | LangGraph】Agent 框架与 LangGraph 核心｜这一卷会讲什么
+description: 2026 年 Agent 框架已成面试必考，LangGraph、ReAct、Tool Calling 构成核心三件套。本文按八股文结构拆解：模板答案、筛选逻辑、常见追问、易错点与项目实战说法。
 tags:
-  - "Agent 框架"
-  - "LangGraph"
-  - "面试准备"
-  - "ReAct"
-  - "Tool Calling"
-  - "Harness Engineering"
-  - "Agent"
-  - "Tool"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/12/大卷一-langgraphagent-框架与-langgraph-核心这一卷会讲什么/"
-img: ""
-swiperImg: ""
-permalink: "posts/2026/04/12/大卷一-langgraphagent-框架与-langgraph-核心这一卷会讲什么/"
-date: "2026-04-12 06:38:00"
-updated: "2026-04-12 06:39:00"
+- Agent 框架
+- LangGraph
+- 面试准备
+- ReAct
+- Tool Calling
+- Harness Engineering
+- Agent
+- Tool
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/12/大卷一-langgraphagent-框架与-langgraph-核心这一卷会讲什么/
+img: ''
+swiperImg: ''
+permalink: posts/2026/04/12/大卷一-langgraphagent-框架与-langgraph-核心这一卷会讲什么/
+date: '2026-04-12 06:38:00'
+updated: '2026-04-12 06:39:00'
+categories:
+- 大卷一
+- LangGraph
 ---
 
 2026 年 4 月，OpenAI 的 Applied AI Engineer 岗位 JD 里，"Agent runtime" 和 "Tool orchestration" 出现频率已经超过"微服务"和"消息队列"[1](https://jobs.ashbyhq.com/OpenAI/577e6673-0a4a-491b-9a0d-facbdd3bdf3c)。

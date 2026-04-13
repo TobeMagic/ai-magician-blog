@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "Apple 最新公告里，藏着哪些技术投入与经营信号？"
-description: "距离 Apple FY26 Q2 财报发布还有 20 天，IR 页面已悄然更新。本文从财报日历、产品命名与资本开支出发，将财务信号翻译为工程师可理解的技术投入方向，分析端侧 AI 与隐私架构如何重塑岗位需求。"
+layout: post
+title: Apple 最新公告里，藏着哪些技术投入与经营信号？
+description: 距离 Apple FY26 Q2 财报发布还有 20 天，IR 页面已悄然更新。本文从财报日历、产品命名与资本开支出发，将财务信号翻译为工程师可理解的技术投入方向，分析端侧
+  AI 与隐私架构如何重塑岗位需求。
 tags:
-  - "Apple 财报"
-  - "端侧 AI"
-  - "资本开支"
-  - "MacBook Neo"
-  - "隐私计算"
-  - "工程师职业"
-  - "Apple"
-  - "FY26"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/apple-最新公告里藏着哪些技术投入与经营信号/"
-permalink: "posts/2026/04/10/apple-最新公告里藏着哪些技术投入与经营信号/"
-date: "2026-04-10 12:43:00"
-updated: "2026-04-10 12:48:00"
+- Apple 财报
+- 端侧 AI
+- 资本开支
+- MacBook Neo
+- 隐私计算
+- 工程师职业
+- Apple
+- FY26
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/apple-最新公告里藏着哪些技术投入与经营信号/
+permalink: posts/2026/04/10/apple-最新公告里藏着哪些技术投入与经营信号/
+date: '2026-04-10 12:43:00'
+updated: '2026-04-10 12:48:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 2026 年 4 月 10 日，太平洋时间上午 9 点，Apple Investor Relations 页面静默更新了一行字：FY26 第二季度财报电话会议定于 4 月 30 日举行。

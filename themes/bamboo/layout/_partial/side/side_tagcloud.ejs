@@ -1,15 +1,137 @@
-<% if (site.tags.length){ %>
+<%
+function normalizeTagKey(name) {
+  return String(name || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .replace(/[-_]+/g, " ");
+}
+
+function parseHexColor(color) {
+  const value = String(color || "").trim().replace("#", "");
+  if (!/^[0-9a-f]{6}$/i.test(value)) return null;
+  return {
+    r: parseInt(value.slice(0, 2), 16),
+    g: parseInt(value.slice(2, 4), 16),
+    b: parseInt(value.slice(4, 6), 16),
+  };
+}
+
+function mixHexColor(start, end, ratio) {
+  const startColor = parseHexColor(start);
+  const endColor = parseHexColor(end);
+  if (!startColor || !endColor) return "";
+  const clamp = Math.max(0, Math.min(1, ratio));
+  const toHex = (value) => value.toString(16).padStart(2, "0");
+  const mixed = {
+    r: Math.round(startColor.r + (endColor.r - startColor.r) * clamp),
+    g: Math.round(startColor.g + (endColor.g - startColor.g) * clamp),
+    b: Math.round(startColor.b + (endColor.b - startColor.b) * clamp),
+  };
+  return "#" + toHex(mixed.r) + toHex(mixed.g) + toHex(mixed.b);
+}
+
+const aliases = new Map([
+  ["ai", "AI"],
+  ["人工智能", "AI"],
+  ["ai agent", "AI Agent"],
+  ["agentic ai", "AI Agent"],
+  ["ai 基建", "AI基建"],
+  ["ai基建", "AI基建"],
+  ["ai 基础设施", "AI基建"],
+  ["microsoft", "微软"],
+  ["微软", "微软"],
+  ["microsoft 财报", "微软财报"],
+  ["apple", "Apple"],
+  ["apple 财报", "Apple财报"],
+  ["nvidia", "NVIDIA"],
+  ["langgraph", "LangGraph"],
+  ["claude code", "Claude Code"],
+  ["tool calling", "Tool Calling"],
+  ["stategraph", "StateGraph"],
+]);
+const ignored = new Set([
+  "",
+  "ai",
+  "agent",
+  "claude",
+  "anthropic",
+  "apple",
+  "microsoft",
+  "nvidia",
+  "azure",
+  "github",
+  "code",
+  "jd",
+  "coding",
+  "tool",
+  "system",
+  "for",
+  "vs",
+  "ir",
+  "q2",
+  "q4",
+  "fy25",
+  "fy26",
+  "fy2026",
+]);
+const rawTags = site.tags && typeof site.tags.toArray === "function" ? site.tags.toArray() : [];
+const grouped = new Map();
+
+rawTags.forEach(function (tag) {
+  const rawName = String((tag && tag.name) || "").trim();
+  if (!rawName) return;
+  const key = normalizeTagKey(rawName);
+  if (ignored.has(key)) return;
+  const displayName = aliases.get(key) || rawName;
+  const displayKey = normalizeTagKey(displayName);
+  if (ignored.has(displayKey)) return;
+  const current = grouped.get(displayKey) || {
+    name: displayName,
+    length: 0,
+    path: tag.path,
+    maxSingleCount: 0,
+  };
+  const count = Number(tag.length || 0);
+  current.length += count;
+  if (!current.path || count >= current.maxSingleCount) {
+    current.path = tag.path;
+    current.maxSingleCount = count;
+  }
+  grouped.set(displayKey, current);
+});
+
+const tags = Array.from(grouped.values())
+  .filter(function (tag) { return tag.length > 0; })
+  .sort(function (a, b) {
+    if (b.length !== a.length) return b.length - a.length;
+    return a.name.localeCompare(b.name, "zh-Hans-CN");
+  })
+  .slice(0, Number(item.limit || 18));
+const counts = tags.map(function (tag) { return tag.length; });
+const minCount = counts.length ? Math.min.apply(null, counts) : 0;
+const maxCount = counts.length ? Math.max.apply(null, counts) : 0;
+const minFont = Number(item.min_font || 14);
+const maxFont = Number(item.max_font || 24);
+
+function fontSizeForTag(count) {
+  if (!counts.length || maxCount === minCount) return minFont;
+  const ratio = (count - minCount) / (maxCount - minCount);
+  return minFont + (maxFont - minFont) * ratio;
+}
+%>
+<% if (tags.length) { %>
 <section class="widget side_tagcloud">
     <%- partial('sideHeader', {item: item}) %>
     <div class='content'>
-    <%- tagcloud(site.tags, {
-        min_font: item.min_font,
-        max_font: item.max_font,
-        color: item.color,
-        start_color: item.start_color,
-        end_color: item.end_color,
-    }) %>
+    <% tags.forEach(function(tag) { 
+        const ratio = maxCount === minCount ? 0.5 : (tag.length - minCount) / (maxCount - minCount);
+        const color = item.color ? mixHexColor(item.start_color, item.end_color, ratio) : "";
+    %>
+      <a href="<%- url_for(tag.path) %>" style="font-size:<%= fontSizeForTag(tag.length).toFixed(1) %>px;<% if (color) { %>color:<%= color %>;<% } %>">
+        <%= tag.name %>
+      </a>
+    <% }) %>
     </div>
 </section>
 <% } %>
-  

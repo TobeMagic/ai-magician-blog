@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "Claude Code 源码泄露：51 万行代码背后的 AI 编程帝国与 Kairos 野心"
-description: "本文深度拆解了近期泄露的 Claude Code 51 万行源码，揭秘了其核心引擎 Kairos 的任务调度逻辑与 MCP 协议的护城河效应。"
+layout: post
+title: Claude Code 源码泄露：51 万行代码背后的 AI 编程帝国与 Kairos 野心
+description: 本文深度拆解了近期泄露的 Claude Code 51 万行源码，揭秘了其核心引擎 Kairos 的任务调度逻辑与 MCP 协议的护城河效应。
 tags:
-  - "Claude Code"
-  - "Kairos Framework"
-  - "MCP 协议"
-  - "AI Agent"
-  - "源码拆解"
-  - "Claude"
-  - "Code"
-  - "AI"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/31/claude-code-源码泄露51-万行代码背后的-ai-编程帝国与-kairos-野心/"
-permalink: "posts/2026/03/31/claude-code-源码泄露51-万行代码背后的-ai-编程帝国与-kairos-野心/"
-date: "2026-03-31 12:48:00"
-updated: "2026-03-31 12:48:00"
+- Claude Code
+- Kairos Framework
+- MCP 协议
+- AI Agent
+- 源码拆解
+- Claude
+- Code
+- AI
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/31/claude-code-源码泄露51-万行代码背后的-ai-编程帝国与-kairos-野心/
+permalink: posts/2026/03/31/claude-code-源码泄露51-万行代码背后的-ai-编程帝国与-kairos-野心/
+date: '2026-03-31 12:48:00'
+updated: '2026-03-31 12:48:00'
+categories:
+- AI工程
+- 面试八股
 ---
 
 周五下午四点半，公司那个名为“紧急发布排期”的群聊里，原本正为了一个诡异的内存溢出吵得不可开交。突然，一个平时只发技术文档的老哥甩出了一个 GitHub 仓库链接，配文只有三个字：“看这个”。

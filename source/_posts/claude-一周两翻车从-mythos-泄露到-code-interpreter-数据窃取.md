@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "Claude 一周两翻车：从 Mythos 泄露到 Code Interpreter 数据窃取"
-description: "2026 年 3 月最后一周，Anthropic 遭遇两起安全重击：CMS 配置错误泄露 Claude Mythos 模型，Code Interpreter 被曝数据窃取漏洞。本文拆解事故根因与攻击链，揭示「默认安全」背后的企业风险。"
+layout: post
+title: Claude 一周两翻车：从 Mythos 泄露到 Code Interpreter 数据窃取
+description: 2026 年 3 月最后一周，Anthropic 遭遇两起安全重击：CMS 配置错误泄露 Claude Mythos 模型，Code Interpreter
+  被曝数据窃取漏洞。本文拆解事故根因与攻击链，揭示「默认安全」背后的企业风险。
 tags:
-  - "Claude"
-  - "Anthropic"
-  - "数据安全"
-  - "Code Interpreter"
-  - "提示注入"
-  - "Mythos"
-  - "Code"
-  - "Interpreter"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/28/claude-一周两翻车从-mythos-泄露到-code-interpreter-数据窃取/"
-permalink: "posts/2026/03/28/claude-一周两翻车从-mythos-泄露到-code-interpreter-数据窃取/"
-date: "2026-03-28 02:08:00"
-updated: "2026-03-28 02:08:00"
+- Claude
+- Anthropic
+- 数据安全
+- Code Interpreter
+- 提示注入
+- Mythos
+- Code
+- Interpreter
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/28/claude-一周两翻车从-mythos-泄露到-code-interpreter-数据窃取/
+permalink: posts/2026/03/28/claude-一周两翻车从-mythos-泄露到-code-interpreter-数据窃取/
+date: '2026-03-28 02:08:00'
+updated: '2026-03-28 02:08:00'
+categories:
+- 技术观察
 ---
 
 ## 为什么现在值得写

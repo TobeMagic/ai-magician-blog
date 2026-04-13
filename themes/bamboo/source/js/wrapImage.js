@@ -2,6 +2,22 @@ $(document).ready(function () {
   wrapImageWithFancyBox();
 });
 
+function normalizeImageCaption(rawCaption) {
+  var caption = String(rawCaption || "").replace(/\s+/g, " ").trim();
+  if (!caption) {
+    return "";
+  }
+  if (
+    caption.startsWith("SVGDIAGRAM::") ||
+    /^(正文图解|正文配图)\d*$/.test(caption) ||
+    /^(大佬系列表情|程序员反应图|程序员 reaction|reaction|表情包)[:：]/i.test(caption) ||
+    ["封面图", "文末收口图", "延伸阅读入口"].includes(caption)
+  ) {
+    return "";
+  }
+  return caption;
+}
+
 /**
  * Wrap images with fancybox support.
  */
@@ -24,12 +40,12 @@ function wrapImageWithFancyBox() {
     .not(".btns img")
     .not(".gallery-group-img")
     .not('.getJsonPhoto-api img')
-    .not('.getJsonTalk-api img')
-    .each(function () {
-      var $image = $(this);
-      var imageCaption = $image.attr("alt");
-      var $imageWrapLink = $image.parent("a");
-      var $linkWrapDiv = $imageWrapLink.parent("div");
+	    .not('.getJsonTalk-api img')
+	    .each(function () {
+	      var $image = $(this);
+	      var imageCaption = normalizeImageCaption($image.attr("alt"));
+	      var $imageWrapLink = $image.parent("a");
+	      var $linkWrapDiv = $imageWrapLink.parent("div");
       if ($imageWrapLink.length < 1) {
         var src = this.getAttribute("data-src") || this.getAttribute("src");
         var idx = src.lastIndexOf("?");

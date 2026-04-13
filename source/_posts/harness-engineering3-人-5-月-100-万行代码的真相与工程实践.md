@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "Harness Engineering：3 人 5 月 100 万行代码的真相与工程实践"
-description: "本文深度拆解了 Harness 团队 3 人在 5 个月内产出 100 万行代码的工程奇迹。通过分析 Harness Engineering 的核心逻辑，揭示了 AI 时代从“手写代码”向“工程约束”的范式转移，并警示了代码通胀带来的认知负荷与维护陷阱。"
+layout: post
+title: Harness Engineering：3 人 5 月 100 万行代码的真相与工程实践
+description: 本文深度拆解了 Harness 团队 3 人在 5 个月内产出 100 万行代码的工程奇迹。通过分析 Harness Engineering
+  的核心逻辑，揭示了 AI 时代从“手写代码”向“工程约束”的范式转移，并警示了代码通胀带来的认知负荷与维护陷阱。
 tags:
-  - "Harness Engineering"
-  - "AI 编程"
-  - "软件架构"
-  - "研发效能"
-  - "代码通胀"
-  - "Harness"
-  - "Engineering"
-  - "AI"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/30/harness-engineering3-人-5-月-100-万行代码的真相与工程实践/"
-permalink: "posts/2026/03/30/harness-engineering3-人-5-月-100-万行代码的真相与工程实践/"
-date: "2026-03-30 01:13:00"
-updated: "2026-03-30 01:13:00"
+- Harness Engineering
+- AI 编程
+- 软件架构
+- 研发效能
+- 代码通胀
+- Harness
+- Engineering
+- AI
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/30/harness-engineering3-人-5-月-100-万行代码的真相与工程实践/
+permalink: posts/2026/03/30/harness-engineering3-人-5-月-100-万行代码的真相与工程实践/
+date: '2026-03-30 01:13:00'
+updated: '2026-03-30 01:13:00'
+categories:
+- 技术观察
 ---
 
 Hello 大家好呀，我是计算机魔术师。

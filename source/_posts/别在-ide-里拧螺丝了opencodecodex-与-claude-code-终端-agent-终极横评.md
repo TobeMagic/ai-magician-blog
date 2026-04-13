@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "别在 IDE 里拧螺丝了：OpenCode、Codex 与 Claude Code 终端 Agent 终极横评"
-description: "本文深度横评了 OpenAI Codex、Claude Code 与 OpenCode 三款终端 AI 编程代理。从执行架构、模型深度到成本隐私，拆解了 AI 如何从“补全插件”进化为“终端特种兵”，并为不同背景的开发者提供选型建议。"
+layout: post
+title: 别在 IDE 里拧螺丝了：OpenCode、Codex 与 Claude Code 终端 Agent 终极横评
+description: 本文深度横评了 OpenAI Codex、Claude Code 与 OpenCode 三款终端 AI 编程代理。从执行架构、模型深度到成本隐私，拆解了
+  AI 如何从“补全插件”进化为“终端特种兵”，并为不同背景的开发者提供选型建议。
 tags:
-  - "AI 编程代理"
-  - "终端 Agent"
-  - "OpenAI Codex"
-  - "Claude Code"
-  - "OpenCode"
-  - "SWE-bench"
-  - "IDE"
-  - "Codex"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/29/别在-ide-里拧螺丝了opencodecodex-与-claude-code-终端-agent-终极横评/"
-permalink: "posts/2026/03/29/别在-ide-里拧螺丝了opencodecodex-与-claude-code-终端-agent-终极横评/"
-date: "2026-03-29 10:14:00"
-updated: "2026-03-29 12:37:00"
+- AI 编程代理
+- 终端 Agent
+- OpenAI Codex
+- Claude Code
+- OpenCode
+- SWE-bench
+- IDE
+- Codex
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/29/别在-ide-里拧螺丝了opencodecodex-与-claude-code-终端-agent-终极横评/
+permalink: posts/2026/03/29/别在-ide-里拧螺丝了opencodecodex-与-claude-code-终端-agent-终极横评/
+date: '2026-03-29 10:14:00'
+updated: '2026-03-29 12:37:00'
+categories:
+- AI工程
+- 面试八股
 ---
 
 Hello 大家好呀，我是计算机魔术师。

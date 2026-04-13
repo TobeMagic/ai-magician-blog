@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: ".claude 文件夹解剖：让 Claude Code 记住一切的魔法抽屉"
-description: "深入拆解 Claude Code 的 .claude 目录结构，从 CLAUDE.md 的编写红线到 skills 的自动触发机制，帮你把 AI 从需要反复叮嘱的临时工，调教成懂规矩、有记忆的合伙人。"
+layout: post
+title: .claude 文件夹解剖：让 Claude Code 记住一切的魔法抽屉
+description: 深入拆解 Claude Code 的 .claude 目录结构，从 CLAUDE.md 的编写红线到 skills 的自动触发机制，帮你把
+  AI 从需要反复叮嘱的临时工，调教成懂规矩、有记忆的合伙人。
 tags:
-  - "Claude Code"
-  - "AI 编程"
-  - "配置管理"
-  - "自动化工作流"
-  - "上下文工程"
-  - "Claude"
-  - "Code"
-  - "CLAUDE.md"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/28/claude-文件夹解剖让-claude-code-记住一切的魔法抽屉/"
-permalink: "posts/2026/03/28/claude-文件夹解剖让-claude-code-记住一切的魔法抽屉/"
-date: "2026-03-28 00:13:00"
-updated: "2026-03-28 00:14:00"
+- Claude Code
+- AI 编程
+- 配置管理
+- 自动化工作流
+- 上下文工程
+- Claude
+- Code
+- CLAUDE.md
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/28/claude-文件夹解剖让-claude-code-记住一切的魔法抽屉/
+permalink: posts/2026/03/28/claude-文件夹解剖让-claude-code-记住一切的魔法抽屉/
+date: '2026-03-28 00:13:00'
+updated: '2026-03-28 00:14:00'
+categories:
+- AI工程
+- 面试八股
 ---
 
 ## 为什么现在值得写

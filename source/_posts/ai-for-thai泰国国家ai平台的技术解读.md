@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "AI For Thai：泰国国家AI平台的技术解读"
-description: "本文解读泰国国家AI战略的工程落地：微软与华为云的基建博弈、NECTEC与FDA的政务实践、Agentic AI的医疗突破，以及数据中心扩张带来的水资源隐忧。技术落地不仅要看算力账单，更要算清资源账单。"
+layout: post
+title: AI For Thai：泰国国家AI平台的技术解读
+description: 本文解读泰国国家AI战略的工程落地：微软与华为云的基建博弈、NECTEC与FDA的政务实践、Agentic AI的医疗突破，以及数据中心扩张带来的水资源隐忧。技术落地不仅要看算力账单，更要算清资源账单。
 tags:
-  - "泰国AI"
-  - "政务云"
-  - "Agentic AI"
-  - "华为云"
-  - "数据中心"
-  - "泰语NLP"
-  - "AI"
-  - "For"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/ai-for-thai泰国国家ai平台的技术解读/"
-permalink: "posts/2026/04/10/ai-for-thai泰国国家ai平台的技术解读/"
-date: "2026-04-10 04:52:00"
-updated: "2026-04-10 04:54:00"
+- 泰国AI
+- 政务云
+- Agentic AI
+- 华为云
+- 数据中心
+- 泰语NLP
+- AI
+- For
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/ai-for-thai泰国国家ai平台的技术解读/
+permalink: posts/2026/04/10/ai-for-thai泰国国家ai平台的技术解读/
+date: '2026-04-10 04:52:00'
+updated: '2026-04-10 04:54:00'
+categories:
+- 云原生
+- 工程实践
 ---
 
 2026年3月31日，微软副总裁Brad Smith在曼谷宣布了一项10亿美元的投资计划，目标直指泰国的云和AI基础设施。

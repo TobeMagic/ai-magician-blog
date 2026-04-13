@@ -5,11 +5,11 @@ layout: post
 top: true
 swiper: false
 tags:
-  - 写作
-  - 技术
-  - 生活观察
+- 写作
+- 技术
+- 生活观察
 categories:
-  - 开场白
+- 技术观察
 description: 这是 AI Magician 的第一篇真正对外的文章。
 ---
 

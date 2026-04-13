@@ -1,21 +1,24 @@
 ---
-layout: "post"
-title: "AI 面试八股文 Vol.2：AI System Design 为什么总在一面被问到？"
-description: "这篇 Vol.2 不再空谈框架，而是把 AI System Design 面试里最常见的 Runtime、Tool Calling、状态管理和失败路径拆开讲透。"
+layout: post
+title: AI 面试八股文 Vol.2：AI System Design 为什么总在一面被问到？
+description: 这篇 Vol.2 不再空谈框架，而是把 AI System Design 面试里最常见的 Runtime、Tool Calling、状态管理和失败路径拆开讲透。
 tags:
-  - "AI System Design"
-  - "Agent Runtime"
-  - "Tool Calling"
-  - "状态管理"
-  - "后端 AI 面试"
-  - "AI"
-  - "Vol.2"
-  - "System"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/28/ai-面试八股文-vol2ai-system-design-为什么总在一面被问到/"
-permalink: "posts/2026/03/28/ai-面试八股文-vol2ai-system-design-为什么总在一面被问到/"
-date: "2026-03-28 03:55:00"
-updated: "2026-03-31 01:20:00"
-cover: "https://iili.io/B2xjpm7.png"
+- AI System Design
+- Agent Runtime
+- Tool Calling
+- 状态管理
+- 后端 AI 面试
+- AI
+- Vol.2
+- System
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/28/ai-面试八股文-vol2ai-system-design-为什么总在一面被问到/
+permalink: posts/2026/03/28/ai-面试八股文-vol2ai-system-design-为什么总在一面被问到/
+date: '2026-03-28 03:55:00'
+updated: '2026-03-31 01:20:00'
+cover: https://iili.io/B2xjpm7.png
+categories:
+- AI工程
+- 面试八股
 ---
 
 周三下午四点，群里突然有人贴了一张面经截图。我顺手翻了最近 7 份公开面经，发现 AI Agent 岗位的一面问法不一样，但最后几乎都会绕回系统设计：`请你设计一个支持多工具调用、能容错、还能把长任务反馈给前端的 Agent Runtime。` 题目不长，但下面那句补刀很致命: 前端网关超时 30 秒，模型还会偶尔吐错 JSON，怎么保证系统不把用户直接晾在那儿？

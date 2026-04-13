@@ -1,20 +1,22 @@
 ---
-layout: "post"
-title: "一句话就能做游戏？YC 孵化的 Rosebud 来了，游戏开发者要失业了吗"
-description: "Rosebud 并非游戏开发的终结者，而是从「写代码」到「做设计」的杠杆。它消灭的是低端重复劳动，把门槛推向了提示词工程和 AI 调试。真正危险的，是那些只会写换皮代码的「人肉编译器」。"
+layout: post
+title: 一句话就能做游戏？YC 孵化的 Rosebud 来了，游戏开发者要失业了吗
+description: Rosebud 并非游戏开发的终结者，而是从「写代码」到「做设计」的杠杆。它消灭的是低端重复劳动，把门槛推向了提示词工程和 AI 调试。真正危险的，是那些只会写换皮代码的「人肉编译器」。
 tags:
-  - "Rosebud AI"
-  - "游戏开发"
-  - "AIGC"
-  - "YC 创业"
-  - "提示词工程"
-  - "YC"
-  - "Rosebud"
-  - "AI"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/07/一句话就能做游戏yc-孵化的-rosebud-来了游戏开发者要失业了吗/"
-permalink: "posts/2026/04/07/一句话就能做游戏yc-孵化的-rosebud-来了游戏开发者要失业了吗/"
-date: "2026-04-07 11:28:00"
-updated: "2026-04-07 11:30:00"
+- Rosebud AI
+- 游戏开发
+- AIGC
+- YC 创业
+- 提示词工程
+- YC
+- Rosebud
+- AI
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/07/一句话就能做游戏yc-孵化的-rosebud-来了游戏开发者要失业了吗/
+permalink: posts/2026/04/07/一句话就能做游戏yc-孵化的-rosebud-来了游戏开发者要失业了吗/
+date: '2026-04-07 11:28:00'
+updated: '2026-04-07 11:30:00'
+categories:
+- 技术观察
 ---
 
 上周 Hacker News 的热度榜上，一个标题让不少游戏开发者的咖啡差点洒在键盘上：Rosebud，一个能把自然语言描述直接变成浏览器游戏的平台。

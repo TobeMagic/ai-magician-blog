@@ -1,21 +1,24 @@
 ---
-layout: "post"
-title: "从MBTI到SBTI：为什么我们总想被四个字母定义？"
-description: "本文从朋友圈刷屏的 SBTI 测试切入，结合 Anthropic、国聘等真实岗位案例，分析其在裁员与 AI 冲击背景下成为年轻人“心理锚点”的原因，并揭示招聘市场中的隐形筛选与反向工程陷阱。"
+layout: post
+title: 从MBTI到SBTI：为什么我们总想被四个字母定义？
+description: 本文从朋友圈刷屏的 SBTI 测试切入，结合 Anthropic、国聘等真实岗位案例，分析其在裁员与 AI 冲击背景下成为年轻人“心理锚点”的原因，并揭示招聘市场中的隐形筛选与反向工程陷阱。
 tags:
-  - "SBTI"
-  - "职场焦虑"
-  - "性格测试"
-  - "求职面试"
-  - "自我认知"
-  - "Anthropic"
-  - "AI"
-  - "人工智能"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/11/从mbti到sbti为什么我们总想被四个字母定义/"
-permalink: "posts/2026/04/11/从mbti到sbti为什么我们总想被四个字母定义/"
-date: "2026-04-11 23:41:00"
-updated: "2026-04-12 02:33:00"
-cover: "https://iili.io/BWzjwbV.png"
+- SBTI
+- 职场焦虑
+- 性格测试
+- 求职面试
+- 自我认知
+- Anthropic
+- AI
+- 人工智能
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/11/从mbti到sbti为什么我们总想被四个字母定义/
+permalink: posts/2026/04/11/从mbti到sbti为什么我们总想被四个字母定义/
+date: '2026-04-11 23:41:00'
+updated: '2026-04-12 02:33:00'
+cover: https://iili.io/BWzjwbV.png
+categories:
+- 求职成长
+- 求职面试
 ---
 
 2026 年 4 月的一个周五晚上，朋友圈突然被一组四个字母的代码刷屏了。不是股票代码，也不是什么新框架的版本号，而是 SBTI 人格测试的结果。

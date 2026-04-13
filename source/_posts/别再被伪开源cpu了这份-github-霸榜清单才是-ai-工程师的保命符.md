@@ -1,21 +1,25 @@
 ---
-layout: "post"
-title: "别再被“伪开源”CPU了：这份 GitHub 霸榜清单，才是 AI 工程师的保命符"
-description: "GitHub 新晋热门项目 alvinunreal/awesome-opensource-ai 揭开了大厂“伪开源”的遮羞布。本文深度拆解这份“纯净 AI 清单”，教你如何在 2026 年构建真正自主可控的技术栈，避开 License 里的商业陷阱，守住工程师的尊严。"
+layout: post
+title: 别再被“伪开源”CPU了：这份 GitHub 霸榜清单，才是 AI 工程师的保命符
+description: GitHub 新晋热门项目 alvinunreal/awesome-opensource-ai 揭开了大厂“伪开源”的遮羞布。本文深度拆解这份“纯净
+  AI 清单”，教你如何在 2026 年构建真正自主可控的技术栈，避开 License 里的商业陷阱，守住工程师的尊严。
 tags:
-  - "开源 AI"
-  - "License 协议"
-  - "Local LLM"
-  - "Agent 框架"
-  - "自主可控"
-  - "GitHub"
-  - "AI"
-  - "Alvinunreal"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/27/别再被伪开源cpu了这份-github-霸榜清单才是-ai-工程师的保命符/"
-permalink: "posts/2026/03/27/别再被伪开源cpu了这份-github-霸榜清单才是-ai-工程师的保命符/"
-date: "2026-03-27 11:21:00"
-updated: "2026-03-27 11:21:00"
-cover: "https://iili.io/qt1sk6g.png"
+- 开源 AI
+- License 协议
+- Local LLM
+- Agent 框架
+- 自主可控
+- GitHub
+- AI
+- Alvinunreal
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/27/别再被伪开源cpu了这份-github-霸榜清单才是-ai-工程师的保命符/
+permalink: posts/2026/03/27/别再被伪开源cpu了这份-github-霸榜清单才是-ai-工程师的保命符/
+date: '2026-03-27 11:21:00'
+updated: '2026-03-27 11:21:00'
+cover: https://iili.io/qt1sk6g.png
+categories:
+- 开源热点
+- 技术趋势
 ---
 
 ### 1. 故事引入：凌晨两点的 License 惊魂

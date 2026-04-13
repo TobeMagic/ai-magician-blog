@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "外企 AI 岗到底看什么：baseline expectations、differentiators 和 portfolio strategy"
-description: "2026 年外企 AI 岗竞争逻辑已变：Baseline expectations 只是入场券，Differentiators 才是决胜点。"
+layout: post
+title: 外企 AI 岗到底看什么：baseline expectations、differentiators 和 portfolio strategy
+description: 2026 年外企 AI 岗竞争逻辑已变：Baseline expectations 只是入场券，Differentiators 才是决胜点。
 tags:
-  - "外企求职"
-  - "AI 工程师"
-  - "System Design"
-  - "Portfolio"
-  - "Anthropic"
-  - "AI"
-  - "Baseline"
-  - "Expectations"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/06/外企-ai-岗到底看什么baseline-expectationsdifferentiators-和-portfolio-strategy/"
-permalink: "posts/2026/04/06/外企-ai-岗到底看什么baseline-expectationsdifferentiators-和-portfolio-strategy/"
-date: "2026-04-06 09:40:00"
-updated: "2026-04-06 09:42:00"
+- 外企求职
+- AI 工程师
+- System Design
+- Portfolio
+- Anthropic
+- AI
+- Baseline
+- Expectations
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/06/外企-ai-岗到底看什么baseline-expectationsdifferentiators-和-portfolio-strategy/
+permalink: posts/2026/04/06/外企-ai-岗到底看什么baseline-expectationsdifferentiators-和-portfolio-strategy/
+date: '2026-04-06 09:40:00'
+updated: '2026-04-06 09:42:00'
+categories:
+- 求职成长
+- 求职面试
 ---
 
 先问候一声，这篇我们认真聊聊外企 AI 岗到底看什么。

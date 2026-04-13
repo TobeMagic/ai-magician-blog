@@ -1,21 +1,23 @@
 ---
-layout: "post"
-title: "博客变赌场？一次运营商 HTTP 劫持的排查与绝地反击"
-description: "博客突然跳转到非法网站，排查发现是运营商 HTTP 劫持。本文记录了从发现异常、锁定根因到通过强制 HTTPS、HSTS、CSP 等手段彻底修复的全过程，并总结了静态博客的安全加固最佳实践。"
+layout: post
+title: 博客变赌场？一次运营商 HTTP 劫持的排查与绝地反击
+description: 博客突然跳转到非法网站，排查发现是运营商 HTTP 劫持。本文记录了从发现异常、锁定根因到通过强制 HTTPS、HSTS、CSP 等手段彻底修复的全过程，并总结了静态博客的安全加固最佳实践。
 tags:
-  - "HTTP劫持"
-  - "HTTPS"
-  - "网络安全"
-  - "Cloudflare"
-  - "GitHub Pages"
-  - "HSTS"
-  - "HTTP"
-  - "CSP"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/03/27/博客变赌场一次运营商-http-劫持的排查与绝地反击/"
-permalink: "posts/2026/03/27/博客变赌场一次运营商-http-劫持的排查与绝地反击/"
-date: "2026-03-27 13:19:00"
-updated: "2026-03-27 13:40:00"
-cover: "https://iili.io/qtPxSb1.png"
+- HTTP劫持
+- HTTPS
+- 网络安全
+- Cloudflare
+- GitHub Pages
+- HSTS
+- HTTP
+- CSP
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/03/27/博客变赌场一次运营商-http-劫持的排查与绝地反击/
+permalink: posts/2026/03/27/博客变赌场一次运营商-http-劫持的排查与绝地反击/
+date: '2026-03-27 13:19:00'
+updated: '2026-03-27 13:40:00'
+cover: https://iili.io/qtPxSb1.png
+categories:
+- 技术观察
 ---
 
 ## 为什么现在值得写

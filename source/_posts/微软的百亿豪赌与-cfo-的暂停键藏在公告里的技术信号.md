@@ -1,20 +1,23 @@
 ---
-layout: "post"
-title: "微软的百亿豪赌与 CFO 的暂停键：藏在公告里的技术信号"
-description: "微软一边在日本砸下百亿美元，一边暂停部分数据中心建设，CFO 的“暂停键”背后是对 AI 泡沫的警惕，还是战略重心的转移？自研 MAI 模型、Copilot+ PC 与地缘布局，这些动作如何影响工程师的技术选型与职业决策？"
+layout: post
+title: 微软的百亿豪赌与 CFO 的暂停键：藏在公告里的技术信号
+description: 微软一边在日本砸下百亿美元，一边暂停部分数据中心建设，CFO 的“暂停键”背后是对 AI 泡沫的警惕，还是战略重心的转移？自研 MAI 模型、Copilot+
+  PC 与地缘布局，这些动作如何影响工程师的技术选型与职业决策？
 tags:
-  - "微软"
-  - "AI 战略"
-  - "云计算"
-  - "技术选型"
-  - "宏观经济"
-  - "CFO"
-  - "AI"
-  - "MAI"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/06/微软的百亿豪赌与-cfo-的暂停键藏在公告里的技术信号/"
-permalink: "posts/2026/04/06/微软的百亿豪赌与-cfo-的暂停键藏在公告里的技术信号/"
-date: "2026-04-06 07:36:00"
-updated: "2026-04-06 07:37:00"
+- 微软
+- AI 战略
+- 云计算
+- 技术选型
+- 宏观经济
+- CFO
+- AI
+- MAI
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/06/微软的百亿豪赌与-cfo-的暂停键藏在公告里的技术信号/
+permalink: posts/2026/04/06/微软的百亿豪赌与-cfo-的暂停键藏在公告里的技术信号/
+date: '2026-04-06 07:36:00'
+updated: '2026-04-06 07:37:00'
+categories:
+- 技术观察
 ---
 
 先打个招呼，今天这篇想把微软的百亿豪赌与 CFO 的暂停键说明白。

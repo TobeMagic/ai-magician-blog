@@ -1,20 +1,24 @@
 ---
-layout: "post"
-title: "Microsoft 最新公告里，藏着哪些技术投入与经营信号？"
-description: "本文拆解微软 FY25 Q4 财报与近期公告，指出股价回撤与 Azure 高增背后的“温差”实则是市场短视与长期投入的错配。通过分析资本开支、日本基建投资及 AI 安全新框架，为工程师解读算力基建与安全门槛上移带来的职业信号。"
+layout: post
+title: Microsoft 最新公告里，藏着哪些技术投入与经营信号？
+description: 本文拆解微软 FY25 Q4 财报与近期公告，指出股价回撤与 Azure 高增背后的“温差”实则是市场短视与长期投入的错配。通过分析资本开支、日本基建投资及
+  AI 安全新框架，为工程师解读算力基建与安全门槛上移带来的职业信号。
 tags:
-  - "Microsoft"
-  - "Azure"
-  - "AI基建"
-  - "资本开支"
-  - "职业发展"
-  - "FY25"
-  - "Q4"
-  - "AI"
-canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/microsoft-最新公告里藏着哪些技术投入与经营信号/"
-permalink: "posts/2026/04/10/microsoft-最新公告里藏着哪些技术投入与经营信号/"
-date: "2026-04-10 13:36:00"
-updated: "2026-04-10 13:43:00"
+- Microsoft
+- Azure
+- AI基建
+- 资本开支
+- 职业发展
+- FY25
+- Q4
+- AI
+canonical_url: https://tobemagic.github.io/ai-magician-blog/posts/2026/04/10/microsoft-最新公告里藏着哪些技术投入与经营信号/
+permalink: posts/2026/04/10/microsoft-最新公告里藏着哪些技术投入与经营信号/
+date: '2026-04-10 13:36:00'
+updated: '2026-04-10 13:43:00'
+categories:
+- 技术金融
+- 财报拆解
 ---
 
 2026 年 4 月，Microsoft 股价距离高点回撤了 25%，但同一份财报里，Azure 增速却冲到了 39%[1](https://www.microsoft.com/en-us/investor/earnings/fy-2025-q4/metrics)。
