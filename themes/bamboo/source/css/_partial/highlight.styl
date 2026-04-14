@@ -223,3 +223,72 @@ $line-numbers
       > code[class*="language-"]
         padding: 14px 16px 16px
 
+.post
+  figure.highlight
+  pre:has(> code[class*="language-"])
+    border: 1px solid #d9e5f2 !important
+    border-radius: 16px
+    background: linear-gradient(180deg, #fbfdff 0%, #f5f8fc 100%) !important
+    box-shadow: 0 14px 28px rgba(148, 163, 184, 0.12)
+    overflow: hidden
+
+    &:before
+      display: none !important
+
+  figure.highlight
+    figcaption
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      gap: 10px
+      margin: 0
+      padding: 10px 12px 8px
+      border-bottom: 1px solid #e2e8f0
+      background: linear-gradient(180deg, rgba(255, 255, 255, .94) 0%, rgba(248, 250, 252, .98) 100%)
+
+      span
+        display: inline-flex
+        align-items: center
+        padding: 4px 9px
+        border-radius: 999px
+        border: 1px solid #dbe5ef
+        background: #f1f5f9
+        color: #64748b
+        font-size: 11px
+        line-height: 1
+        font-weight: 600
+        letter-spacing: .02em
+
+      a
+        float: none
+        color: #2563eb
+        font-size: 11px
+
+    table
+      border-collapse: collapse
+
+    .gutter
+      display: table-cell
+      width: 52px
+      background: rgba(241, 245, 249, .72)
+      border-right: 1px solid #e2e8f0
+
+    .gutter pre
+      color: #94a3b8
+      font-size: 12px
+      text-align: right
+      padding: 14px 10px 16px 14px !important
+      user-select: none
+
+    .code pre
+      padding: 14px 16px 16px !important
+      color: #334155
+      font-size: 12.5px
+      line-height: 1.78
+
+  pre:has(> code[class*="language-"])
+    > code[class*="language-"]
+      color: #334155
+      font-size: 12.5px
+      line-height: 1.78
+

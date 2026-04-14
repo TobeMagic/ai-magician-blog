@@ -7,8 +7,10 @@ function normalizeImageCaption(rawCaption) {
   if (!caption) {
     return "";
   }
+  if (caption.startsWith("SVGDIAGRAM::")) {
+    return caption.slice("SVGDIAGRAM::".length).trim();
+  }
   if (
-    caption.startsWith("SVGDIAGRAM::") ||
     /^(正文图解|正文配图)\d*$/.test(caption) ||
     /^(大佬系列表情|程序员反应图|程序员 reaction|reaction|表情包)[:：]/i.test(caption) ||
     ["封面图", "文末收口图", "延伸阅读入口"].includes(caption)
@@ -70,10 +72,11 @@ function wrapImageWithFancyBox() {
     .not(".link-card img")
     .not(".btns img")
     .not(".gallery-group-img")
-    .not('.getJsonPhoto-api img')
+	    .not('.getJsonPhoto-api img')
 	    .not('.getJsonTalk-api img')
 	    .each(function () {
 	      var $image = $(this);
+	      var rawAlt = String($image.attr("alt") || "").trim();
 	      var imageCaption = "";
 	      var $imageWrapLink = $image.parent("a");
 	      var $linkWrapDiv = $imageWrapLink.parent("div");
@@ -93,16 +96,29 @@ function wrapImageWithFancyBox() {
 
       imageCaption = resolveAdjacentBlockquoteCaption($linkWrapDiv);
       if (!imageCaption) {
-        imageCaption = normalizeImageCaption($image.attr("alt"));
+        imageCaption = normalizeImageCaption(rawAlt);
       }
 
       $imageWrapLink.attr("data-fancybox", "images");
+      if (
+        rawAlt === "封面图" ||
+        rawAlt === "文末收口图" ||
+        rawAlt === "站外推广图" ||
+        rawAlt.startsWith("SVGDIAGRAM::")
+      ) {
+        $linkWrapDiv.addClass("plain-article-asset");
+      }
+      if (rawAlt.startsWith("SVGDIAGRAM::")) {
+        $linkWrapDiv.addClass("svgdiagram-asset");
+      }
       if (imageCaption) {
         $imageWrapLink.attr("data-caption", imageCaption);
         $linkWrapDiv.find("> .image-caption").remove();
         $linkWrapDiv.append(
           '<span class="image-caption">' + imageCaption + "</span>"
         );
+      } else {
+        $linkWrapDiv.find("> .image-caption").remove();
       }
     });
   
