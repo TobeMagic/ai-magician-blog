@@ -259,6 +259,120 @@ $line-numbers
         font-weight: 600
         letter-spacing: .02em
 
+.post
+  figure.highlight
+    position: relative
+    margin: 1.35rem 0
+    border: 1px solid #d9e5f2 !important
+    border-radius: 16px
+    background: linear-gradient(180deg, #fbfdff 0%, #f5f8fc 100%) !important
+    box-shadow: 0 14px 28px rgba(148, 163, 184, 0.12)
+    overflow: hidden
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      height: 38px
+      background: linear-gradient(180deg, rgba(255, 255, 255, .94) 0%, rgba(248, 250, 252, .98) 100%)
+      border-bottom: 1px solid #e2e8f0
+
+    &:after
+      content: ''
+      position: absolute
+      top: 14px
+      left: 14px
+      width: 48px
+      height: 10px
+      background: radial-gradient(circle at 5px 5px, #ff5f57 0, #ff5f57 4px, transparent 4.5px), radial-gradient(circle at 24px 5px, #febc2e 0, #febc2e 4px, transparent 4.5px), radial-gradient(circle at 43px 5px, #28c840 0, #28c840 4px, transparent 4.5px)
+      z-index: 2
+
+    table
+      position: relative
+      z-index: 1
+      margin: 0
+      width: 100%
+
+    figcaption
+      position: absolute
+      top: 0
+      right: 12px
+      left: 72px
+      z-index: 3
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      gap: 10px
+      height: 38px
+      margin: 0
+      padding: 0
+      border: 0
+      background: transparent
+
+    .gutter
+      display: table-cell
+      width: 56px
+      background: rgba(241, 245, 249, .72)
+      border-right: 1px solid #e2e8f0
+
+    .gutter pre
+      padding: 16px 12px 18px 16px
+      color: #94a3b8
+      font-size: 12px
+      line-height: 1.78
+      background: transparent
+      user-select: none
+
+    .code pre
+      padding: 16px 18px 18px
+      color: #334155
+      font-size: 12.5px
+      line-height: 1.78
+      background: transparent
+
+    .gutter + .code pre
+      padding: 16px 18px 18px
+
+  pre:has(> code[class*="language-"])
+    position: relative
+    margin: 1.35rem 0
+    border: 1px solid #d9e5f2 !important
+    border-radius: 16px
+    background: linear-gradient(180deg, #fbfdff 0%, #f5f8fc 100%) !important
+    box-shadow: 0 14px 28px rgba(148, 163, 184, 0.12)
+    overflow: hidden
+    padding-top: 38px
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      height: 38px
+      background: linear-gradient(180deg, rgba(255, 255, 255, .94) 0%, rgba(248, 250, 252, .98) 100%)
+      border-bottom: 1px solid #e2e8f0
+
+    &:after
+      content: ''
+      position: absolute
+      top: 14px
+      left: 14px
+      width: 48px
+      height: 10px
+      background: radial-gradient(circle at 5px 5px, #ff5f57 0, #ff5f57 4px, transparent 4.5px), radial-gradient(circle at 24px 5px, #febc2e 0, #febc2e 4px, transparent 4.5px), radial-gradient(circle at 43px 5px, #28c840 0, #28c840 4px, transparent 4.5px)
+      z-index: 2
+
+    > code[class*="language-"]
+      display: block
+      padding: 16px 18px 18px
+      color: #334155
+      font-size: 12.5px
+      line-height: 1.78
+      background: transparent
+
       a
         float: none
         color: #2563eb
