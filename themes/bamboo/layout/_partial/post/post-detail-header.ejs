@@ -23,8 +23,13 @@
   img = imgs[Math.abs(hashCode(post.title) % imgs.length)]
 %>
 
+<%
+  var heroImage = post.cover || post.img || post.swiperImg || img;
+  var heroImageUrl = /^(https?:)?\/\//.test(heroImage) ? heroImage : url_for(heroImage);
+%>
+
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('<%- url_for(post.img || post.swiperImg || img) %>')">
+  background-position: center center;position: relative;background-image:url('<%- heroImageUrl %>')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   

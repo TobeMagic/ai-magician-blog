@@ -14,14 +14,74 @@
       mounted() {
         const that = this;
         var copy = '<%= __("copy") %>';
+        var languageLabelMap = {
+          python: 'Python',
+          javascript: 'JavaScript',
+          typescript: 'TypeScript',
+          bash: 'Bash',
+          shell: 'Bash',
+          sh: 'Bash',
+          json: 'JSON',
+          yaml: 'YAML',
+          yml: 'YAML',
+          sql: 'SQL',
+          html: 'HTML',
+          css: 'CSS',
+          markdown: 'Markdown',
+          text: 'Text',
+          plaintext: 'Text'
+        };
+
+        function normalizeLanguageLabel(raw) {
+          var lang = String(raw || '').trim().toLowerCase();
+          if (!lang) return 'Text';
+          if (lang.indexOf('language-') === 0) {
+            lang = lang.slice('language-'.length);
+          }
+          if (lang === 'py') return 'Python';
+          if (lang === 'js') return 'JavaScript';
+          if (lang === 'ts') return 'TypeScript';
+          return languageLabelMap[lang] || (lang.charAt(0).toUpperCase() + lang.slice(1));
+        }
+
+        function ensureCodeDecoration() {
+          $(".post-detail pre").not('.gutter pre').each(function () {
+            var $pre = $(this);
+            var $code = $pre.find("code[class*='language-']").first();
+            if (!$code.length) {
+              return;
+            }
+            if ($pre.parent('.codeBox').length < 1) {
+              $pre.wrap("<div class='codeBox' style='position:relative;width:100%;'></div>");
+            }
+            var $box = $pre.parent('.codeBox');
+            var className = String($code.attr('class') || '');
+            var languageMatch = className.match(/language-([A-Za-z0-9_+-]+)/);
+            var languageLabel = normalizeLanguageLabel(languageMatch ? languageMatch[1] : '');
+            $box.attr('data-code-lang', languageLabel);
+            $pre.addClass('line-numbers');
+            $pre.attr('data-code-lang', languageLabel);
+            if ($pre.find('> .line-numbers-rows').length < 1) {
+              var codeText = String($code.text() || '').replace(/\n$/, '');
+              var lineCount = Math.max(codeText ? codeText.split('\n').length : 1, 1);
+              var rowsHtml = '';
+              for (var index = 0; index < lineCount; index += 1) {
+                rowsHtml += '<span></span>';
+              }
+              $pre.append('<span aria-hidden="true" class="line-numbers-rows">' + rowsHtml + '</span>');
+            }
+            if ($box.children('.btn-copy').length < 1) {
+              var copyHtml = '';
+              copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:2;">';
+              copyHtml += '<i class="fas fa-copy"></i><span>' + copy + '</span>';
+              copyHtml += '</button>';
+              $pre.before(copyHtml);
+            }
+          });
+        }
         /* code */
         var initCopyCode = function () {
-          var copyHtml = '';
-          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
-          copyHtml += '<i class="fas fa-copy"></i><span>' + copy + '</span>';
-          copyHtml += '</button>';
-          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
-          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          ensureCodeDecoration();
           new ClipboardJS('.btn-copy', {
             target: function (trigger) {
               return trigger.nextElementSibling;

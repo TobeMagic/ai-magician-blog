@@ -109,6 +109,7 @@ function wrapImageWithFancyBox() {
         $linkWrapDiv.addClass("plain-article-asset");
       }
       if (rawAlt.startsWith("SVGDIAGRAM::")) {
+        $image.attr("alt", normalizeImageCaption(rawAlt) || "正文图解");
         $linkWrapDiv.addClass("svgdiagram-asset");
       }
       if (imageCaption) {

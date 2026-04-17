@@ -406,3 +406,104 @@ $line-numbers
       font-size: 12.5px
       line-height: 1.78
 
+.post
+  .codeBox
+    position: relative
+    margin: 1.35rem 0
+    border: 1px solid #d9e5f2
+    border-radius: 16px
+    background: linear-gradient(180deg, #fbfdff 0%, #f5f8fc 100%)
+    box-shadow: 0 14px 28px rgba(148, 163, 184, 0.12)
+    overflow: hidden
+
+    &:before
+      content: ''
+      position: absolute
+      top: 14px
+      left: 14px
+      width: 48px
+      height: 10px
+      background: radial-gradient(circle at 5px 5px, #ff5f57 0, #ff5f57 4px, transparent 4.5px), radial-gradient(circle at 24px 5px, #febc2e 0, #febc2e 4px, transparent 4.5px), radial-gradient(circle at 43px 5px, #28c840 0, #28c840 4px, transparent 4.5px)
+      z-index: 3
+
+    &:after
+      content: attr(data-code-lang)
+      position: absolute
+      top: 8px
+      right: 72px
+      display: inline-flex
+      align-items: center
+      min-height: 22px
+      padding: 0 10px
+      border: 1px solid #dbe5ef
+      border-radius: 999px
+      background: #f8fbff
+      color: #5b6f83
+      font-size: 11px
+      font-weight: 600
+      line-height: 1
+      letter-spacing: .02em
+      z-index: 3
+
+    > pre[class*="language-"]
+      margin: 0
+      padding: 44px 0 0
+      border: 0 !important
+      border-radius: 0
+      background: transparent !important
+      box-shadow: none
+
+      &:before
+      &:after
+        display: none !important
+
+      > code[class*="language-"]
+        display: block
+        padding: 14px 16px 16px
+        color: #334155
+        font-size: 12.5px
+        line-height: 1.78
+        background: transparent
+
+      &.line-numbers
+        padding-left: 0 !important
+
+        > code[class*="language-"]
+          padding-left: 4.2em
+
+        .line-numbers-rows
+          top: 44px
+          left: 0
+          width: 3.4em
+          padding: 14px 0 16px
+          background: rgba(241, 245, 249, .72)
+          border-right: 1px solid #e2e8f0
+
+        .line-numbers-rows > span:before
+          color: #94a3b8
+          font-size: 12px
+          line-height: 1.78
+
+    .btn-copy
+      top: 8px !important
+      right: 12px !important
+      border: 1px solid #d9e5f2 !important
+      border-radius: 999px !important
+      background: rgba(255, 255, 255, .94) !important
+      color: #526273 !important
+      box-shadow: 0 4px 12px rgba(148, 163, 184, .14)
+
+  @media (max-width: 768px)
+    .codeBox
+      border-radius: 14px
+      &:after
+        right: 58px
+        padding: 0 8px
+        font-size: 10px
+      > pre[class*="language-"]
+        > code[class*="language-"]
+          padding: 12px 14px 14px
+        &.line-numbers
+          > code[class*="language-"]
+            padding-left: 3.9em
+
