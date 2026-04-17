@@ -16,12 +16,12 @@ tags:
   - "CertiK安全报告"
   - "Anthropic封号"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/17/agent架构-hermes-agent-openclaw小龙虾该换爱马仕了hermes-agent-为什么让-openclaw-突然没那么香了/"
-img: "https://iili.io/BU8OXyJ.png"
-swiperImg: "https://iili.io/BU8OXyJ.png"
+img: "https://iili.io/BU8pWSn.png"
+swiperImg: "https://iili.io/BU8pWSn.png"
 permalink: "posts/2026/04/17/agent架构-hermes-agent-openclaw小龙虾该换爱马仕了hermes-agent-为什么让-openclaw-突然没那么香了/"
 date: "2026-04-17 04:09:00"
 updated: "2026-04-17 04:10:00"
-cover: "https://iili.io/BU8OXyJ.png"
+cover: "https://iili.io/BU8pWSn.png"
 ---
 
 2026 年 4 月 11 日凌晨，OpenClaw 创始人 Peter Steinberger 在 X 上发了一条带图的推文，配文是：「看来以后越来越难保证 OpenClaw 继续兼容 Anthropic 模型了。
