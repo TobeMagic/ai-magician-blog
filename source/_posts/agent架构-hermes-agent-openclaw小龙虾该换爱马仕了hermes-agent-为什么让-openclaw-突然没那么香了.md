@@ -65,7 +65,7 @@ Hermes Agent 则是另一套逻辑。
 
 Hermes 想做的是「会记事的搭档」——任务做完，它会复盘，提取可复用步骤，固化成 Skill，下次遇到同类任务直接调用，不用你再教一遍。GitHub Stars 在两个月内冲到 4 万+[3](https://www.cndba.cn/dave/article/131875)。
 
-![SVGDIAGRAM::正文图解 1](https://iili.io/BU56myx.png)
+![正文图解 1](https://iili.io/BU56myx.png)
 > 正文图解 1
 
 两条路线的核心差异可以一句话说清：**Hermes Agent 做的是「让一个 Agent 越来越懂你」，OpenClaw 做的是「让一堆工具被你一个 Agent 调用」。**
