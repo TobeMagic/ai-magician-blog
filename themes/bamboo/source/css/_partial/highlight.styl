@@ -485,13 +485,30 @@ $line-numbers
           line-height: 1.78
 
     .btn-copy
+      display: inline-flex
+      align-items: center
+      gap: 6px
       top: 8px !important
       right: 12px !important
+      padding: 3px 10px !important
       border: 1px solid #d9e5f2 !important
       border-radius: 999px !important
       background: rgba(255, 255, 255, .94) !important
       color: #526273 !important
+      font-size: 12px
+      font-weight: 600
+      line-height: 1.2
+      opacity: 1
       box-shadow: 0 4px 12px rgba(148, 163, 184, .14)
+      transition: background .2s ease, color .2s ease, border-color .2s ease
+
+      span
+        margin-left: 0
+
+      &:hover
+        background: #eef5fb !important
+        border-color: #c5d5e7 !important
+        color: #364a5f !important
 
   @media (max-width: 768px)
     .codeBox
