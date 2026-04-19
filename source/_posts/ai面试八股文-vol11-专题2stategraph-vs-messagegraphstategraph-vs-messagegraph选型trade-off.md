@@ -16,12 +16,12 @@ tags:
   - "多 Agent 协作"
   - "Vol.1.1"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/04/19/ai面试八股文-vol11-专题2stategraph-vs-messagegraphstategraph-vs-messagegraph选型trade-off/"
-img: "https://iili.io/BgGOXLX.jpg"
-swiperImg: "https://iili.io/BgGOXLX.jpg"
+img: "https://iili.io/BgE6tEB.png"
+swiperImg: "https://iili.io/BgE6tEB.png"
 permalink: "posts/2026/04/19/ai面试八股文-vol11-专题2stategraph-vs-messagegraphstategraph-vs-messagegraph选型trade-off/"
 date: "2026-04-19 00:33:00"
 updated: "2026-04-19 01:04:00"
-cover: "https://iili.io/BgGOXLX.jpg"
+cover: "https://iili.io/BgE6tEB.png"
 ---
 
 翻了一圈面经，发现 StateGraph 和 MessageGraph 这道题出现的频率高得离谱。
