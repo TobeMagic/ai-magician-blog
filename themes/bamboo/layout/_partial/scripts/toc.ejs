@@ -27,6 +27,17 @@
       .trim();
   }
 
+  function rewriteHeadingContent($heading, baseText, prefix) {
+    var $anchors = $heading.children('a.headerlink, a.anchor').detach();
+    var $index = $('<span></span>').addClass('heading-index').text(prefix + ' ');
+    $heading.empty();
+    $heading.append($index);
+    $heading.append(document.createTextNode(baseText));
+    if ($anchors.length > 0) {
+      $heading.append($anchors);
+    }
+  }
+
   function annotateNumberedHeadings() {
     var h2Index = 0;
     var h3Index = 0;
@@ -62,8 +73,7 @@
       }
 
       $heading.attr('data-base-heading-text', baseText);
-      $heading.find('> .heading-index').remove();
-      $heading.prepend('<span class="heading-index">' + prefix + ' </span>');
+      rewriteHeadingContent($heading, baseText, prefix);
     });
   }
 
@@ -181,13 +191,13 @@
     }
     const mobileToc = {
       open: () => {
-        $cardTocLayout.style.cssText = 'animation: toc-open .3s; opacity: 1; right: ' + right
+        $cardTocLayout.style.cssText = 'display: block; animation: toc-open .3s; opacity: 1; right: ' + right
       },
 
       close: () => {
         $cardTocLayout.style.animation = 'toc-close .2s'
         setTimeout(() => {
-          $cardTocLayout.style.cssText = "opacity:''; animation: ''; right: ''"
+          $cardTocLayout.style.cssText = "display: none; opacity:''; animation: ''; right: ''"
         }, 100)
       }
     }
