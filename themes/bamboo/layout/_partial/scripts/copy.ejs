@@ -58,6 +58,9 @@
             var className = String($code.attr('class') || '');
             var languageMatch = className.match(/language-([A-Za-z0-9_+-]+)/);
             var languageLabel = normalizeLanguageLabel(languageMatch ? languageMatch[1] : '');
+            if (languageMatch && !$pre.hasClass('language-' + languageMatch[1])) {
+              $pre.addClass('language-' + languageMatch[1]);
+            }
             $box.attr('data-code-lang', languageLabel);
             $pre.addClass('line-numbers');
             $pre.attr('data-code-lang', languageLabel);
