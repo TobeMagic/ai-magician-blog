@@ -11,46 +11,36 @@ function lazyProcess(htmlContent, target) {
     }
   }
   const loadingImg = cfg.loadingImg;
-  return htmlContent.replace(/<img(.*?)src="(.*?)"(.*?)>/gi, function(str, p1, p2) {
+  const transparentImg = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=';
+  return htmlContent.replace(/<img\b([^>]*)\bsrc=(["'])(.*?)\2([^>]*)>/gi, function(str, before, quote, src, after) {
     // might be duplicate
-    if (/data-srcset/gi.test(str)) {
+    if (/data-src(set)?=/gi.test(str)) {
       return str;
     }
-    if (/src="data:image(.*?)/gi.test(str)) {
+    if (/src=["']data:image/gi.test(str)) {
       return str;
     }
     if (/no-lazy/gi.test(str)) {
       return str;
     }
-    let cls = '';
-    if (str.indexOf('class=') > -1) {
-      cls = str.substring(str.indexOf('class='));
-      if (cls.length > 7) {
-        const c = cls.substring(6, 7);
-        cls = cls.split(c);
-        if (cls.length > 1) {
-          cls = cls[0] + '"' + cls[1] + '"';
-        }
-      }
-    }
-    let result = str;
-    let newCls = '';
-    if (cls.length > 0 && result.includes('class=')) {
-      newCls = cls.replace(/(class=|[\"]*)/g, '') + ' ';
-    }
-    const oldCls = newCls.trim();
-    if (loadingImg) {
-      newCls += 'lazyload placeholder';
+    const lazyClasses = loadingImg ? 'lazyload placeholder' : 'lazyload';
+    let attrs = `${before || ''}${after || ''}`
+      .replace(/\s(?:srcset|data-srcset)=("[^"]*"|'[^']*'|[^\s>]+)/gi, '')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+    const classMatch = attrs.match(/\bclass=(["'])(.*?)\1/i);
+    if (classMatch) {
+      const existing = classMatch[2].trim();
+      const merged = `${existing} ${lazyClasses}`
+        .split(/\s+/)
+        .filter((item, index, list) => item && list.indexOf(item) === index)
+        .join(' ');
+      attrs = attrs.replace(classMatch[0], `class=${classMatch[1]}${merged}${classMatch[1]}`);
     } else {
-      newCls += 'lazyload';
+      attrs = `class="${lazyClasses}" ${attrs}`.trim();
     }
-    if (cls.length > 0) {
-      result = result.replace('"' + oldCls + '"', '"' + newCls + '"');
-    }
-    if (loadingImg) {
-      return result.replace(p2, p2 + '" class="lazyload placeholder" ' + 'data-srcset="' + p2 + '" srcset="' + loadingImg);
-    }
-    return result.replace(p2, p2 + '" class="lazyload" ' + 'data-srcset="' + p2 + '" srcset="' + 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=');
+    const placeholderSrc = loadingImg || transparentImg;
+    return `<img ${attrs} src="${placeholderSrc}" data-src="${src}">`;
 
   });
 }
