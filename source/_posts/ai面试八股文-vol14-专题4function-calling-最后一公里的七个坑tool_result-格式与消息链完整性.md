@@ -83,7 +83,7 @@ messages = [
 
 这两个约束不是风格偏好，而是 Anthropic API 的硬性要求，违反任意一条都会触发 BadRequestError（详见 GitHub Issue #1423）。
 
-![](https://iili.io/B6vZAiv.png)
+![](https://iili.io/B6Pa63Q.png)
 > 这个错误我踩过，第2轮interrupt直接崩
 
 ---
@@ -141,7 +141,7 @@ tool_result 的 `content` 字段可以承载两种形态：字符串形式的返
 
 在 LangGraph 场景里，这个问题通常由框架自己处理，但如果你是手写 ToolNode 或者在并发场景下自己管理消息数组，就需要格外注意 ID 映射的一致性。
 
-![](https://iili.io/B6vtlrQ.png)
+![](https://iili.io/qyujVJ2.png)
 > review 的时候才发现 tool_use_id 对不上
 
 ### is_error 与 type：异常标记与 SDK 差异
@@ -224,7 +224,7 @@ Human-in-the-loop 是 LangGraph 的核心能力之一。面试官喜欢追问这
 
 核心解法是在 `post_tool_review` 节点里用 `Command({ goto: "agent", update: { messages: [feedbackMsg] })` 把反馈消息注入到正确位置，而不是让默认 reducer 随意追加。
 
-![](https://iili.io/B8CX5yG.png)
+![](https://iili.io/BRBMU4j.png)
 > interrupt 恢复后第2轮直接 BadRequestError
 
 ### 场景二：并发 tool 调用导致 id 错配
@@ -378,6 +378,10 @@ LangGraph 官方建议在 `post_tool_review` 节点使用 `Command({ goto: "agen
 如果你用 PostgresSaver 还要额外验证序列化后的顺序是否正确。
 
 ---
+
+---
+
+![文末收口图](https://iili.io/qLIhGYg.png)
 
 ## 参考文献
 <div class="academic-reference-list">
