@@ -23,13 +23,35 @@ date: "2026-05-08 15:45:00"
 updated: "2026-05-09 01:33:00"
 ---
 
-你大概见过这个场景：给AI发了三个问题，它用同一个解决框架回答了三次。
+---
 
-temperature调到0.9，换了几个prompt说法，让它「再想想」「多想几个角度」，出来的答案还是那几条熟悉分支，像一台只会走固定舞步的老式点唱机。
+**你 → AI**  
+帮我设计一个数据仪表盘的配色方案
 
-这不是个例。
+**AI**  
+① 蓝 + 白 + 灰，简洁专业  
+② 深色背景 + 高亮数据  
+③ 用渐变色突出重点指标
 
-这是工程现场里真实存在的结构性困境——不是prompt写得不够好，而是模型在给定语言下探索的向量空间是相对固定的，切换temperature只是在这个空间里打转的幅度不同，并不是在改变它探索的方向。
+**你 → AI**  
+再来几个不一样的方向
+
+**AI**  
+① 绿色代表增长，红色代表下降  
+② 紫色 + 深灰，科技感  
+③ 橙色 + 深蓝，对比色
+
+**你 → AI**  
+真正不一样的，再想想
+
+**AI**  
+① 用色块代替图标  
+② 大字体突出核心数字  
+③ 卡片式布局分组
+
+你看着这三轮答案，突然发现——第一轮的「简洁专业」和第三轮的「大字体突出」是同一个思路，第二轮的「科技感」和第一轮的「蓝白灰」本质上是同一套配色逻辑。
+
+temperature 调了、prompt 换了、让模型「跳出来想」——它每次都认真回答，但探索的其实是同一个方向。
 
 ![](https://iili.io/BgVFpfV.png)
 > 等等，我调了半天temperature你告诉我方向就不对？
@@ -207,5 +229,7 @@ why_not_selected → 未入选原因说明
 
 ![](https://iili.io/qysAvUP.png)
 > 这个Skill怎么拿到？评论区见
+> 
+> **关注留言评论区即可获取！附加即可**
 
 <div class="hexo-wechat-follow-card" style="margin:28px 0 0;padding:16px 18px;border:1px solid #dbe7f3;border-radius:14px;background:#f8fbff;"><a href="weixin://profile/gh_1ab72c968bef" style="font-weight:700;color:#0f5b9f;text-decoration:none;">点这里一键关注『计算机魔术师』</a><p style="margin:8px 0 0;font-size:13px;color:#6f8299;line-height:1.7;">如果浏览器无法直接唤起微信，可在微信内打开公众号主页：<a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzkwNjQyOTUwOA==#wechat_redirect" style="color:#0f5b9f;text-decoration:none;">计算机魔术师</a></p></div>
