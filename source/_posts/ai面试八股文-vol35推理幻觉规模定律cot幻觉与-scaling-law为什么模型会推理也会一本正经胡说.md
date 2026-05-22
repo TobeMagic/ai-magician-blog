@@ -46,6 +46,8 @@ cover: "https://iili.io/C9bKlUb.png"
 [^15]: https://arxiv.org/abs/2203.11171
 [^28]: https://arxiv.org/abs/2005.14165
 
+## 二、CoT 推理机制：从触发器到多路采样
+
 这个问题暴露了大多数候选人对 Chain-of-Thought 的根本性误解：把触发机制当成能力来源。CoT 本质上是让模型把已经存在于参数权重中的隐式推理路径显式写出来，而不是模型通过写步骤才获得推理能力[14]。
 
 ### 2.1 Chain-of-Thought 的基本机制：中间步骤、路径展开和可检查性
@@ -54,7 +56,7 @@ cover: "https://iili.io/C9bKlUb.png"
 
 可检查性是 CoT 的工程意义所在。传统问答只能看到输入输出，无法定位错误发生在哪里；CoT 让每个中间步骤成为可验证的节点，一旦发现第三步出错就知道要回溯到第二或第一步。
 
-![](https://iili.io/B2xuxFj.png)
+![](https://iili.io/BHP4xzN.png)
 > 2.1 节：CoT 触发的是隐式路径显式化，不是推理能力的赋予
 
 ### 2.2 Zero-shot / Few-shot CoT：提示词是触发器，不是能力来源
@@ -63,7 +65,7 @@ Zero-shot CoT 的核心发现来自 Kojima 等人的论文[17]：仅需一句"Le
 
 区分触发与赋予很重要：Zero-shot 触发依赖模型预训练语料中见过足够多的推理文本；Few-shot 示例则帮助模型定位任务类型并激活对应子网络。两者都不是在模型里植入新能力，而是让已有能力更容易被调用[17][28]。
 
-![](https://iili.io/C9Dvq6x.png)
+![](https://iili.io/C9b9tou.png)
 > 2.2 节：提示词是扳机，不是子弹
 
 ### 2.3 Self-Consistency：为什么多路采样能提升稳定性
@@ -85,12 +87,12 @@ Program-aided Reasoning 则将推理任务交给代码解释器：模型生成 P
 
 选择哪种框架取决于两个维度：任务是否需要搜索（多解空间 vs 单解），以及是否需要外部知识或计算工具。简单算术用 CoT 足够；多跳推理用 ReAct；规划类任务用 ToT[16][19]。
 
-![](https://iili.io/BJFIK3x.png)
+![](https://iili.io/C9b9rF4.png)
 > 2.4 节：从单链到搜索树，从文本到代码
 
 要回答这个问题，必须把幻觉拆解成三个独立的工程层：训练数据层、解码层和指令跟随层。这三层各自产生幻觉的机制不同，叠加在一起才构成了我们在应用层看到的“模型一本正经胡说八道”。
 
-![](https://iili.io/C9bHTNt.png)
+![](https://iili.io/C9Dkp3l.png)
 > 这一段，面试官开始看你工程感了
 
 ## 三、幻觉成因：训练、解码、指令跟随三层一起看
@@ -103,7 +105,7 @@ Program-aided Reasoning 则将推理任务交给代码解释器：模型生成 P
 
 TruthfulQA 基准专门测试模型在这类问题上的表现，发现即便是 GPT-3.5 在涉及文化、饮食、健康等领域的长尾知识上也有显著误导率[22]。这不是模型的“恶意”，而是统计学习的固有局限。
 
-![](https://iili.io/C9Dv3Zu.png)
+![](https://iili.io/C9Dk4YN.png)
 > 3.1 节：知识边界与长尾事实导致训练数据层幻觉
 
 ### 3.2 解码层：temperature、top-p 和 over-confident 生成
@@ -122,7 +124,7 @@ SFT（监督微调）和 RLHF 训练让模型学会了“跟随指令”的能�
 
 这个现象可以用工程语言重新表述：SFT 和 RLHF 实际上是在优化一个目标函数，这个函数强调的是“回答的有用性”和“格式的正确性”，但对“答案的真实性”缺乏直接的梯度信号。真实性和有用性之间存在张力，而这个张力被训练过程牺牲了。
 
-![](https://iili.io/Bq617K7.png)
+![](https://iili.io/B3caqXa.png)
 > 3.3 节：SFT 优化有用性但牺牲真实性的工程机制
 
 ### 3.4 Agent 场景：为什么工具调用和结构化输出仍然不能自动消灭幻觉
@@ -136,8 +138,6 @@ ReAct 框架让模型生成推理 trace 后调用外部工具，根据 observati
 ![正文图解 2](https://iili.io/C9bCv4t.png)
 > 正文图解 2
 
-这篇会把 CoT、幻觉和 Scaling Law 放到同一条工程主线上：CoT 不是教模型思考，而是触发模型把隐式路径显式写出来；幻觉不是单一 bug，而是训练知识边界、解码策略和指令跟随压力叠加后的结果；Scaling Law 则解释了为什么规模会带来能力，也会放大某些错误
-
 ## 四、Scaling Law 与 Chinchilla：为什么“更大”不等于“更适合项目”
 
 ### 4.1 参数量、数据量、算力之间的幂律关系
@@ -149,7 +149,7 @@ Scaling Law 描述了一个基本现象：当算力预算固定时，模型性�
 ![算力-参数-数据三维关系](https://iili.io/C9bCS3X.png)
 > 算力-参数-数据三维关系
 
-![](https://iili.io/C9DkkQa.png)
+![](https://iili.io/C9bHTNt.png)
 > 4.1 节：面试官这时候会问你算力怎么算
 
 ### 4.2 Chinchilla 结论：数据不足的大模型为什么会浪费算力
@@ -168,7 +168,7 @@ Chinchilla 验证了这一点：同等算力下，用 70B 参数 + 1.4T token �
 
 LoRA 的核心思想是低秩分解：将 <svg class="math-formula math-formula--inline" xmlns="http://www.w3.org/2000/svg" width="566" height="32" viewBox="0 0 566 32" role="img" aria-label="W \in \mathbb{R}^{d \times k}"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#f6faff"/><text x="18" y="22" fill="#1f3f75" font-size="18" font-family="Menlo,Consolas,Monaco,monospace">W \in \mathbb{R}^{d \times k}</text></svg> 分解为 <svg class="math-formula math-formula--inline" xmlns="http://www.w3.org/2000/svg" width="278" height="32" viewBox="0 0 278 32" role="img" aria-label="W + A \cdot B"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#f6faff"/><text x="18" y="22" fill="#1f3f75" font-size="18" font-family="Menlo,Consolas,Monaco,monospace">W + A \cdot B</text></svg>，其中 <svg class="math-formula math-formula--inline" xmlns="http://www.w3.org/2000/svg" width="566" height="32" viewBox="0 0 566 32" role="img" aria-label="A \in \mathbb{R}^{d \times r}"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#f6faff"/><text x="18" y="22" fill="#1f3f75" font-size="18" font-family="Menlo,Consolas,Monaco,monospace">A \in \mathbb{R}^{d \times r}</text></svg>、<svg class="math-formula math-formula--inline" xmlns="http://www.w3.org/2000/svg" width="566" height="32" viewBox="0 0 566 32" role="img" aria-label="B \in \mathbb{R}^{r \times k}"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#f6faff"/><text x="18" y="22" fill="#1f3f75" font-size="18" font-family="Menlo,Consolas,Monaco,monospace">B \in \mathbb{R}^{r \times k}</text></svg>，$r \ll \min(d, k)$。训练时只更新 A 和 B，不更新原始 W，这使得微调参数量从 $d \times k$ 降到 $2 \times d \times r$[2]。QLoRA 在此基础上引入了 4-bit NF 量化，结合 SFT Trainer[12] 的指令微调流程，可以在单张 24GB 显存的 GPU 上微调 65B 模型[3]。
 
-![](https://iili.io/C9DOmoG.png)
+![](https://iili.io/BD7cSII.png)
 > 4.3 节：这里要会算显存，算不了显存的调参工程师不是好算法工程师
 
 ### 4.4 应用岗选型：规模、延迟、成本、可控性怎么一起算
@@ -212,7 +212,7 @@ LoRA 的核心思想是低秩分解：将 <svg class="math-formula math-formula-
 
 低温只消除了采样随机性，但无法消除模型参数中编码的错误知识。temperature 控制的是 <svg class="math-formula math-formula--inline" xmlns="http://www.w3.org/2000/svg" width="296" height="32" viewBox="0 0 296 32" role="img" aria-label="p(next\_token)"><rect x="0" y="0" width="100%" height="100%" rx="10" fill="#f6faff"/><text x="18" y="22" fill="#1f3f75" font-size="18" font-family="Menlo,Consolas,Monaco,monospace">p(next\_token)</text></svg> 的分布形状，而非模型对事实的记忆准确度。当模型参数中存储的知识本身存在偏差或过时，即使 logits 完全 deterministic，输出的 top-1 token 仍然是错误的。低温对稳定输出格式有效，对事实准确性无效。
 
-![](https://iili.io/C9DeFR9.png)
+![](https://iili.io/C9Dvq6x.png)
 > 5.2 节：这三个追问答好，面试官基本不会继续追细节了
 
 ### 5.3 易错边界：把 Prompt 当训练、把 RAG 当万能、把规模当唯一答案
@@ -239,7 +239,7 @@ RAG 能解决知识过时和长尾事实问题，但不能解决推理错误[25]
 
 **风险兜底设计**：永远假设模型会犯错。在 API 层面设计 fallback 机制：当模型输出的置信度低于阈值（可以用 token 概率阈值或结构化字段缺失来判断）时，切换到规则引擎或人工处理。不要让模型成为单点故障。
 
-![](https://iili.io/BgV3nQR.png)
+![](https://iili.io/C9DOmoG.png)
 > 5.4 节：面试官听到这里，基本已经知道你是做生产的，不是调 prompt 的
 
 ## 参考文献
