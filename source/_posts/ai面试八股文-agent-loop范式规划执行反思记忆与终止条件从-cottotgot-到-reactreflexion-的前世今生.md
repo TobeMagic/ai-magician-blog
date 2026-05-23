@@ -16,11 +16,13 @@ tags:
   - "ReAct"
   - "Reflexion"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/05/23/ai面试八股文-agent-loop范式规划执行反思记忆与终止条件从-cottotgot-到-reactreflexion-的前世今生/"
-img: ""
-swiperImg: ""
+img: "https://iili.io/CHE8AoQ.png"
+swiperImg: "https://iili.io/CHE8AoQ.png"
 permalink: "posts/2026/05/23/ai面试八股文-agent-loop范式规划执行反思记忆与终止条件从-cottotgot-到-reactreflexion-的前世今生/"
+imgTop: false
 date: "2026-05-23 02:53:00"
 updated: "2026-05-23 02:53:00"
+cover: "https://iili.io/CHE8AoQ.png"
 ---
 
 上周有个读者跟我复盘一场 AI 应用工程师面试。 他前面聊 RAG、Embedding、LangGraph 都很顺，直到面试官问了一句：「如果你的 Agent 调了三次工具还是没解决问题，它接下来应该继续试、换计划、反思，还是停下来交给人？」 他当场卡住了。 不是因为不知道 ReAct，也不是没听过 CoT，而是突然发现自己一直在背范式名词，却没有把 Agent Loop 当成一个工程系统来理解：怎么规划，怎么执行，怎么反思，记忆写在哪里，什么时候必须停。 这篇就沿着这五个点，把 CoT、ToT、GoT、Self-Consistency、ReAct、Tool-use、Plan-and-Execute、Reflexion、Self-Refine 串起来讲透。
@@ -31,7 +33,7 @@ updated: "2026-05-23 02:53:00"
 
 很多候选人把 Agent Loop 等同于 LangGraph 或 CrewAI 的 API 调用，这是把范式理解成了框架选型。Agent Loop 是一类**闭环推理-执行架构**的设计哲学：模型输出思维步骤 → 执行动作 → 获得反馈 → 依据反馈更新状态并决定下一步。无论用 ReAct、Toolformer 还是 Voyager 的技能库，都属于 Agent Loop 的具体实现。
 
-![](https://iili.io/C9Dvq6x.png)
+![](https://iili.io/B3caqXa.png)
 
 ### 1.2 五个核心设计点
 
@@ -46,7 +48,7 @@ updated: "2026-05-23 02:53:00"
 
 面试官问「调三次工具还没解决该怎么做」，不是在考你知道多少个论文名字，而是想听你在**有限轮次 vs. 探索深度**之间的权衡逻辑：你有什么依据判断当前路径失败？反思粒度是工具级别还是任务级别？这本质上是考察你**把范式论文翻译成生产系统配置参数**的能力——最大重试次数设多少、反思触发阈值怎么调、记忆窗口截断策略是什么。
 
-![](https://iili.io/C9Dvq6x.png)
+![](https://iili.io/B3caqXa.png)
 
 ## 二、推理型 Loop：从 CoT 到 ToT、GoT 和 Self-Consistency
 
@@ -58,7 +60,7 @@ Chain-of-Thought 的本质是用自然语言显式写出中间推理步骤，让
 
 面试中真正有区分度的问题是：你怎么判断 CoT 在某个任务上是否有效？答案是看任务的「步骤可分解性」——数学推导、逻辑证明、多跳问答这类任务天然适合，因为每一步的中间结论都可验证。而开放式写作、情感分析这类任务，CoT 收益有限，因为中间步骤本身难以客观评判。
 
-![](https://iili.io/C9Dvq6x.png)
+![](https://iili.io/B3caqXa.png)
 
 ### 2.2 ToT：把单链路推理扩展成树状搜索
 
@@ -88,7 +90,7 @@ Self-Consistency 的设计哲学不同于 CoT/ToT/GoT 的「主动结构化推�
 
 **幻觉在搜索中会被放大**。CoT 每一步都可能在「看起来合理」的推理中引入新的幻觉，而 ToT/GoT 的多路径探索会进一步扩散这个风险。Self-Consistency 的投票机制可以部分缓解，但不能根本解决——多个幻觉路径可能相互一致，从而在多数投票中胜出。生产系统必须在推理后增加「事实核查」环节。
 
-![](https://iili.io/qyHHWKv.png)
+![](https://iili.io/BfdJPbS.png)
 
 ## 三、行动型 Loop：从 ReAct 到 Tool-use 和 Plan-and-Execute
 
@@ -98,7 +100,7 @@ ReAct（Synergizing Reasoning and Acting in Language Models，2022）第一次�
 
 ReAct 的核心价值不在于这三个标签，而在于它把工具调用变成了可审计的推理步骤。传统做法里模型直接输出 API 调用，开发者不知道它为什么选这个工具。ReAct 让 Thought 显式化了决策依据：模型先说「当前对话中没有提到北京的历史建筑信息，需要搜索」，然后才执行 Search 操作。
 
-![](https://iili.io/C9Dvq6x.png)
+![](https://iili.io/B3caqXa.png)
 
 面试追问：ReAct 的 Thought 是模型自己生成的还是 prompt 里写好的？答案：两者都有。论文中用 zero-shot prompting 让模型自发生成 Thought，但工程实践中往往在 system prompt 里预置 Thought 结构，引导模型在每个 Action 前先写推理。
 
@@ -128,7 +130,7 @@ Voyager（2023）是 Plan-and-Execute 在具身智能中的落地。它用 LLM �
 
 **超时设计**：每个 Action 必须有超时配置。HTTP 请求默认超时 30 秒，复杂计算任务可以给 5 分钟。超时后的策略取决于任务类型：读取类可以降级返回缓存，写入类必须回滚或标记失败。
 
-![](https://iili.io/C9Dvq6x.png)
+![](https://iili.io/B3caqXa.png)
 
 ## 四、反思型 Loop：Reflexion 与 Self-Refine
 
@@ -170,7 +172,7 @@ Agent Loop 里的「记忆」不是把对话历史一股脑塞进 context 就完
 
 **反思记忆**专门存储执行过程中的关键决策和结果。Reflexion 把每次失败经验写成自然语言形式的 self-reflection，写进长期记忆供下次同类任务参考。这个层级的记忆不是「我查了什么」，而是「上次在这个类型的任务上为什么失败」。
 
-![](https://iili.io/C9Dvq6x.png)
+![](https://iili.io/B3caqXa.png)
 
 ### 5.2 max_turns、质量阈值、预算阈值与人工接管
 
@@ -223,7 +225,7 @@ Agent Loop 里的「记忆」不是把对话历史一股脑塞进 context 就完
 
 **系统操作任务**（API 调用、文件管理、部署流水线）：反馈密度高、路径不可逆。适合 **Plan-and-Execute**，全局规划避免操作顺序错误，局部 ReAct 处理工具调用。必须设置 max_turns 和人工接管阈值。
 
-![](https://iili.io/C9Dvq6x.png)
+![](https://iili.io/B3caqXa.png)
 
 ### 6.3 常见组合：Plan-and-Execute + ReAct + Reflexion
 
@@ -326,5 +328,9 @@ def execute_tool(tool_call, context):
 [11]: ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models - https://arxiv.org/abs/2305.02323
 [12]: Voyager: An Open-Ended Embodied Agent with Large Language Models - https://arxiv.org/abs/2305.16291
 [13]: Gorilla: A Large Language Model for Software Test Generation - https://arxiv.org/abs/2307.06888
+
+---
+
+![文末收口图](https://iili.io/qLIhGYg.png)
 
 <div class="hexo-wechat-follow-card" style="margin:28px 0 0;padding:16px 18px;border:1px solid #dbe7f3;border-radius:14px;background:#f8fbff;"><a href="weixin://profile/gh_1ab72c968bef" style="font-weight:700;color:#0f5b9f;text-decoration:none;">点这里一键关注『计算机魔术师』</a><p style="margin:8px 0 0;font-size:13px;color:#6f8299;line-height:1.7;">如果浏览器无法直接唤起微信，可在微信内打开公众号主页：<a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzkwNjQyOTUwOA==#wechat_redirect" style="color:#0f5b9f;text-decoration:none;">计算机魔术师</a></p></div>
