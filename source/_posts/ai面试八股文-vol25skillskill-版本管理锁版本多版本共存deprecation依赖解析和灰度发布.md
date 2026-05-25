@@ -47,7 +47,7 @@ Skill 版本管理的本质不是“给包打个号”，而是一套**向后兼
 
 **边界三：依赖解析时的循环依赖检测**。当 Skill A 依赖 Skill B 的 v1，Skill B 依赖 Skill A 的 v2 时，系统要能检测并拒绝发布，同时给出清晰的依赖拓扑图告诉开发者冲突点在哪里。
 
-![](https://iili.io/C9b9rF4.png)
+![](https://iili.io/C9b9tou.png)
 > 这一段，面试官开始看你工程感了
 
 yaml
@@ -172,34 +172,6 @@ caption: 'Skill 版本管理四层策略叠加：用户配置→版本策略→�
 
 > 灰度发布的核心价值是把\"爆炸半径\"从全局收敛到百分比
 
-```svgdiagram\nfenced: yaml\nid: skill-rollout-pipeline\ncaption: Skill 灰度发布三阶段流程与指标监控
-
-nodes:
-  - id: skill_v2_tagged\n    type: pipeline-stage\n    label: \"1. 发布 v2 标签\\n仅测试环境可见\"\n    x: 100 y: 50
-
-- id: canary_1pct\n    type: pipeline-stage\n    label: \"2. 灰度 1%\\n指标监控开启\"\n    x: 100 y: 150
-
-- id: metrics_check\n    type: decision\n    label: \"指标达标？\"\n    x: 100 y: 250
-
-- id: canary_50pct\n    type: pipeline-stage\n    label: \"3. 扩量至 50%\\n企业租户可选降级\"\n    x: 300 y: 150
-
-- id: full_rollout\n    type: pipeline-stage\n    label: \"4. 全量发布\\nv1 保留 30 天\"\n    x: 500 y: 150
-
-- id: rollback\n    type: pipeline-stage\n    label: \"回滚至 v1\\n热备环境切换\"\n    x: 300 y: 350
-
-- id: deprecate_v1\n    type: pipeline-stage\n    label: \"5. v1 废弃\\n进入 Deprecation\"\n    x: 500 y: 350
-
-edges:
-  - from: skill_v2_tagged\n    to: canary_1pct
-  - from: canary_1pct\n    to: metrics_check
-  - from: metrics_check\n    to: canary_50pct\n    label: \"是\"
-  - from: metrics_check\n    to: rollback\n    label: \"否\"
-  - from: canary_50pct\n    to: full_rollout
-  - from: rollback\n    to: full_rollout
-  - from: full_rollout\n    to: deprecate_v1
-
-styles:\n  pipeline-stage: fill:#e1f5fe,stroke:#0277bd,stroke-width:2,rx:8\n  decision: fill:#fff9c4,stroke:#f9a825,stroke-width:2,rx:20\n  rollback: fill:#ffebee,stroke:#c62828,stroke-width:2,stroke-dasharray:5,3\n```
-
 灰度发布的技术支撑来自两个能力：**流量分级路由**（基于用户 ID 哈希或租户标签做流量拆分）和**版本热备环境**（旧版本执行镜像不销毁，随时可回切）。没有这两点，灰度只是\"手动把用户分批切到新版本\"，谈不上可控。
 
 ### 2.3 用户 Skill 引用策略：锁定具体版本 vs 跟随最新（类比 npm ^ 语义）
@@ -224,8 +196,6 @@ Deprecation 不是简单\"标记然后删除\"，而是一个有法律效力的�
 
 > Deprecation 的质量，反映的是平台对用户技术债务的尊重程度
 
-
-
 **强制废弃后的兜底策略**：通知期结束后，平台保留 Skill 的只读元数据（可查询不可执行），并给仍然引用的用户返回明确的 HTTP 410 Gone，响应体中携带迁移指引 URL。这比直接 404 更友好，让用户有迹可循。
 
 ### 2.5 Skill 依赖关系解析与循环依赖检测
@@ -236,34 +206,7 @@ Deprecation 不是简单\"标记然后删除\"，而是一个有法律效力的�
 
 循环依赖是 Skill 生态的硬性禁区：Skill A 依赖 Skill B，Skill B 依赖 Skill C，Skill C 依赖 Skill A —— 这种结构在执行时会陷入死锁。平台在发布时必须运行循环检测算法（Tarjan 算法或 DFS 环检测），一旦检测到环，直接拒绝发布并返回错误。
 
-```svgdiagram\nfenced: yaml\nid: skill-dep-graph\ncaption: Skill 依赖图解析与循环依赖检测示意
-
-nodes:
-  - id: skill_a\n    type: skill\n    label: \"Skill A\\n(用户直接引用)\"\n    x: 150 y: 100
-
-- id: skill_b\n    type: skill\n    label: \"Skill B\\n@^2.0\"\n    x: 50 y: 220
-  - id: skill_c\n    type: skill\n    label: \"Skill C\\n@v1.5\"\n    x: 250 y: 220
-  - id: conflict_d\n    type: conflict\n    label: \"❌ Skill D\\n同时引用 v2 & v3\"\n    x: 450 y: 160
-  - id: platform\n    type: platform\n    label: \"平台 Registry\\n版本索引\"\n    x: 450 y: 60
-
-edges:
-  - from: skill_a\n    to: skill_b\n    label: \"depends\"
-  - from: skill_a\n    to: skill_c\n    label: \"depends\"
-  - from: skill_b\n    to: platform\n    label: \"resolves\"
-  - from: skill_c\n    to: platform\n    label: \"resolves\"
-  - from: platform\n    to: conflict_d\n    label: \"conflict\"
-
-styles:\n  skill: fill:#e8f5e9,stroke:#2e7d32,stroke-width:2,rx:8\n  conflict: fill:#ffebee,stroke:#c62828,stroke-width:2,stroke-dasharray:5,3\n  platform: fill:#e3f2fd,stroke:#1565c0,stroke-width:2,rx:8\n"}"}
-
-## 三、项目里怎么设计：从引用策略到发布流水线
-
-讲完机制原理，面试官接下来想看的是你在项目里怎么落地。这部分拆成两层：数据模型怎么设计，以及 CI 校验 + 发布流水线怎么跑。
-
-### 3.1 数据模型、manifest、registry 和运行态的边界
-
-先说数据模型。每一个 Skill 包在仓库里有一个 manifest（清单文件），记录这个 Skill 的身份、能力边界和依赖声明。典型的结构是：
-
-```yaml
+yaml
 skill:
   id: github-code-review
   version: 1.2.3
@@ -282,8 +225,12 @@ skill:
     memory_limit: 512MB
 ```
 
-![](https://iili.io/C9Dvq6x.png)
+
+
+![](https://iili.io/Bq617K7.png)
 > Skill manifest 结构：ID + 版本 + 依赖 + 运行时约束
+
+
 
 这里 version 字段用 SemVer 语义，dependencies 里的 version specifier 借鉴了 npm 的 ^、>=、< 语法，让 Skill 作者可以声明兼容性范围。
 
@@ -295,8 +242,12 @@ Registry（注册表）是这些 manifest 的集中存储，提供版本查询�
 
 很多项目出事故的原因是把这三个边界混在一起——比如让 Registry 直接调用 Skill 代码，或者运行时直接读仓库源码而不走 manifest 版本校验。一旦依赖版本对不上，轻则能力退化，重则运行时崩溃。
 
-![Skill 版本管理三组件边界](https://iili.io/CJeG0oN.png)
+
+
+![Skill 版本管理三组件边界](https://iili.io/CJeGNDl.png)
 > Skill 版本管理三组件边界
+
+
 
 ### 3.2 CI 校验、灰度发布、回滚和审计链路
 
@@ -310,8 +261,12 @@ Registry（注册表）是这些 manifest 的集中存储，提供版本查询�
 
 **第四步：审计链路。** 所有版本发布、用户引用变更、Deprecation 通知都记录到审计日志里，供安全合规和故障溯源使用。典型字段包括操作者身份、操作时间戳、操作类型（发布/回滚/Deprecate）、涉及的 Skill ID 和版本号、受影响的用户数。
 
-![](https://iili.io/C9DOmoG.png)
+
+
+![](https://iili.io/BD7cSII.png)
 > 这一段，面试官开始看你工程感了：CI 怎么卡位、灰度怎么监控、回滚怎么落地
+
+
 
 落到面试回答里，这套流水线可以用一句话收尾：**我们用 Registry 做版本索引，用 CI 卡住兼容性和规范，用灰度阶段验证线上表现，用审计日志做事后追溯。** 面试官追问细节时可以逐层展开：CI 跑什么检测、灰度指标怎么选、回滚的降级路径怎么走。
 
@@ -331,8 +286,12 @@ Registry（注册表）是这些 manifest 的集中存储，提供版本查询�
 
 真正的工程取舍是**分层策略**：核心业务 Skill 锁版本 + 定期 review + 强制 CI 校验；内部工具 Skill 跟随最新 + 灰度验证 + 快速回滚机制。如果你回答“我全锁死”或“我全跟最新”，面试官会立刻追问边界 case，这恰恰暴露了你没有思考过代价。
 
-![](https://iili.io/C9b9rF4.png)
+
+
+![](https://iili.io/C9b9tou.png)
 > 这一段，面试官开始看你工程感了
+
+
 
 ### 4.2 多版本共存什么时候该保留，什么时候该强迁移
 
@@ -353,6 +312,10 @@ Skill 之间有依赖关系是常态，但依赖解析失败或循环依赖会�
 **循环依赖的检测与阻断**：通过拓扑排序在构建时检测环路，一旦发现 Skill A 依赖 B 且 B 依赖 A，直接拒绝发布并给出清晰的错误路径。运行时如果出现循环依赖，通常表现为调用栈溢出或超时，这时候除了阻断发布，还要在 CI 里加自动化测试用例覆盖常见的循环依赖 pattern。
 
 **工程边界上的坑**：很多人忽略了传递依赖的循环，比如 A→B→C→A 这种三层环路检测起来比直接 A→A 复杂得多。另外，条件依赖（仅在特定条件下触发的依赖）也可能隐藏循环，静态分析要配合动态测试一起跑。
+
+
+
+
 
 如果面试官继续追问“线上跑着跑着发现依赖冲突怎么办”，你要能答出三层兜底：CI 强制校验（发布前阻断）、运行时降级（部分功能不可用但核心流程保命）、监控告警（第一时间发现问题而不是等用户报障）。这三个层次对应的是工程上从预防到发现到恢复的完整链路，也是面试官判断你是否有真实 SRE 思维的关键。
 
@@ -387,11 +350,19 @@ Skill 之间有依赖关系是常态，但依赖解析失败或循环依赖会�
 
 > Skill 版本管理的本质是 **在灵活性与稳定性之间找到工程化平衡**：锁版本保稳定、灰度控风险、Deprecation 给过渡、依赖解析防循环。
 
-![Skill 版本管理全链路架构：用户引用层 → Registry 层 → 运行时调度层](https://iili.io/CJeGNDl.png)
+
+
+![Skill 版本管理全链路架构：用户引用层 → Registry 层 → 运行时调度层](https://iili.io/CJetlPp.png)
 > Skill 版本管理全链路架构：用户引用层 → Registry 层 → 运行时调度层
 
-![](https://iili.io/C9b9rF4.png)
+
+
+
+
+![](https://iili.io/C9b9tou.png)
 > 这一段，面试官开始看你工程感了
+
+
 
 ## 参考文献
 1. Semantic Versioning 2.0.0 - https://semver.org/
