@@ -47,7 +47,7 @@ Skill 版本管理的本质不是“给包打个号”，而是一套**向后兼
 
 **边界三：依赖解析时的循环依赖检测**。当 Skill A 依赖 Skill B 的 v1，Skill B 依赖 Skill A 的 v2 时，系统要能检测并拒绝发布，同时给出清晰的依赖拓扑图告诉开发者冲突点在哪里。
 
-![](https://iili.io/C9b9tou.png)
+![](https://iili.io/C9Dv3Zu.png)
 > 这一段，面试官开始看你工程感了
 
 yaml
@@ -176,7 +176,7 @@ caption: 'Skill 版本管理四层策略叠加：用户配置→版本策略→�
 
 ### 2.3 用户 Skill 引用策略：锁定具体版本 vs 跟随最新（类比 npm ^ 语义）
 
-\n用户在代码或配置中引用 Skill 时，有两种主流策略：
+用户在代码或配置中引用 Skill 时，有两种主流策略：
 
 **锁定具体版本**（`skill://data-processor@v1.2.0`）：精确到 patch 级别，每次部署使用的 Skill 二进制完全一致。这是最保守的策略，适合对执行结果有严格幂等性要求的工作流，任何非预期的 Skill 变更都可能导致下游结果漂移。
 
@@ -190,7 +190,7 @@ caption: 'Skill 版本管理四层策略叠加：用户配置→版本策略→�
 
 Deprecation 不是简单\"标记然后删除\"，而是一个有法律效力的过渡协议。一个完整的 Deprecation 流程包含：
 
-\n**通知期（通常 30~90 天）**：平台在 Skill 详情页、用户工作台和 API 响应 header 中持续展示废弃警告，警告中必须包含：废弃生效时间、推荐迁移目标版本、自动迁移工具入口。
+**通知期（通常 30~90 天）**：平台在 Skill 详情页、用户工作台和 API 响应 header 中持续展示废弃警告，警告中必须包含：废弃生效时间、推荐迁移目标版本、自动迁移工具入口。
 
 **迁移 guide 自动生成**：平台根据两个版本之间的 diff，自动生成迁移变更点说明 —— 哪些 API 签名变了、哪些参数被移除、哪些行为不再向后兼容。如果 Skill 有结构化定义（类似 Claude Code Skills 的 Manifest），这一步可以由平台自动推断；如果 Skill 是非结构化的描述性文档，则需要 maintainer 手动编写。
 
@@ -227,7 +227,7 @@ skill:
 
 
 
-![](https://iili.io/Bq617K7.png)
+![](https://iili.io/C9bHTNt.png)
 > Skill manifest 结构：ID + 版本 + 依赖 + 运行时约束
 
 
@@ -263,7 +263,7 @@ Registry（注册表）是这些 manifest 的集中存储，提供版本查询�
 
 
 
-![](https://iili.io/BD7cSII.png)
+![](https://iili.io/C9DOmoG.png)
 > 这一段，面试官开始看你工程感了：CI 怎么卡位、灰度怎么监控、回滚怎么落地
 
 
@@ -288,7 +288,7 @@ Registry（注册表）是这些 manifest 的集中存储，提供版本查询�
 
 
 
-![](https://iili.io/C9b9tou.png)
+![](https://iili.io/C9Dv3Zu.png)
 > 这一段，面试官开始看你工程感了
 
 
@@ -359,7 +359,7 @@ Skill 之间有依赖关系是常态，但依赖解析失败或循环依赖会�
 
 
 
-![](https://iili.io/C9b9tou.png)
+![](https://iili.io/C9Dv3Zu.png)
 > 这一段，面试官开始看你工程感了
 
 
