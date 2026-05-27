@@ -7,27 +7,29 @@ categories:
   - "AI面试八股文 Vol.1.7"
   - "记忆管理"
 tags:
-  - "AI Agent 面试八股文"
-  - "对话状态管理"
-  - "Context Window 截断"
-  - "Summary Memory"
-  - "Working Memory"
-  - "长期记忆 向量检索"
+  - "💼 职场情报"
   - "Vol.1.7"
   - "Context"
+  - "Window"
+  - "Summary"
+  - "Buffer"
+  - "Working"
+  - "Memory"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/05/11/ai面试八股文-vol17-记忆管理对话状态与记忆管理context-windowsummary-bufferworking-memory长期记忆和多用户隔离一篇讲透/"
-img: ""
-swiperImg: ""
+img: "https://iili.io/CdgCZqN.png"
+swiperImg: "https://iili.io/CdgCZqN.png"
 permalink: "posts/2026/05/11/ai面试八股文-vol17-记忆管理对话状态与记忆管理context-windowsummary-bufferworking-memory长期记忆和多用户隔离一篇讲透/"
+imgTop: false
 date: "2026-05-11 03:55:00"
 updated: "2026-05-11 03:55:00"
+cover: "https://iili.io/CdgCZqN.png"
 ---
 
 上周五晚上，线上Agent的上下文突然塌了——用户在多轮对话里提过的地址、偏好，前面确认过的选项，全部忘干净。
 
 查日志发现是Context Window被撑爆，截断策略刚好把System Prompt之后的内容全清掉。这不是小概率事件：任何一个上线过对话Agent的工程师，只要用户量稍大，几乎都会撞上这把刀。
 
-![](https://iili.io/B6hBtHl.png)
+![](https://iili.io/BHi0NjV.png)
 > 屏幕一红，心率先上去了
 
 这道题之所以反复出现，是因为它同时踩中了好几个能力维度：工程设计（怎么管状态）、系统认知（怎么控预算）、产品判断（哪些东西不能丢）。
@@ -37,12 +39,12 @@ updated: "2026-05-11 03:55:00"
 
 只会说「超了就截断」的人，暴露了自己只处理过toy project。
 
-![](https://iili.io/CdgFEhB.png)
+![](https://iili.io/B4PkeAN.png)
 > 你开心就好，我先不展开了
 
 先说清楚一件事：记忆管理不是「把对话塞进Context」这么简单。
 
-![](https://iili.io/BimQSWB.png)
+![](https://iili.io/BimwwfS.png)
 > 这一段，懂的都懂
 
 它是一套分层策略，从毫秒级Working Memory到分钟级Summary Buffer再到小时/天级别的External Memory，每一层都有自己的设计约束和取舍。
@@ -64,9 +66,6 @@ updated: "2026-05-11 03:55:00"
 在说清楚三层记忆架构之前，先给一个核心判断：**这三层不是并列关系，而是时间尺度和访问频率的梯度** 。
 
 Working Memory管当前会话，Summary Buffer管压缩保留，External Memory管跨会话持久化。每一层的读写延迟、数据规模、Token成本都不一样。
-
-![正文图解 1](https://iili.io/CdgKa6X.png)
-> 正文图解 1
 
 这个分层不是某篇论文的独创设计，而是工业级对话Agent普遍采用的基础架构。MemGPT最早把这个思路系统化，后来被LangGraph、AutoGen等框架广泛借鉴[1](https://ac.nowcoder.com/discuss/1637601?type=0)。
 
@@ -166,11 +165,8 @@ Working Memory只管当前会话，Summary Buffer管跨轮压缩，而External M
 用户发起会话时，Agent先把当前query过一遍Embedding，然后在向量库里做top-k相似度检索。关键参数：
 
 - `top_k`：取多少条相关记忆回来。设太小容易漏，设太大会往Context里塞一堆无关信息。经验值在3到8之间，通常根据当前Context剩余容量动态调整。
-
 - `similarity_threshold`：相似度低于多少就不召回。低于0.7的块通常语义相关性已经不可靠了，但产品知识库可以设高一点（0.75+），对话历史记忆可以适当放宽（0.65+）。
-
 - `metadata_filter`：这是生产级系统里最容易出问题的环节。召回时必须用metadata_filter把「当前用户的记忆」筛出来，而不是把全量用户的记忆都搅在一起。
-
 ```python
 import chromadb
 from openai import OpenAI
@@ -472,7 +468,6 @@ External Memory用Qdrant或Milvus；Token预算管理用Python类内嵌计算逻
 ## 参考文献
 
 1. [字节Agent面试问我：“你了解哪些Agent框架？ ”_讨论帖_牛客网](https://ac.nowcoder.com/discuss/1637601?type=0)
-
-2. [LangChain: Observe, Evaluate, and Deploy ReliableAIAgents](https://www.langchain.com/)
+1. [LangChain: Observe, Evaluate, and Deploy ReliableAIAgents](https://www.langchain.com/)
 
 <div class="hexo-wechat-follow-card" style="margin:28px 0 0;padding:16px 18px;border:1px solid #dbe7f3;border-radius:14px;background:#f8fbff;"><a href="weixin://profile/gh_1ab72c968bef" style="font-weight:700;color:#0f5b9f;text-decoration:none;">点这里一键关注『计算机魔术师』</a><p style="margin:8px 0 0;font-size:13px;color:#6f8299;line-height:1.7;">如果浏览器无法直接唤起微信，可在微信内打开公众号主页：<a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzkwNjQyOTUwOA==#wechat_redirect" style="color:#0f5b9f;text-decoration:none;">计算机魔术师</a></p></div>
