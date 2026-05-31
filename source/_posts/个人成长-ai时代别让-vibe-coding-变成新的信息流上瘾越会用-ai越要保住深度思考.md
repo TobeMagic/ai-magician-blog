@@ -7,7 +7,6 @@ categories:
   - "个人成长"
   - "AI时代"
 tags:
-  - "个人成长，AI时代；第一人称深度反思；克制但有情绪；不鸡汤、不营销；围绕 vib"
   - "Vibe-coding"
   - "AI"
   - "Token"
@@ -15,18 +14,24 @@ tags:
   - "Plan"
   - "人工智能"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/05/31/个人成长-ai时代别让-vibe-coding-变成新的信息流上瘾越会用-ai越要保住深度思考/"
-img: ""
-swiperImg: ""
+img: "https://iili.io/C3GOHCu.png"
+swiperImg: "https://iili.io/C3GOHCu.png"
 permalink: "posts/2026/05/31/个人成长-ai时代别让-vibe-coding-变成新的信息流上瘾越会用-ai越要保住深度思考/"
+imgTop: false
 date: "2026-05-31 09:09:00"
 updated: "2026-05-31 09:09:00"
+cover: "https://iili.io/C3GOHCu.png"
 ---
+
+# 【个人成长 | AI时代】别让 vibe-coding 变成新的信息流上瘾：越会用 AI，越要保住深度思考
+
+> 这篇是 AI 时代的个人成长反思：vibe-coding 很容易把人带进短反馈、频繁切换和 token 消耗的循环。真正的分水岭不是谁点得更快，而是谁能在写 prompt 前先想清楚目标、边界和 plan，并把每次和 AI 的讨论沉淀成自己的判断力。
 
 最近我有一个很强烈的感觉：vibe-coding 有时候不像在写代码，反而像在刷短视频。刚看到一点结果，马上想点下一次；刚改完一个页面，又忍不住切到另一个问题。
 
-## 一、我为什么觉得 vibe-coding 有点像新的信息流
+## 我为什么觉得 vibe-coding 有点像新的信息流
 
-### 1.1 它给反馈太快，快到人很容易上瘾
+### 它给反馈太快，快到人很容易上瘾
 
 vibe-coding 的核心机制是自然语言驱动生成，你描述一个功能，AI 几秒内给你一个可运行的实现。这种即时反馈满足了我们对"掌控感"的渴望，却也在悄悄重塑我们的注意力模式。
 
@@ -36,7 +41,7 @@ vibe-coding 的核心机制是自然语言驱动生成，你描述一个功能�
 
 > 信息流 vs vibe-coding 的注意力循环对比
 
-### 1.2 频繁切上下文，会让人误以为自己很高效
+### 频繁切上下文，会让人误以为自己很高效
 
 vibe-coding 的第二个陷阱是上下文切换的幻觉。当你一天和 AI 交互了 50 次，每次都在不同的功能点之间跳跃，表面上看产出很多，实际上你的深度思考能力正在被消耗。
 
@@ -44,16 +49,51 @@ vibe-coding 的第二个陷阱是上下文切换的幻觉。当你一天和 AI �
 
 问题在于，这种"高效"是假象。你确实快速完成了多个功能，但你对系统整体的理解是碎片化的。当你需要 debug、需要优化性能、需要向别人解释这段代码的意图，你会发现自己在每个节点上都没有足够的掌控力。真正的效率不是做了多少事，而是对所做的事有多少把握。
 
-![高频上下文切换 vs 深度聚焦的认知成本差异](https://iili.io/C3GXxNn.png)
-> 高频上下文切换 vs 深度聚焦的认知成本差异
-
+```plain text
+type: workflow
+caption: 高频上下文切换 vs 深度聚焦的认知成本差异
+---
 name: context-switch-cost
 
-![正文图解 2](https://iili.io/C3GXNHP.png)
-> 正文图解 2
+nodes:
+  - id: start
+    label: 任务 A
+    type: task
+  - id: ai1
+    label: AI 生成结果
+    type: output
+  - id: switch1
+    label: 切换任务 B
+    type: transition
+    color: red
+  - id: ai2
+    label: AI 生成结果
+    type: output
+  - id: switch2
+    label: 切换任务 C
+    type: transition
+    color: red
+  - id: ai3
+    label: AI 生成结果
+    type: output
+  - id: cost
+    label: 认知负荷累计
+    type: warning
+    color: orange
 
-![正文图解 3](https://iili.io/C3GXbsf.png)
-> 正文图解 3
+edges:
+  - from: start
+    to: ai1
+  - from: ai1
+    to: switch1
+  - from: switch1
+    to: ai2
+  - from: ai2
+    to: switch2
+  - from: switch2
+    to: ai3
+  - from: ai3
+    to: cost
 
 layout:
   direction: LR
@@ -68,13 +108,25 @@ layout:
 
 核心机制是这样的：每一次低质量 prompt 都在消耗你「定义清晰目标」的能力。这个能力像肌肉一样，不用则退化。
 
-![](https://iili.io/B2xuxFj.png)
+![](https://iili.io/C9bHTNt.png)
 > prompt 质量与深度思考能力的正相关循环
 
+```plain text
+type: loop-diagram
 
-
-
-
+nodes:
+  - id: shallow_prompt
+    label: 浅层 Prompt
+    style: dashed_border
+  - id: low_quality_output
+    label: AI 输出质量下滑
+  - id: more_tuning
+    label: 更多调优轮次
+  - id: token_overhead
+    label: Token 消耗上升
+  - id: thinking_degeneration
+    label: 深度思考能力退化
+    style: gradient_bg
 
 edges:
   - from: shallow_prompt
@@ -100,20 +152,20 @@ edges:
 
 这不是「要不要用 AI」的问题，而是「怎么用才能让自己的深度思考能力保持增长」的问题。
 
-## 二、真正消耗人的不是 token，而是没有想清楚就开始
+## 真正消耗人的不是 token，而是没有想清楚就开始
 
-### 2.1 低质量 prompt 会制造更多返工
+### 低质量 prompt 会制造更多返工
 
 我观察到一个很反直觉的现象：很多人在 vibe-coding 场景下花了大量时间「调优」，但仔细看他们的调优记录，大部分都在修补同一个问题——最开始那个 prompt 太模糊了。
 
 比如有人说「帮我写个登录页面」，AI 生成一个基础版本；然后他说「加上验证码」，AI 加上了；他又说「验证码要支持国际号码」，AI 又改了一轮；然后他发现验证码服务商不支持某些地区，又得改架构……四轮下来，这个人花了 20 分钟，看起来在高效迭代，实际上只是在为一个本该在第一轮就定义清楚的需求反复擦屁股。
 
-![](https://iili.io/BgV3nQR.png)
+![](https://iili.io/C9DOmoG.png)
 > 低质量 prompt 的返工陷阱
 
 这种返工的本质不是迭代，是消耗。因为每次返工都在占用你的注意力带宽，让你更难集中精力去思考真正重要的东西——业务逻辑、数据流向、边界情况。
 
-### 2.2 多次调优不一定是迭代，也可能只是迷路
+### 多次调优不一定是迭代，也可能只是迷路
 
 我曾经有一段时间陷入一种很奇怪的状态：每天都在和 AI 对话，每天都在产出代码，但每周回顾的时候却发现进度几乎为零。那些代码还在，但那周定的目标没实现。
 
@@ -121,7 +173,7 @@ edges:
 
 这就是「迷路」——不是走得慢，是不知道终点在哪。
 
-### 2.3 一次高质量 prompt，后面才会形成复利
+### 一次高质量 prompt，后面才会形成复利
 
 我后来强迫自己养成一个习惯：每次让 AI 写代码之前，先花 5 分钟把「我要解决什么问题、约束条件是什么、希望 AI 以什么角色思考」写清楚。听起来很费时间，但实际上这 5 分钟帮我省下了后面可能浪费的 30 分钟调优时间。
 
@@ -129,8 +181,77 @@ edges:
 
 这个判断力，才是真正的复利。
 
-![正文图解 6](https://iili.io/C3GXy0l.png)
-> 正文图解 6
+type: loop-diagram
+nodes:
+  - id: high_quality_prompt
+    label: 高质量 Prompt
+    style: solid_border
+  - id: clear_requirements
+    label: 清晰需求定义
+    style: solid_border
+  - id: efficient_iteration
+    label: 高效迭代
+    style: solid_border
+  - id: skill_compounding
+    label: 能力复利
+    style: solid_border
+  - id: low_quality_prompt
+    label: 低质量 Prompt
+    style: dashed_border
+  - id: vague_requirements
+    label: 模糊需求
+    style: dashed_border
+  - id: wasted_iteration
+    label: 无效返工
+    style: dashed_border
+  - id: skill_erosion
+    label: 能力退化
+    style: dashed_border
+edges:
+  - from: high_quality_prompt
+    to: clear_requirements
+  - from: clear_requirements
+    to: efficient_iteration
+  - from: efficient_iteration
+    to: skill_compounding
+  - from: skill_compounding
+    to: high_quality_prompt
+  - from: low_quality_prompt
+    to: vague_requirements
+  - from: vague_requirements
+    to: wasted_iteration
+  - from: wasted_iteration
+    to: skill_erosion
+  - from: skill_erosion
+    to: low_quality_prompt
+caption: 高质量 Prompt 与低质量 Prompt 的路径分叉
+
+## 三、用 AI 的时候，为什么更要先自己思考
+
+为什么越是 AI 能力强大，越要在用它之前先自己想清楚？
+
+因为 AI 输出的是答案，而你需要的不是答案——你需要的是判断哪个答案值得用的能力。这个能力，只能通过独立思考来训练。
+
+### 3.1 先写一版自己的 plan，再让 AI 讨论
+
+我有一个习惯，每次开始一个功能模块之前，先在脑子里（或者纸上）过一遍自己的方案：我要解决什么问题？可能的路径有哪几条？为什么我会倾向于 A 而不是 B？
+
+然后才去和 AI 讨论。
+
+这时候对话的性质就变了。你不是在问「怎么做」，而是在问「我的思路对不对、有没有遗漏、还有没有更好的」。AI 成了你的 review 伙伴，而不是替代你思考的机器。
+
+这个区别非常关键：前者你在训练自己的判断力，后者你在消费 AI 的输出。短期看，后者好像更快；但长期看，前者才会让你不被 AI 取代。
+
+Plan mode 的核心价值不是「帮你做计划」，而是「迫使你先想清楚再开口」。当你被迫把自己的思路写出来，你才会发现原来有些地方根本没想明白——而这恰恰是最有价值的时刻。
+
+![](https://iili.io/C9DeFR9.png)
+> Plan mode：强制先想后问，让 AI 成为思维质量检测器
+
+fenced: yaml type: flow-diagram
+
+stages: - label: 独立思考 description: 先过一遍自己的方案，定义问题边界 style: solid_border - label: Plan 输出 description: 写出你的思路、倾向和疑问 style: solid_border - label: AI 讨论 description: 与 AI review 你的 plan，检测思维盲区 style: solid_border - label: 判断力迭代 description: 吸收 AI 反馈，更新自己的判断框架 style: solid_border
+
+flow_direction: horizontal
 
 ### 3.2 问清楚为什么这么做，而不是只看它做了什么
 
@@ -142,7 +263,7 @@ edges:
 
 比如 AI 推荐用 Redis 做缓存，而不是数据库直接查询。如果你只复制代码，这个知识点就流失了。但如果你追问「为什么是 Redis 而不是内存缓存」，你就会理解 Redis 的持久化优势、分布式场景下的共享能力、以及什么规模才值得引入这个复杂度。这个知识点会变成你的判断框架的一部分，下次遇到类似场景，你自己就能做决策。
 
-![](https://iili.io/C9b9rF4.png)
+![](https://iili.io/BgV3nQR.png)
 > 追问为什么：把 AI 的判断逻辑转化为自己的判断框架
 
 ### 3.3 把更好的方案记下来，训练自己的判断力
@@ -173,16 +294,16 @@ Plan Mode 的本质是一个「方向校验层」。当你把一个模糊的想�
 
 而 Plan Mode 要求你在动手前，先用一到两句话描述：「我要解决什么问题？约束条件是什么？预期结果是什么？」这不是减速，这是避免走到错误方向之后再折返。
 
-![](https://iili.io/C9DOmoG.png)
+![](https://iili.io/C9Dvq6x.png)
 > Plan Mode 注意力锚点机制
 
-![正文图解 8](https://iili.io/C3Ghd57.png)
-> 正文图解 8
+type: flow-diagram
 
-comment: |
-  Plan Mode 在想法与执行之间建立校验层，
-  避免模糊目标导致后期大幅返工。
-```
+nodes: - id: idea label: 模糊想法 style: dashed_border - id: plan_mode label: Plan Mode 方向校验 style: highlighted - id: confirmed_direction label: 确认方向 style: solid_border - id: execution label: 执行 style: solid_border - id: aligned_output label: 对齐输出 style: highlighted
+
+edges: - from: idea to: plan_mode label: 先描述目标和约束 - from: plan_mode to: confirmed_direction label: AI 确认理解 - from: confirmed_direction to: execution label: 进入执行 - from: execution to: aligned_output label: 输出对齐
+
+comment: | Plan Mode 在想法与执行之间建立校验层， 避免模糊目标导致后期大幅返工。
 
 ### 4.2 即便是 vibe，也要保留深度思考模式
 
@@ -198,12 +319,8 @@ comment: |
 
 更焦虑的工作流则相反：你总是觉得差一点就能跑通，但每次改完又出新的问题；你不知道当前的方案在什么场景下会崩；你花了很多时间调参，但调完之后又忘了为什么要调。
 
-
-
-![](https://iili.io/BJFIK3x.png)
+![](https://iili.io/C9Dkp3l.png)
 > 注意力锚点 vs 注意力漂移
-
-
 
 ## 五、结尾：AI 时代真正稀缺的，是能持续思考的人
 
@@ -223,5 +340,9 @@ comment: |
 3. Vibe Coding: The Theory and Practice of High-Fidelity AI Prompt Engineering - https://languageandthought.com/2026/03/04/vibe-coding-the-theory-and-practice-of-high-fidelity-ai-prompt-engineering/
 4. Vibe Coding Explained: Platforms, Prompts & Best Practices - https://www.clarifai.com/blog/vibe-coding-explained
 5. Forbes: Vibe Coding Gains Traction Via Users Writing Prompts That Spur AI To Automatically Generate Usable Software Code - https://www.forbes.com/sites/lanceeliot/2025/09/18/vibe-coding-gains-traction-via-users-writing-prompts-that-spur-ai-to-automatically-generate-usable-software-code/
+
+---
+
+![文末收口图](https://iili.io/qLIhGYg.png)
 
 <div class="hexo-wechat-follow-card" style="margin:28px 0 0;padding:16px 18px;border:1px solid #dbe7f3;border-radius:14px;background:#f8fbff;"><a href="weixin://profile/gh_1ab72c968bef" style="font-weight:700;color:#0f5b9f;text-decoration:none;">点这里一键关注『计算机魔术师』</a><p style="margin:8px 0 0;font-size:13px;color:#6f8299;line-height:1.7;">如果浏览器无法直接唤起微信，可在微信内打开公众号主页：<a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=MzkwNjQyOTUwOA==#wechat_redirect" style="color:#0f5b9f;text-decoration:none;">计算机魔术师</a></p></div>
