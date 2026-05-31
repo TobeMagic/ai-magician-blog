@@ -29,22 +29,22 @@ cover: "https://iili.io/CdgCZqN.png"
 
 查日志发现是Context Window被撑爆，截断策略刚好把System Prompt之后的内容全清掉。这不是小概率事件：任何一个上线过对话Agent的工程师，只要用户量稍大，几乎都会撞上这把刀。
 
-![](https://iili.io/BHi0NjV.png)
+![](https://iili.io/qysul8F.png)
 > 屏幕一红，心率先上去了
 
 这道题之所以反复出现，是因为它同时踩中了好几个能力维度：工程设计（怎么管状态）、系统认知（怎么控预算）、产品判断（哪些东西不能丢）。
 
-![](https://iili.io/BHPU42f.png)
+![](https://iili.io/BOjuaZg.png)
 > 这一改，边界就开始漂了
 
 只会说「超了就截断」的人，暴露了自己只处理过toy project。
 
-![](https://iili.io/B4PkeAN.png)
+![](https://iili.io/CdgoKZv.png)
 > 你开心就好，我先不展开了
 
 先说清楚一件事：记忆管理不是「把对话塞进Context」这么简单。
 
-![](https://iili.io/BimwwfS.png)
+![](https://iili.io/Bibsc6g.png)
 > 这一段，懂的都懂
 
 它是一套分层策略，从毫秒级Working Memory到分钟级Summary Buffer再到小时/天级别的External Memory，每一层都有自己的设计约束和取舍。
