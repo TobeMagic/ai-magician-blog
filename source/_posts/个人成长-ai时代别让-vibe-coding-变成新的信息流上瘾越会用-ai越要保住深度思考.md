@@ -49,56 +49,8 @@ vibe-coding 的第二个陷阱是上下文切换的幻觉。当你一天和 AI �
 
 问题在于，这种"高效"是假象。你确实快速完成了多个功能，但你对系统整体的理解是碎片化的。当你需要 debug、需要优化性能、需要向别人解释这段代码的意图，你会发现自己在每个节点上都没有足够的掌控力。真正的效率不是做了多少事，而是对所做的事有多少把握。
 
-```plain text
-type: workflow
-caption: 高频上下文切换 vs 深度聚焦的认知成本差异
----
-name: context-switch-cost
-
-nodes:
-  - id: start
-    label: 任务 A
-    type: task
-  - id: ai1
-    label: AI 生成结果
-    type: output
-  - id: switch1
-    label: 切换任务 B
-    type: transition
-    color: red
-  - id: ai2
-    label: AI 生成结果
-    type: output
-  - id: switch2
-    label: 切换任务 C
-    type: transition
-    color: red
-  - id: ai3
-    label: AI 生成结果
-    type: output
-  - id: cost
-    label: 认知负荷累计
-    type: warning
-    color: orange
-
-edges:
-  - from: start
-    to: ai1
-  - from: ai1
-    to: switch1
-  - from: switch1
-    to: ai2
-  - from: ai2
-    to: switch2
-  - from: switch2
-    to: ai3
-  - from: ai3
-    to: cost
-
-layout:
-  direction: LR
-  spacing: 2
-```
+![高频上下文切换 vs 深度聚焦的认知成本差异](https://iili.io/C3GXxNn.png)
+> 高频上下文切换 vs 深度聚焦的认知成本差异
 
 真正的分水岭不是谁点得快，而是谁能在这个快节奏里守住自己的思考节奏。
 
@@ -108,7 +60,7 @@ layout:
 
 核心机制是这样的：每一次低质量 prompt 都在消耗你「定义清晰目标」的能力。这个能力像肌肉一样，不用则退化。
 
-![](https://iili.io/C9bHTNt.png)
+![](https://iili.io/BD7cSII.png)
 > prompt 质量与深度思考能力的正相关循环
 
 ```plain text
@@ -160,7 +112,7 @@ edges:
 
 比如有人说「帮我写个登录页面」，AI 生成一个基础版本；然后他说「加上验证码」，AI 加上了；他又说「验证码要支持国际号码」，AI 又改了一轮；然后他发现验证码服务商不支持某些地区，又得改架构……四轮下来，这个人花了 20 分钟，看起来在高效迭代，实际上只是在为一个本该在第一轮就定义清楚的需求反复擦屁股。
 
-![](https://iili.io/C9DOmoG.png)
+![](https://iili.io/C9b9rF4.png)
 > 低质量 prompt 的返工陷阱
 
 这种返工的本质不是迭代，是消耗。因为每次返工都在占用你的注意力带宽，让你更难集中精力去思考真正重要的东西——业务逻辑、数据流向、边界情况。
@@ -244,7 +196,7 @@ caption: 高质量 Prompt 与低质量 Prompt 的路径分叉
 
 Plan mode 的核心价值不是「帮你做计划」，而是「迫使你先想清楚再开口」。当你被迫把自己的思路写出来，你才会发现原来有些地方根本没想明白——而这恰恰是最有价值的时刻。
 
-![](https://iili.io/C9DeFR9.png)
+![](https://iili.io/C9b9tou.png)
 > Plan mode：强制先想后问，让 AI 成为思维质量检测器
 
 fenced: yaml type: flow-diagram
@@ -263,7 +215,7 @@ flow_direction: horizontal
 
 比如 AI 推荐用 Redis 做缓存，而不是数据库直接查询。如果你只复制代码，这个知识点就流失了。但如果你追问「为什么是 Redis 而不是内存缓存」，你就会理解 Redis 的持久化优势、分布式场景下的共享能力、以及什么规模才值得引入这个复杂度。这个知识点会变成你的判断框架的一部分，下次遇到类似场景，你自己就能做决策。
 
-![](https://iili.io/BgV3nQR.png)
+![](https://iili.io/Bq617K7.png)
 > 追问为什么：把 AI 的判断逻辑转化为自己的判断框架
 
 ### 3.3 把更好的方案记下来，训练自己的判断力
@@ -294,7 +246,7 @@ Plan Mode 的本质是一个「方向校验层」。当你把一个模糊的想�
 
 而 Plan Mode 要求你在动手前，先用一到两句话描述：「我要解决什么问题？约束条件是什么？预期结果是什么？」这不是减速，这是避免走到错误方向之后再折返。
 
-![](https://iili.io/C9Dvq6x.png)
+![](https://iili.io/B3caqXa.png)
 > Plan Mode 注意力锚点机制
 
 type: flow-diagram
@@ -319,7 +271,7 @@ comment: | Plan Mode 在想法与执行之间建立校验层， 避免模糊目�
 
 更焦虑的工作流则相反：你总是觉得差一点就能跑通，但每次改完又出新的问题；你不知道当前的方案在什么场景下会崩；你花了很多时间调参，但调完之后又忘了为什么要调。
 
-![](https://iili.io/C9Dkp3l.png)
+![](https://iili.io/BJFIK3x.png)
 > 注意力锚点 vs 注意力漂移
 
 ## 五、结尾：AI 时代真正稀缺的，是能持续思考的人
