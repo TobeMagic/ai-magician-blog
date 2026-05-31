@@ -7,6 +7,7 @@ categories:
   - "个人成长"
   - "AI时代"
 tags:
+  - "个人成长，AI时代；第一人称深度反思；克制但有情绪；不鸡汤、不营销；围绕 vib"
   - "Vibe-coding"
   - "AI"
   - "Token"
@@ -23,15 +24,11 @@ updated: "2026-05-31 09:09:00"
 cover: "https://iili.io/C3GOHCu.png"
 ---
 
-# 【个人成长 | AI时代】别让 vibe-coding 变成新的信息流上瘾：越会用 AI，越要保住深度思考
-
-> 这篇是 AI 时代的个人成长反思：vibe-coding 很容易把人带进短反馈、频繁切换和 token 消耗的循环。真正的分水岭不是谁点得更快，而是谁能在写 prompt 前先想清楚目标、边界和 plan，并把每次和 AI 的讨论沉淀成自己的判断力。
-
 最近我有一个很强烈的感觉：vibe-coding 有时候不像在写代码，反而像在刷短视频。刚看到一点结果，马上想点下一次；刚改完一个页面，又忍不住切到另一个问题。
 
-## 我为什么觉得 vibe-coding 有点像新的信息流
+## 一、我为什么觉得 vibe-coding 有点像新的信息流
 
-### 它给反馈太快，快到人很容易上瘾
+### 1.1 它给反馈太快，快到人很容易上瘾
 
 vibe-coding 的核心机制是自然语言驱动生成，你描述一个功能，AI 几秒内给你一个可运行的实现。这种即时反馈满足了我们对"掌控感"的渴望，却也在悄悄重塑我们的注意力模式。
 
@@ -41,7 +38,7 @@ vibe-coding 的核心机制是自然语言驱动生成，你描述一个功能�
 
 > 信息流 vs vibe-coding 的注意力循环对比
 
-### 频繁切上下文，会让人误以为自己很高效
+### 1.2 频繁切上下文，会让人误以为自己很高效
 
 vibe-coding 的第二个陷阱是上下文切换的幻觉。当你一天和 AI 交互了 50 次，每次都在不同的功能点之间跳跃，表面上看产出很多，实际上你的深度思考能力正在被消耗。
 
@@ -60,7 +57,7 @@ vibe-coding 的第二个陷阱是上下文切换的幻觉。当你一天和 AI �
 
 核心机制是这样的：每一次低质量 prompt 都在消耗你「定义清晰目标」的能力。这个能力像肌肉一样，不用则退化。
 
-![](https://iili.io/C9Dk4YN.png)
+![](https://iili.io/C9b9rF4.png)
 > prompt 质量与深度思考能力的正相关循环
 
 ![正文图解 2](https://iili.io/C3GXNHP.png)
@@ -72,20 +69,20 @@ vibe-coding 的第二个陷阱是上下文切换的幻觉。当你一天和 AI �
 
 这不是「要不要用 AI」的问题，而是「怎么用才能让自己的深度思考能力保持增长」的问题。
 
-## 真正消耗人的不是 token，而是没有想清楚就开始
+## 二、真正消耗人的不是 token，而是没有想清楚就开始
 
-### 低质量 prompt 会制造更多返工
+### 2.1 低质量 prompt 会制造更多返工
 
 我观察到一个很反直觉的现象：很多人在 vibe-coding 场景下花了大量时间「调优」，但仔细看他们的调优记录，大部分都在修补同一个问题——最开始那个 prompt 太模糊了。
 
 比如有人说「帮我写个登录页面」，AI 生成一个基础版本；然后他说「加上验证码」，AI 加上了；他又说「验证码要支持国际号码」，AI 又改了一轮；然后他发现验证码服务商不支持某些地区，又得改架构……四轮下来，这个人花了 20 分钟，看起来在高效迭代，实际上只是在为一个本该在第一轮就定义清楚的需求反复擦屁股。
 
-![](https://iili.io/C9bHTNt.png)
+![](https://iili.io/BD7cSII.png)
 > 低质量 prompt 的返工陷阱
 
 这种返工的本质不是迭代，是消耗。因为每次返工都在占用你的注意力带宽，让你更难集中精力去思考真正重要的东西——业务逻辑、数据流向、边界情况。
 
-### 多次调优不一定是迭代，也可能只是迷路
+### 2.2 多次调优不一定是迭代，也可能只是迷路
 
 我曾经有一段时间陷入一种很奇怪的状态：每天都在和 AI 对话，每天都在产出代码，但每周回顾的时候却发现进度几乎为零。那些代码还在，但那周定的目标没实现。
 
@@ -93,7 +90,7 @@ vibe-coding 的第二个陷阱是上下文切换的幻觉。当你一天和 AI �
 
 这就是「迷路」——不是走得慢，是不知道终点在哪。
 
-### 一次高质量 prompt，后面才会形成复利
+### 2.3 一次高质量 prompt，后面才会形成复利
 
 我后来强迫自己养成一个习惯：每次让 AI 写代码之前，先花 5 分钟把「我要解决什么问题、约束条件是什么、希望 AI 以什么角色思考」写清楚。听起来很费时间，但实际上这 5 分钟帮我省下了后面可能浪费的 30 分钟调优时间。
 
@@ -122,12 +119,8 @@ vibe-coding 的第二个陷阱是上下文切换的幻觉。当你一天和 AI �
 
 Plan mode 的核心价值不是「帮你做计划」，而是「迫使你先想清楚再开口」。当你被迫把自己的思路写出来，你才会发现原来有些地方根本没想明白——而这恰恰是最有价值的时刻。
 
-![](https://iili.io/B2xuxFj.png)
+![](https://iili.io/C9DOmoG.png)
 > Plan mode：强制先想后问，让 AI 成为思维质量检测器
-
-fenced: yaml type: flow-diagram
-
-stages: - label: 独立思考 description: 先过一遍自己的方案，定义问题边界 style: solid_border - label: Plan 输出 description: 写出你的思路、倾向和疑问 style: solid_border - label: AI 讨论 description: 与 AI review 你的 plan，检测思维盲区 style: solid_border - label: 判断力迭代 description: 吸收 AI 反馈，更新自己的判断框架 style: solid_border
 
 ![正文图解 4](https://iili.io/C3G4EPI.png)
 > 正文图解 4
@@ -142,7 +135,7 @@ stages: - label: 独立思考 description: 先过一遍自己的方案，定义�
 
 比如 AI 推荐用 Redis 做缓存，而不是数据库直接查询。如果你只复制代码，这个知识点就流失了。但如果你追问「为什么是 Redis 而不是内存缓存」，你就会理解 Redis 的持久化优势、分布式场景下的共享能力、以及什么规模才值得引入这个复杂度。这个知识点会变成你的判断框架的一部分，下次遇到类似场景，你自己就能做决策。
 
-![](https://iili.io/B3caqXa.png)
+![](https://iili.io/C9Dkp3l.png)
 > 追问为什么：把 AI 的判断逻辑转化为自己的判断框架
 
 ### 3.3 把更好的方案记下来，训练自己的判断力
@@ -173,16 +166,11 @@ Plan Mode 的本质是一个「方向校验层」。当你把一个模糊的想�
 
 而 Plan Mode 要求你在动手前，先用一到两句话描述：「我要解决什么问题？约束条件是什么？预期结果是什么？」这不是减速，这是避免走到错误方向之后再折返。
 
-![](https://iili.io/BgV3nQR.png)
+![](https://iili.io/Bq617K7.png)
 > Plan Mode 注意力锚点机制
 
-type: flow-diagram
-
-nodes: - id: idea label: 模糊想法 style: dashed_border - id: plan_mode label: Plan Mode 方向校验 style: highlighted - id: confirmed_direction label: 确认方向 style: solid_border - id: execution label: 执行 style: solid_border - id: aligned_output label: 对齐输出 style: highlighted
-
-edges: - from: idea to: plan_mode label: 先描述目标和约束 - from: plan_mode to: confirmed_direction label: AI 确认理解 - from: confirmed_direction to: execution label: 进入执行 - from: execution to: aligned_output label: 输出对齐
-
-comment: | Plan Mode 在想法与执行之间建立校验层， 避免模糊目标导致后期大幅返工。
+![正文图解 5](https://iili.io/C3GsjgS.png)
+> 正文图解 5
 
 ### 4.2 即便是 vibe，也要保留深度思考模式
 
@@ -198,7 +186,7 @@ comment: | Plan Mode 在想法与执行之间建立校验层， 避免模糊目�
 
 更焦虑的工作流则相反：你总是觉得差一点就能跑通，但每次改完又出新的问题；你不知道当前的方案在什么场景下会崩；你花了很多时间调参，但调完之后又忘了为什么要调。
 
-![](https://iili.io/C9b9tou.png)
+![](https://iili.io/C9DkkQa.png)
 > 注意力锚点 vs 注意力漂移
 
 ## 五、结尾：AI 时代真正稀缺的，是能持续思考的人
