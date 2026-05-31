@@ -60,43 +60,11 @@ vibe-coding 的第二个陷阱是上下文切换的幻觉。当你一天和 AI �
 
 核心机制是这样的：每一次低质量 prompt 都在消耗你「定义清晰目标」的能力。这个能力像肌肉一样，不用则退化。
 
-![](https://iili.io/BD7cSII.png)
+![](https://iili.io/C9Dv3Zu.png)
 > prompt 质量与深度思考能力的正相关循环
 
-```plain text
-type: loop-diagram
-
-nodes:
-  - id: shallow_prompt
-    label: 浅层 Prompt
-    style: dashed_border
-  - id: low_quality_output
-    label: AI 输出质量下滑
-  - id: more_tuning
-    label: 更多调优轮次
-  - id: token_overhead
-    label: Token 消耗上升
-  - id: thinking_degeneration
-    label: 深度思考能力退化
-    style: gradient_bg
-
-edges:
-  - from: shallow_prompt
-    to: low_quality_output
-    label: 缺少边界定义
-  - from: low_quality_output
-    to: more_tuning
-    label: 需要反复修正
-  - from: more_tuning
-    to: token_overhead
-    label: 迭代成本累积
-  - from: token_overhead
-    to: thinking_degeneration
-    label: 失去前置思考习惯
-  - from: thinking_degeneration
-    to: shallow_prompt
-    label: 无法提出高质量需求
-```
+![正文图解 2](https://iili.io/C3GXNHP.png)
+> 正文图解 2
 
 而这个循环的反面——深度 prompt 的复利效应——同样成立。当你花时间在写 prompt 前想清楚「我要做什么、为什么这么做、约束条件是什么」时，AI 的输出会更精准，你需要的调优轮次会更少，你学到的模式会沉淀成自己的判断力。
 
@@ -112,7 +80,7 @@ edges:
 
 比如有人说「帮我写个登录页面」，AI 生成一个基础版本；然后他说「加上验证码」，AI 加上了；他又说「验证码要支持国际号码」，AI 又改了一轮；然后他发现验证码服务商不支持某些地区，又得改架构……四轮下来，这个人花了 20 分钟，看起来在高效迭代，实际上只是在为一个本该在第一轮就定义清楚的需求反复擦屁股。
 
-![](https://iili.io/C9b9rF4.png)
+![](https://iili.io/C9DOgoJ.png)
 > 低质量 prompt 的返工陷阱
 
 这种返工的本质不是迭代，是消耗。因为每次返工都在占用你的注意力带宽，让你更难集中精力去思考真正重要的东西——业务逻辑、数据流向、边界情况。
@@ -133,50 +101,8 @@ edges:
 
 这个判断力，才是真正的复利。
 
-type: loop-diagram
-nodes:
-  - id: high_quality_prompt
-    label: 高质量 Prompt
-    style: solid_border
-  - id: clear_requirements
-    label: 清晰需求定义
-    style: solid_border
-  - id: efficient_iteration
-    label: 高效迭代
-    style: solid_border
-  - id: skill_compounding
-    label: 能力复利
-    style: solid_border
-  - id: low_quality_prompt
-    label: 低质量 Prompt
-    style: dashed_border
-  - id: vague_requirements
-    label: 模糊需求
-    style: dashed_border
-  - id: wasted_iteration
-    label: 无效返工
-    style: dashed_border
-  - id: skill_erosion
-    label: 能力退化
-    style: dashed_border
-edges:
-  - from: high_quality_prompt
-    to: clear_requirements
-  - from: clear_requirements
-    to: efficient_iteration
-  - from: efficient_iteration
-    to: skill_compounding
-  - from: skill_compounding
-    to: high_quality_prompt
-  - from: low_quality_prompt
-    to: vague_requirements
-  - from: vague_requirements
-    to: wasted_iteration
-  - from: wasted_iteration
-    to: skill_erosion
-  - from: skill_erosion
-    to: low_quality_prompt
-caption: 高质量 Prompt 与低质量 Prompt 的路径分叉
+![高质量 Prompt 与低质量 Prompt 的路径分叉](https://iili.io/C3GXbsf.png)
+> 高质量 Prompt 与低质量 Prompt 的路径分叉
 
 ## 三、用 AI 的时候，为什么更要先自己思考
 
@@ -196,14 +122,15 @@ caption: 高质量 Prompt 与低质量 Prompt 的路径分叉
 
 Plan mode 的核心价值不是「帮你做计划」，而是「迫使你先想清楚再开口」。当你被迫把自己的思路写出来，你才会发现原来有些地方根本没想明白——而这恰恰是最有价值的时刻。
 
-![](https://iili.io/C9b9tou.png)
+![](https://iili.io/C9DOmoG.png)
 > Plan mode：强制先想后问，让 AI 成为思维质量检测器
 
 fenced: yaml type: flow-diagram
 
 stages: - label: 独立思考 description: 先过一遍自己的方案，定义问题边界 style: solid_border - label: Plan 输出 description: 写出你的思路、倾向和疑问 style: solid_border - label: AI 讨论 description: 与 AI review 你的 plan，检测思维盲区 style: solid_border - label: 判断力迭代 description: 吸收 AI 反馈，更新自己的判断框架 style: solid_border
 
-flow_direction: horizontal
+![正文图解 4](https://iili.io/C3G4EPI.png)
+> 正文图解 4
 
 ### 3.2 问清楚为什么这么做，而不是只看它做了什么
 
@@ -215,7 +142,7 @@ flow_direction: horizontal
 
 比如 AI 推荐用 Redis 做缓存，而不是数据库直接查询。如果你只复制代码，这个知识点就流失了。但如果你追问「为什么是 Redis 而不是内存缓存」，你就会理解 Redis 的持久化优势、分布式场景下的共享能力、以及什么规模才值得引入这个复杂度。这个知识点会变成你的判断框架的一部分，下次遇到类似场景，你自己就能做决策。
 
-![](https://iili.io/Bq617K7.png)
+![](https://iili.io/BHP4xzN.png)
 > 追问为什么：把 AI 的判断逻辑转化为自己的判断框架
 
 ### 3.3 把更好的方案记下来，训练自己的判断力
@@ -246,7 +173,7 @@ Plan Mode 的本质是一个「方向校验层」。当你把一个模糊的想�
 
 而 Plan Mode 要求你在动手前，先用一到两句话描述：「我要解决什么问题？约束条件是什么？预期结果是什么？」这不是减速，这是避免走到错误方向之后再折返。
 
-![](https://iili.io/B3caqXa.png)
+![](https://iili.io/C9DeFR9.png)
 > Plan Mode 注意力锚点机制
 
 type: flow-diagram
@@ -271,7 +198,7 @@ comment: | Plan Mode 在想法与执行之间建立校验层， 避免模糊目�
 
 更焦虑的工作流则相反：你总是觉得差一点就能跑通，但每次改完又出新的问题；你不知道当前的方案在什么场景下会崩；你花了很多时间调参，但调完之后又忘了为什么要调。
 
-![](https://iili.io/BJFIK3x.png)
+![](https://iili.io/C9Dvq6x.png)
 > 注意力锚点 vs 注意力漂移
 
 ## 五、结尾：AI 时代真正稀缺的，是能持续思考的人
