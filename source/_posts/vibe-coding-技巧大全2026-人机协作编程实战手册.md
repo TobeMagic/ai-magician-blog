@@ -1,7 +1,7 @@
 ---
 title: "Vibe Coding 技巧大全：2026 人机协作编程实战手册"
 date: "2026-06-13 11:11:12"
-updated: "2026-06-13 13:04:08"
+updated: "2026-06-13 13:09:28"
 permalink: "posts/2026/06/13/vibe-coding-技巧大全2026-人机协作编程实战手册/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/06/13/vibe-coding-技巧大全2026-人机协作编程实战手册/"
 article_id: "3cb76846-d5c4-4ae2-bb97-3f682801cdd9"
@@ -9,7 +9,7 @@ description: "本文围绕 Vibe Coding 技巧展开，讲清楚什么是氛围�
 imgTop: false
 ---
 
-不靠死记语法，靠描述意图——Vibe Coding正在重新定义'会编程'这三个字
+不靠死记语法，靠描述意图——Vibe Coding正在重新定义'会编程'这两个字
 
 想象一下：你跟AI说"给我做个能记账的小程序，带图表那种"，然后一杯咖啡的功夫，它就把数据库、前端、后端全给你搭好了。这不是科幻，是2026年程序员的日常。
 
@@ -79,7 +79,7 @@ Vibe Coding的精髓在于把"想法"翻译成AI能执行的"指令"，而不是
 
 
 
-![程序员 reaction：柯南00027 可疑哦](https://iili.io/CCZvaGs.png)
+![程序员 reaction：我叫江户川柯南是一名侦探](https://iili.io/CCZxIov.png)
 > 好的prompt是谈判，不是命令
 
 
@@ -114,7 +114,7 @@ AI的上下文窗口有限，像一个容量固定的杯子。当对话越来越
 
 
 
-![程序员 reaction："Justpatchitinproduction](https://iili.io/CC55m8u.png)
+![程序员 reaction：WHATIFTHEREWERENODISK?](https://iili.io/CCZ4u9f.png)
 > 上下文溢出前的主动重启，比事后debug省十倍时间
 
 
@@ -173,14 +173,14 @@ Vibe Coding 不是让人类当甩手掌柜，而是让人从"执行者"升级为
 
 
 
-![程序员 reaction：SalesforceCEosaysengineers](https://iili.io/CCZxcRn.png)
+![程序员 reaction：MeusingAlagentstocodewith](https://iili.io/CCZAA8B.png)
 > 背定义到这里就不够了
 
 
 
 
 
-![程序员 reaction：柯南00089 找到你了](https://iili.io/CCZubTX.png)
+![程序员 reaction：暗中观察](https://iili.io/CCZOWwF.png)
 > 这个追问就是分水岭
 
 
