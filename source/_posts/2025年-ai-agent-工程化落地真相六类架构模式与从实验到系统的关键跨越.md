@@ -1,7 +1,7 @@
 ---
 title: "2025年 AI Agent 工程化落地真相：六类架构模式与从\"实验\"到\"系统\"的关键跨越"
 date: "2026-06-14 15:53:50"
-updated: "2026-06-18 02:14:42"
+updated: "2026-06-18 02:23:48"
 permalink: "posts/2026/06/14/2025年-ai-agent-工程化落地真相六类架构模式与从实验到系统的关键跨越/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/06/14/2025年-ai-agent-工程化落地真相六类架构模式与从实验到系统的关键跨越/"
 article_id: "9bcd9402-2ae0-4035-9840-8c4f79ab9ab1"
@@ -22,7 +22,7 @@ Gartner在2024年第四季度发布的AI技术成熟度曲线显示，AI Agent�
 
 
 
-![Agent系统工程化成熟度模型](https://iili.io/Cx2CjDb.png)
+![Agent系统工程化成熟度模型](https://iili.io/Cx21wiB.png)
 > Agent系统工程化成熟度模型
 
 
@@ -31,7 +31,7 @@ Gartner在2024年第四季度发布的AI技术成熟度曲线显示，AI Agent�
 
 
 
-![程序员 reaction：WHATIFTHEREWERENODISK?](https://iili.io/CCZ4u9f.png)
+![程序员 reaction：OurSQL](https://iili.io/CC5uD3g.png)
 > 这一段，面试官开始看你工程感了
 
 
@@ -61,7 +61,7 @@ Gartner在2024年第四季度发布的AI技术成熟度曲线显示，AI Agent�
 
 
 
-![程序员 reaction：losingafewpackets](https://iili.io/Cx2fLs2.png)
+![程序员 reaction：we'rechangingthe](https://iili.io/CCG5GX1.png)
 > 三代架构演进，从简单到复杂可控
 
 
@@ -83,7 +83,7 @@ AI Agent工程化的核心矛盾，不是让模型变得更聪明，而是让系
 
 
 
-![程序员 reaction：definitelyaren'tamatch](https://iili.io/CClZ3Ft.png)
+![程序员 reaction：Me:Boyohboy,i'mthinkingabout](https://iili.io/CC572nV.png)
 > Agent执行需内置状态门禁，确保不确定性下的可控退出
 
 
@@ -92,7 +92,7 @@ AI Agent工程化的核心矛盾，不是让模型变得更聪明，而是让系
 
 
 
-![程序员系列表情：据说换成这个发型，面试通过率很高](https://iili.io/CC5AHjp.png)
+![程序员系列表情：如果把面试官唬住了就要50k，没唬住就要5k](https://iili.io/CClZIPS.png)
 > 背定义到这里就不够了
 
 
@@ -144,7 +144,7 @@ MCP（Model Context Protocol）正在成为Agent生态的"USB接口"——它试
 
 
 
-![程序员 reaction：暗中观察](https://iili.io/CCZOWwF.png)
+![程序员 reaction：柯南00027 可疑哦](https://iili.io/CCZvaGs.png)
 > 这个追问就是分水岭
 
 
@@ -196,7 +196,7 @@ MCP（Model Context Protocol）正在成为Agent生态的"USB接口"——它试
 
 
 
-![程序员 reaction：status 418  status 418 5knj](https://iili.io/CCG58Xt.png)
+![程序员 reaction：Content-Length:50](https://iili.io/CClZaNj.png)
 > 这一段，面试官开始看你工程感了
 
 
@@ -205,7 +205,7 @@ MCP（Model Context Protocol）正在成为Agent生态的"USB接口"——它试
 
 
 
-![程序员 reaction：SalesforceCEosaysengineers](https://iili.io/CCZxcRn.png)
+![程序员 reaction：MeusingAlagentstocodewith](https://iili.io/CCZAA8B.png)
 > 能落到项目里，答案才算站住
 
 
@@ -237,7 +237,7 @@ Function Calling本质上是模型推理输出格式的约定——告诉模型"
 
 
 
-![程序员 reaction："THATF*CKJUSTBRAKECHECKED](https://iili.io/Cx2qspa.png)
+![程序员 reaction：andtheruntimeofyourcode](https://iili.io/CnYM3YP.png)
 > MCP协议调用链路的典型故障点分布
 
 
@@ -270,7 +270,7 @@ Function Calling本质上是模型推理输出格式的约定——告诉模型"
 
 
 
-![程序员反应图：看我这本书，再来跟我提需求](https://iili.io/Cx2B3TG.png)
+![程序员反应图：又有新的需求了](https://iili.io/Cx2129a.png)
 > 这个坑，项目里迟早会遇到
 
 
@@ -285,7 +285,7 @@ Function Calling本质上是模型推理输出格式的约定——告诉模型"
 
 
 
-![程序员 reaction：MeusingAlagentstocodewith](https://iili.io/CCZAA8B.png)
+![程序员 reaction：SalesforceCEosaysengineers](https://iili.io/CCZxcRn.png)
 > 上下文内存管理的双层架构
 
 
@@ -305,7 +305,7 @@ Function Calling本质上是模型推理输出格式的约定——告诉模型"
 
 
 
-![程序员 reaction：Manager,I'vebeenwaitingfor](https://iili.io/Cx2BFjf.png)
+![程序员 reaction：Butthatthing](https://iili.io/Cx21Rt4.png)
 > 讲到这一步，答案就有层次了
 
 
@@ -345,14 +345,14 @@ AI Agent的未来价值不在于替代人类做出最终决策，而在于将人
 
 
 
-![程序员 reaction：OtherPeopleWithChatGPT](https://iili.io/Cx2Bzve.png)
+![程序员 reaction：jobifyourjobhasneverneeded](https://iili.io/Cx21aPS.png)
 > 别急着背结论，先看工程约束
 
 
 
 
 
-![程序员反应图：写一天bug，累了吧](https://iili.io/Cx2BuTb.png)
+![程序员反应图：你就是我打死我，我也不改这个bug](https://iili.io/Cx21lK7.png)
 > 这一段，面试官开始看你工程感了
 
 
