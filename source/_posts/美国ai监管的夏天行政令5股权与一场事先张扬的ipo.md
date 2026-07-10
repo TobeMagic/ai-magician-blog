@@ -1,7 +1,7 @@
 ---
 title: "美国AI监管的夏天：行政令、5%股权与一场事先张扬的IPO"
 date: "2026-07-10 12:30:28"
-updated: "2026-07-10 14:21:17"
+updated: "2026-07-10 15:00:44"
 permalink: "posts/2026/07/10/美国ai监管的夏天行政令5股权与一场事先张扬的ipo/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/07/10/美国ai监管的夏天行政令5股权与一场事先张扬的ipo/"
 article_id: "29c6498d-e3e3-42d7-a09b-346e0e27c523"
@@ -14,14 +14,14 @@ imgTop: false
 
 ## 一、四件事同时发生的夏天
 
-时间拨回2026年6月2日，白宫没有敲锣打鼓，特朗普在一片沉默中签署了那份被砍掉三分之二篇幅的AI行政令。与此同时，路透社爆料OpenAI正与特朗普政府商讨5%股权划转方案；七天后Anthropic秘密递交IPO招股书；而在日内瓦，47国代表结束了长达一个月的谈判，拿出一份措辞谨慎的联合声明——"自愿审查"四个字，没有罚则，没有机制，只有各方都签字的体面。
+时间拨回2026年6月2日，白宫没有敲锣打鼓，特朗普在一片沉默中签署了那份被砍掉三分之二篇幅的AI行政令。与此同时，路透社爆料OpenAI正与特朗普政府商讨5%股权划转方案；七天后Anthropic秘密递交IPO招股书；而在日内瓦，47国代表结束了为期一个月的谈判，拿出一份措辞谨慎的联合声明——"自愿审查"四个字，没有罚则，没有机制，只有各方都签字的体面。
 
 这四件事凑在同一月份绝非巧合。AI权力结构正在经历一次静悄悄的重组：监管者坐在谈判桌上，但每张椅子底下都藏着要换的牌。
 
 
 
-![程序员 reaction：BloatedUl,forcedlogin](https://iili.io/CC5upyv.png)
-> 这一段，面试官开始看你工程感了
+![程序员 reaction：MicrosoftSQLServer,MongoDB](https://iili.io/CCG5adx.png)
+> 这里的信息密度不小
 
 
 
@@ -44,8 +44,8 @@ imgTop: false
 
 
 
-![程序员系列表情：据说换成这个发型，面试通过率很高](https://iili.io/CC5AHjp.png)
-> 背定义到这里就不够了
+![程序员系列表情：如果把面试官唬住了就要50k，没唬住就要5k](https://iili.io/CClZIPS.png)
+> 背后的逻辑值得细品
 
 
 
@@ -72,8 +72,8 @@ imgTop: false
 
 
 
-![程序员 reaction：柯南00089 找到你了](https://iili.io/CCZubTX.png)
-> 这个追问就是分水岭
+![程序员 reaction：柯南00027 可疑哦](https://iili.io/CCZvaGs.png)
+> 核心逻辑往往藏在细节里
 
 
 
@@ -98,8 +98,8 @@ imgTop: false
 
 
 
-![程序员反应图：程序员00052 放肆怎么跟程序员说话呢](https://iili.io/CAl8ixI.png)
-> 到这里才区分会不会讲
+![程序员反应图：程序员00033 摘要模型数据评估](https://iili.io/CA7VfP1.png)
+> 理解了这个，上层就清楚了
 
 
 
@@ -138,8 +138,8 @@ AI监管权力重组，本质是一场没有输家的共谋：行政令给行业
 
 
 
-![程序员 reaction：SalesforceCEosaysengineers](https://iili.io/CCZxcRn.png)
-> 落到项目里，答案才算站住
+![程序员 reaction：MeusingAlagentstocodewith](https://iili.io/CCZAA8B.png)
+> 这一层关系不少人没注意到
 
 
 
