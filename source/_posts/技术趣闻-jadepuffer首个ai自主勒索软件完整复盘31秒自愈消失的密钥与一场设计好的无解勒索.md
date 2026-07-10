@@ -1,7 +1,7 @@
 ---
 title: "【技术趣闻 | JadePuffer】首个AI自主勒索软件完整复盘：31秒自愈、消失的密钥、与一场设计好的「无解勒索」"
 date: "2026-07-10 01:55:44"
-updated: "2026-07-10 09:17:27"
+updated: "2026-07-10 09:35:20"
 permalink: "posts/2026/07/10/技术趣闻-jadepuffer首个ai自主勒索软件完整复盘31秒自愈消失的密钥与一场设计好的无解勒索/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/07/10/技术趣闻-jadepuffer首个ai自主勒索软件完整复盘31秒自愈消失的密钥与一场设计好的无解勒索/"
 article_id: "fa8d1cff-28a9-4cf1-ab28-43c7252e38b1"
@@ -43,7 +43,7 @@ Sysdig 在报告中给出了明确定义：「这是一个我们评估为首例�
 
 
 
-![JadePuffer 攻击链路](https://iili.io/C0vM3bI.png)
+![JadePuffer 攻击链路](https://iili.io/C08RQfV.png)
 > JadePuffer 攻击链路
 
 
@@ -54,7 +54,7 @@ Sysdig 在报告中给出了明确定义：「这是一个我们评估为首例�
 
 
 
-![程序员 reaction：losingafewpackets](https://iili.io/Cx2fLs2.png)
+![程序员 reaction："Justpatchitinproduction](https://iili.io/CC55m8u.png)
 > 这一段，面试官开始看你工程感了
 
 
@@ -90,7 +90,7 @@ Sysdig 在报告中记录了完整的修正轨迹：JWT 伪造失败，下一个
 
 
 
-![程序员系列表情：据说换成这个发型，面试通过率很高](https://iili.io/CC5AHjp.png)
+![程序员系列表情：如果把面试官唬住了就要50k，没唬住就要5k](https://iili.io/CClZIPS.png)
 > 背定义到这里就不够了
 
 
@@ -115,7 +115,7 @@ JadePuffer 用 MySQL 的 AES_ENCRYPT 函数加密了数据，这个加密操作�
 
 
 
-![JadePuffer「无解勒索」执行逻辑](https://iili.io/C0vMgII.png)
+![JadePuffer「无解勒索」执行逻辑](https://iili.io/C0853fp.png)
 > JadePuffer「无解勒索」执行逻辑
 
 
@@ -130,7 +130,7 @@ JadePuffer 的勒索信更像是一种心理战广播：你的数据在我手里
 
 
 
-![程序员 reaction：柯南00070 出现了](https://iili.io/CCZAMap.png)
+![程序员 reaction：暗中观察](https://iili.io/CCZOWwF.png)
 > 这个追问就是分水岭
 
 
@@ -141,7 +141,7 @@ JadePuffer 证明了 AI 可以独立完成整个勒索操作链。这意味着�
 
 
 
-![攻击者视角 VS 防御者视角](https://iili.io/C0vVJEu.png)
+![攻击者视角 VS 防御者视角](https://iili.io/C085Cen.png)
 > 攻击者视角 VS 防御者视角
 
 
@@ -156,7 +156,7 @@ JadePuffer 证明了 AI 可以独立完成整个勒索操作链。这意味着�
 
 
 
-![程序员 reaction：FRONT-END](https://iili.io/CnZ0O5N.png)
+![程序员 reaction：Me:Boyohboy,i'mthinkingabout](https://iili.io/CC572nV.png)
 
 
 
@@ -164,24 +164,24 @@ JadePuffer 证明了 AI 可以独立完成整个勒索操作链。这意味着�
 
 
 
-![程序员 reaction：MeusingAlagentstocodewith](https://iili.io/CCZAA8B.png)
+![程序员 reaction：SalesforceCEosaysengineers](https://iili.io/CCZxcRn.png)
 > 能落到项目里，答案才算站住
 
 
 
 
 
-![程序员反应图：程序员00021 计算机学着挺有意思的就是头冷](https://iili.io/CA7UxEJ.png)
+![程序员反应图：程序员00026 我想做NLP找个好人家](https://iili.io/CumR2Ev.png)
 > 这里开始区分会用和会讲
 
 
 
 ## 参考文献
 [1] 首个全自主勒索软件攻击JadePuffer令安全研究人员彻夜难眠_搜狐网. https://m.sohu.com/a/1047699613_114765?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334
-[2] AI代理JadePuffer发动全面勒索攻击，窃取密钥并加密1300余项配置 | 乌克兰新闻 - #Mezha. https://mezha.net/ch/bukvy/fa536d85_ai_agent_executed
-[3] 美国公司又吹牛！首例AI自主勒索攻击被拆穿：人类幕后操盘、AI只配敲键盘|密钥|服务器|受害者|智能体_网易订阅. https://www.163.com/dy/article/L18IMVKE0511CPVM.html
+[2] AI代理JadePuffer发动全面勒索攻击，窃取密钥并加密1300余项配置. https://mezha.net/ch/bukvy/fa536d85_ai_agent_executed
+[3] 美国公司又吹牛！首例AI自主勒索攻击被拆穿. https://www.163.com/dy/article/L18IMVKE0511CPVM.html
 [4] 首个全自主勒索软件攻击JadePuffer令安全研究人员彻夜难眠_腾讯新闻. https://view.inews.qq.com/a/20260708A08SE100
-[5] 首个AI全流程勒索攻击来了：JADEPUFFER证明，勒索不再需要人类操盘手_凭证_服务器_Agent. https://www.sohu.com/a/1046652640_121124363
-[6] 首例 AI 代理自主執行勒索軟體攻擊，資安公司揭 JADEPUFFER 行動 | 科技新報 | LINE TODAY. https://today.line.me/tw/v3/article/zNWpVq7
-[7] 第一个 AI 自己完成的勒索攻击出现了，600 个攻击载荷全自动_腾讯新闻. https://view.inews.qq.com/a/20260705A03RJC00?uid%5B0%5D=100021494253&uid%5B1%5D=100021494253
+[5] 首个AI全流程勒索攻击来了. https://www.sohu.com/a/1046652640_121124363
+[6] 首例 AI 代理自主執行勒索軟體攻擊，資安公司揭 JADEPUFFER 行動. https://today.line.me/tw/v3/article/zNWpVq7
+[7] 第一个 AI 自己完成的勒索攻击出现了，600 个攻击载荷全自动. https://view.inews.qq.com/a/20260705A03RJC00
 [8] Instagram. https://www.instagram.com/p/DafaqlAjchh
