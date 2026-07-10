@@ -1,7 +1,7 @@
 ---
 title: "【技术趣闻 | JadePuffer】首个AI自主勒索软件完整复盘：31秒自愈、消失的密钥、与一场设计好的「无解勒索」"
 date: "2026-07-10 01:55:44"
-updated: "2026-07-10 09:35:20"
+updated: "2026-07-10 09:36:17"
 permalink: "posts/2026/07/10/技术趣闻-jadepuffer首个ai自主勒索软件完整复盘31秒自愈消失的密钥与一场设计好的无解勒索/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/07/10/技术趣闻-jadepuffer首个ai自主勒索软件完整复盘31秒自愈消失的密钥与一场设计好的无解勒索/"
 article_id: "fa8d1cff-28a9-4cf1-ab28-43c7252e38b1"
@@ -54,7 +54,7 @@ Sysdig 在报告中给出了明确定义：「这是一个我们评估为首例�
 
 
 
-![程序员 reaction："Justpatchitinproduction](https://iili.io/CC55m8u.png)
+![程序员 reaction：Content-Length:50](https://iili.io/CClZaNj.png)
 > 这一段，面试官开始看你工程感了
 
 
@@ -130,7 +130,7 @@ JadePuffer 的勒索信更像是一种心理战广播：你的数据在我手里
 
 
 
-![程序员 reaction：暗中观察](https://iili.io/CCZOWwF.png)
+![程序员 reaction：你被我盯上了](https://iili.io/CCZOwMJ.png)
 > 这个追问就是分水岭
 
 
@@ -156,7 +156,7 @@ JadePuffer 证明了 AI 可以独立完成整个勒索操作链。这意味着�
 
 
 
-![程序员 reaction：Me:Boyohboy,i'mthinkingabout](https://iili.io/CC572nV.png)
+![程序员 reaction：status 418  status 418 5knj](https://iili.io/CCG58Xt.png)
 
 
 
@@ -164,14 +164,14 @@ JadePuffer 证明了 AI 可以独立完成整个勒索操作链。这意味着�
 
 
 
-![程序员 reaction：SalesforceCEosaysengineers](https://iili.io/CCZxcRn.png)
+![程序员 reaction：MeusingAlagentstocodewith](https://iili.io/CCZAA8B.png)
 > 能落到项目里，答案才算站住
 
 
 
 
 
-![程序员反应图：程序员00026 我想做NLP找个好人家](https://iili.io/CumR2Ev.png)
+![程序员反应图：程序员00007 MyCodeCodeOnStackOverFlow](https://i.ibb.co/677YW6mL/transparent.png)
 > 这里开始区分会用和会讲
 
 
