@@ -1,7 +1,7 @@
 ---
 title: "美国AI监管的夏天：行政令、5%股权与一场事先张扬的IPO"
 date: "2026-07-10 12:30:28"
-updated: "2026-07-10 15:00:44"
+updated: "2026-07-10 15:09:11"
 permalink: "posts/2026/07/10/美国ai监管的夏天行政令5股权与一场事先张扬的ipo/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/07/10/美国ai监管的夏天行政令5股权与一场事先张扬的ipo/"
 article_id: "29c6498d-e3e3-42d7-a09b-346e0e27c523"
@@ -20,7 +20,7 @@ imgTop: false
 
 
 
-![程序员 reaction：MicrosoftSQLServer,MongoDB](https://iili.io/CCG5adx.png)
+![程序员 reaction：WHATIFTHEREWERENODISK?](https://iili.io/CCZ4u9f.png)
 > 这里的信息密度不小
 
 
@@ -44,7 +44,7 @@ imgTop: false
 
 
 
-![程序员系列表情：如果把面试官唬住了就要50k，没唬住就要5k](https://iili.io/CClZIPS.png)
+![程序员系列表情：据说换成这个发型，面试通过率很高](https://iili.io/CC5AHjp.png)
 > 背后的逻辑值得细品
 
 
@@ -72,7 +72,7 @@ imgTop: false
 
 
 
-![程序员 reaction：柯南00027 可疑哦](https://iili.io/CCZvaGs.png)
+![程序员 reaction：我叫江户川柯南是一名侦探](https://iili.io/CCZxIov.png)
 > 核心逻辑往往藏在细节里
 
 
@@ -98,7 +98,7 @@ imgTop: false
 
 
 
-![程序员反应图：程序员00033 摘要模型数据评估](https://iili.io/CA7VfP1.png)
+![程序员 reaction：该写代码了](https://iili.io/CAYaCGa.png)
 > 理解了这个，上层就清楚了
 
 
