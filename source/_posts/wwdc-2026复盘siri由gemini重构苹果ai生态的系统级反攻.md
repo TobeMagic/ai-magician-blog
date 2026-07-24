@@ -1,11 +1,12 @@
 ---
 title: "WWDC 2026复盘：Siri由Gemini重构，苹果AI生态的“系统级”反攻"
 date: "2026-07-23 12:13:52"
-updated: "2026-07-23 12:15:58"
+updated: "2026-07-24 01:31:49"
 permalink: "posts/2026/07/23/wwdc-2026复盘siri由gemini重构苹果ai生态的系统级反攻/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/07/23/wwdc-2026复盘siri由gemini重构苹果ai生态的系统级反攻/"
 article_id: "84e20ac0-1bd3-4f2e-84f3-51c4090251c4"
 description: "本文深度解析WWDC 2026中苹果AI战略的重大转折。重点探讨Siri基于Google Gemini内核的重构、iOS 27七大AI功能落地，以及Apple Intelligence 2.0如何通过跨设备智能体与隐私优先设计重塑交互范式。同时分析苹果向ChatGPT等第三方模型开放的生态策略，揭示其从封闭走向融合的技术演进路径。"
+cover: "/tmp/aimagician-artifacts/covers/84e20ac0-1bd3-4f2e-84f3-51c4090251c4/473cc04d-1f6d-4c27-9b55-6b6162afb935/cover.png"
 imgTop: false
 ---
 
