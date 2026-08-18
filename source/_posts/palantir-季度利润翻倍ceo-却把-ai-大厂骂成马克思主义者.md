@@ -1,7 +1,7 @@
 ---
 title: "Palantir 季度利润翻倍，CEO 却把 AI 大厂骂成「马克思主义者」"
 date: "2026-08-18 00:00:01"
-updated: "2026-08-18 05:16:45"
+updated: "2026-08-18 05:25:49"
 permalink: "posts/2026/08/18/palantir-季度利润翻倍ceo-却把-ai-大厂骂成马克思主义者/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/08/18/palantir-季度利润翻倍ceo-却把-ai-大厂骂成马克思主义者/"
 article_id: "c02d5516-b6db-4508-af05-18d37ae7082e"
@@ -14,7 +14,7 @@ Palantir 刚交出一份利润翻倍的财报，CEO 却在股东信里把 AI 行
 
 
 
-![程序员 reaction：特朗普00017 你等着我这就去发推特](https://iili.io/CgBtVqB.png)
+![程序员 reaction：接下来请用心去感受](https://iili.io/Crz9Psf.png)
 > 财报很漂亮，但话很难听
 
 
@@ -58,7 +58,7 @@ flowchart LR
 
 
 
-![程序员 reaction：IWROTEACOUPLEYEARSAGO](https://iili.io/CuzYJLv.png)
+![程序员反应图：不要重构去复制](https://iili.io/CuzarVj.png)
 > 评审人反复追问的那个问题
 
 
@@ -77,7 +77,7 @@ Karp 在 CNBC 采访中透露，几乎所有 Palantir 的企业客户都在私�
 
 
 
-![程序员系列表情：我可能是个假程序员](https://iili.io/CgJWlob.png)
+![程序员反应图：我可能是个假程序员](https://iili.io/CgOpTut.png)
 > 账单来了，老板沉默了
 
 
@@ -106,7 +106,7 @@ flowchart TD
 
 
 
-![程序员 reaction：你在搞笑吗](https://iili.io/CumXt3P.png)
+![程序员 reaction：看来有必要去你家拍一集了](https://iili.io/CAlSlbp.png)
 > 落后者还有机会吗
 
 
@@ -129,7 +129,7 @@ Karp 的核心判断是：AI 这个分类本身已经没有意义了。真正有
 
 
 
-![程序员 reaction：DEEPLYWRONGWITHHER,LIKECODE](https://iili.io/CsbVgff.png)
+![程序员 reaction：VIBEENGINEER](https://iili.io/CgKCp0G.png)
 > 说到了点子上
 
 
