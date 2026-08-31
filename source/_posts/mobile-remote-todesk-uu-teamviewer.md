@@ -1,7 +1,7 @@
 ---
 title: "旅途中用手机远程控制电脑？电脑不在身边，ToDesk/UU远程/TeamViewer移动端深度实测"
 date: "2026-08-31 03:22:12"
-updated: "2026-08-31 03:22:26"
+updated: "2026-08-31 03:56:57"
 permalink: "posts/2026/08/31/mobile-remote-todesk-uu-teamviewer/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/08/31/mobile-remote-todesk-uu-teamviewer/"
 article_id: "6fef81ec-457f-4625-b9bc-307ec6f6e02b"
@@ -21,6 +21,8 @@ imgTop: false
 基于手机远控适合处理一件明确的小事，不适合替代完整电脑的前提下，本文对照 ToDesk、UU远程和 TeamViewer 的移动端使用方式：临时取文件、改一段文档、处理网页后台、查看终端结果、给家里电脑传照片，哪些适合在手机上做，哪些应留给笔记本。
 
 *性能数据均为本轮设备和线路下的记录，不代表所有网络环境；个人和商业许可以购买或使用当日的官方页面为准。
+
+![22c7d8eb-583a-426e-8432-e0397d9a4162.png](https://iili.io/CywjOlt.jpg)
 
 ## 一、外出场景：什么工作适配用手机远控？
 
@@ -87,11 +89,15 @@ ToDesk 手机端将文件传输和桌面控制分开。只取文件时，可以�
 
 从本轮手机端界面看，UU远程的设备和远控入口比较直观。实际操作时，触控点击、鼠标模式和输入法兼容性仍要按自己的手机再测一次；已有记录中出现过网络波动和鼠标加载，旅途中更适合先处理文件和短任务，避免长时间编辑。
 
+![8aa9d1c3-3004-4028-a969-58dd1580e113.png](https://iili.io/Cywjpzx.jpg)
+
 *UU远程**手机端的设备与远控入口*
 
 #### 3. TeamViewer：传统远控流程，操作前先确认账号
 
 本轮截图中的 TeamViewer 保留了设备连接、鼠标操作和工具栏这套传统远控路径。用手机处理任务前，先确认账号能否登录、设备是否在线以及个人许可是否符合实际用途；临时操作时，先完成一个短任务再断开会更稳妥。
+
+![18fcde25-b7a4-4a5c-80f5-72fa428f30c8.png](https://iili.io/Cyww1B2.jpg)
 
 *图 5 TeamViewer 手机端的连接与操作入口*
 
