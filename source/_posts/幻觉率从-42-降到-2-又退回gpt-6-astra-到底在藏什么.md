@@ -1,7 +1,7 @@
 ---
 title: "幻觉率从 4.2% 降到 2% 又退回，GPT-6 Astra 到底在藏什么"
 date: "2026-09-07 05:00:02"
-updated: "2026-09-07 05:11:28"
+updated: "2026-09-07 05:14:19"
 permalink: "posts/2026/09/07/幻觉率从-42-降到-2-又退回gpt-6-astra-到底在藏什么/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/09/07/幻觉率从-42-降到-2-又退回gpt-6-astra-到底在藏什么/"
 article_id: "19b5cb70-d835-4523-9c92-108ebfcf97e6"
@@ -29,7 +29,7 @@ OpenAI 原定美国东部时间 9 月 3 日下午 2 点发布 GPT-6 Astra 公告
 
 
 
-![程序员 reaction：我叫江户川柯南是一名侦探](https://iili.io/CCZxIov.png)
+![程序员 reaction：你被我盯上了](https://iili.io/CCZOwMJ.png)
 > 截图永不撒谎
 
 
@@ -38,7 +38,7 @@ OpenAI 原定美国东部时间 9 月 3 日下午 2 点发布 GPT-6 Astra 公告
 
 值得注意的是，这些修改并非只单向有利于 OpenAI。部分指标的变动呈现出双向波动，而非单纯的「优化」。
 
-![搬砖系列表情：真羡慕你们不用上班](https://iili.io/C1zRo8v.png)
+![搬砖系列表情：今天工地好热，砖头烫手](https://iili.io/CUblf72.png)
 > 这数据改得我CPU都烧了
 
 
@@ -78,7 +78,7 @@ OpenAI 在回应 Fortune 的追问时，给出的解释很简短：「这些修�
 
 
 
-![程序员系列表情：整天在群里瞎比比，写代码没见你这么积极](https://iili.io/Cxqo2se.png)
+![程序员系列表情：产品经理说：让App根据用户秃顶程度来控制手机刘海](https://iili.io/CxPmtfI.png)
 > ##二、为什么会变：OpenAI
 
 
@@ -150,7 +150,7 @@ Anthropic 面对同样的压力时选择了不同路径。他们在 2024 年推�
 
 
 
-![程序员 reaction：Anybodywantto](https://iili.io/Cbk5U0J.png)
+![程序员 reaction：BECALSE](https://iili.io/CQttKkx.png)
 > ##三、刷榜还是校准：基准测试透
 
 
@@ -165,7 +165,7 @@ Anthropic 面对同样的压力时选择了不同路径。他们在 2024 年推�
 
 到当晚 8 点之后，大部分改动回滚到了初版数值。
 
-![程序员 reaction：MeusingAlagentstocodewith](https://iili.io/CCZAA8B.png)
+![程序员 reaction：SalesforceCEosaysengineers](https://iili.io/CCZxcRn.png)
 > 真相终于浮出水面
 
  但部分分数至今仍在变动。这种「发布即修改」的模式，在 AI 行业并非首次，但这次的数据量级和修改方向引起了特别关注——提升的是自家模型，下降的是竞争对手。
@@ -180,7 +180,7 @@ Anthropic 面对同样的压力时选择了不同路径。他们在 2024 年推�
 
 
 
-![程序员 reaction：No,itsthegamerswho](https://iili.io/CUyG6Yu.png)
+![程序员 reaction：GREATIYOUCANMERGEIT](https://iili.io/CgN61EX.png)
 > 体感才是硬道理
 
 
