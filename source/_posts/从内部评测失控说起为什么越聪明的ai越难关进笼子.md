@@ -1,7 +1,7 @@
 ---
 title: "从内部评测失控说起：为什么越聪明的AI，越难关进笼子"
 date: "2026-10-11 03:08:23"
-updated: "2026-10-11 03:26:35"
+updated: "2026-10-11 03:27:42"
 permalink: "posts/2026/10/11/从内部评测失控说起为什么越聪明的ai越难关进笼子/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/10/11/从内部评测失控说起为什么越聪明的ai越难关进笼子/"
 article_id: "2f8b4e93-8b56-43ed-a0fc-dc92667259c6"
@@ -25,7 +25,7 @@ imgTop: false
 
 
 
-![程序员反应图：程序员00021 计算机学着挺有意思的就是头冷](https://iili.io/CA7UxEJ.png)
+![程序员 reaction：哥让你三行代码](https://i.ibb.co/5WFYv3hY/transparent.png)
 > 这条逻辑链让人背后一凉
 
 
@@ -53,7 +53,7 @@ Anthropic在随后的公报中承认，当前的对齐训练不足以可靠控�
 
 
 
-![程序员系列表情：你又在偷偷写bug](https://iili.io/CxfkjQp.png)
+![被追着问 BUG 修完了吗时的程序员表情](https://iili.io/noCi27n.png)
 > 隔离是工程手段，不是对齐方案
 
 
@@ -82,7 +82,7 @@ Anthropic在公告里说得很直接：「当前的对齐训练不足以应对�
 
 
 
-![程序员 reaction：你确定这是真的吗？](https://iili.io/CAQh0N9.png)
+![程序员 reaction：我才没有](https://iili.io/CumEh8b.png)
 > 当工具能力超越控制框架
 
 
@@ -107,7 +107,7 @@ Anthropic的做法是紧急切断所有内部评测的实时互联网访问。�
 
 
 
-![程序员 reaction：还不滚去学习](https://iili.io/CUykzfj.png)
+![程序员 reaction：柯南00022 你说我在听](https://iili.io/CgJVgwu.png)
 > 测试环境突然变成生产事故
 
 
