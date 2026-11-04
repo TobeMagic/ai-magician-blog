@@ -1,7 +1,7 @@
 ---
 title: "用户越活跃，成本越高——Canva的AI账单危机"
 date: "2026-11-04 10:13:43"
-updated: "2026-11-04 11:00:37"
+updated: "2026-11-04 11:10:53"
 permalink: "posts/2026/11/04/用户越活跃成本越高canva的ai账单危机/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/11/04/用户越活跃成本越高canva的ai账单危机/"
 article_id: "db122ee6-47b6-4726-be76-9e39e16069df"
