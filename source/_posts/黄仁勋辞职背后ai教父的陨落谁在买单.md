@@ -1,7 +1,7 @@
 ---
 title: "黄仁勋辞职背后：AI教父的陨落，谁在买单？"
 date: "2026-11-15 01:08:47"
-updated: "2026-11-18 10:15:42"
+updated: "2026-11-18 12:43:19"
 permalink: "posts/2026/11/15/黄仁勋辞职背后ai教父的陨落谁在买单/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/11/15/黄仁勋辞职背后ai教父的陨落谁在买单/"
 article_id: "d5cc54e7-0c65-419d-aa81-d52b408a2750"
