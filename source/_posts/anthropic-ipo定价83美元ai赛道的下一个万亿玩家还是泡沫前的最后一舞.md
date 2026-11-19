@@ -1,12 +1,12 @@
 ---
 title: "Anthropic IPO定价83美元：AI赛道的下一个万亿玩家，还是泡沫前的最后一舞？"
 date: "2026-11-19 02:00:43"
-updated: "2026-11-19 09:29:44"
+updated: "2026-11-19 09:35:53"
 permalink: "posts/2026/11/19/anthropic-ipo定价83美元ai赛道的下一个万亿玩家还是泡沫前的最后一舞/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/11/19/anthropic-ipo定价83美元ai赛道的下一个万亿玩家还是泡沫前的最后一舞/"
 article_id: "67aae24a-b60f-4349-b95e-d42ce1f53e59"
 description: "Anthropic IPO发行价最终定为每股83美元，突破此前70至78美元的定价区间，预计周四以ANT代码在纳斯达克挂牌。营收年化810亿美元、净亏损仍超千亿美元，估值约1.4万亿美元——这个数字本身说明了一切：资本市场在为AI基础设施的确定性买单，而不是为盈利能力。本文梳理定价上调逻辑、营收与亏损的结构矛盾，以及对从业者意味着什么。"
-cover: "/var/lib/aimagician/artifacts/covers/67aae24a-b60f-4349-b95e-d42ce1f53e59/0209fcfb-c4a0-4e49-a5f7-70e2be3377ad/cover.png"
+cover: "https://modelscope-studios.oss-cn-zhangjiakou.aliyuncs.com/aigc/text-to-image/18abdb52-cdea-4c8c-ac4f-7e366a9afa56.png"
 imgTop: false
 ---
 
