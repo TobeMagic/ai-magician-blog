@@ -1,7 +1,7 @@
 ---
 title: "Dario Amodei 回应市场动荡：Anthropic IPO 前称对时机并不在意"
 date: "2026-11-14 10:02:24"
-updated: "2026-11-18 10:18:01"
+updated: "2026-11-19 01:12:51"
 permalink: "posts/2026/11/14/dario-amodei-回应市场动荡anthropic-ipo-前称对时机并不在意/"
 canonical_url: "https://tobemagic.github.io/ai-magician-blog/posts/2026/11/14/dario-amodei-回应市场动荡anthropic-ipo-前称对时机并不在意/"
 article_id: "24725ad3-d470-419f-a451-28e1bf4ef563"
